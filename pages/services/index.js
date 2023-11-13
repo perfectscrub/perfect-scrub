@@ -20,7 +20,7 @@ const Services = () => {
             width={254}
             height={526}
             className="lg:absolute lg:-bottom-20 left-20 z-20 mx-auto"
-            src="/images/about-us-image.png"
+            src="/about-us-image.png"
             alt=""
           />
           {/* Monogram Overlay  */}
@@ -152,7 +152,7 @@ const Services = () => {
             </span>
             <span className="text-xl lg:text-2xl px-2 pb-8 lg:mr-2 text-gray-700">
               Use our
-              <Link className="text-blue-600 hover:underline" href="../quote">
+              <Link className="text-blue-600 hover:underline" href="/quote">
                 {" "}
                 get a quote
               </Link>
@@ -192,7 +192,7 @@ const Services = () => {
           <Link
             className="text-2xl py-4 px-8 m-auto text-white bg-green-600 hover:shadow-xl text-center no-underline 
             uppercase border-2 border-green-600 hover:bg-green-500 hover:border-green-500 scale-100 hover:scale-105 self-center cursor-pointer"
-            href="../contact"
+            href="/contact"
           >
             contact us
           </Link>

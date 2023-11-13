@@ -70,7 +70,7 @@ const DeepCleaning = () => {
         className="w-full md:w-72 border-8 rounded-2xl border-blue-600 px-2 py-6 mb-8 lg:ml-10 font-plexSerif font-semibold flex flex-col lg:mb-16 pb-2 ring-4 ring-blue-300 ring-inset">
         <span className="text-2xl lg:text-4xl lg:mr-2 mb-4 text-green-500">#1</span>
         <span className="text-xl lg:text-2xl px-2 pb-8 lg:mr-2 text-gray-700">Use our
-          <Link className="text-blue-600 hover:underline" href="../quote"> get a quote</Link>
+          <Link className="text-blue-600 hover:underline" href="/quote"> get a quote</Link>
           form to inform us about your cleaning needs</span>
       </div>
       <div
@@ -96,7 +96,7 @@ const DeepCleaning = () => {
         our performance - we will clean it again, free.</p>
       <Link className="text-2xl py-4 px-8 m-auto text-white bg-green-600 hover:shadow-xl text-center no-underline 
               uppercase border-2 border-green-600 hover:bg-green-500 hover:border-green-500 scale-100 hover:scale-105 self-center cursor-pointer"
-        href="../contact">contact us</Link> 
+        href="/contact">contact us</Link> 
     </div>
   </section>
 

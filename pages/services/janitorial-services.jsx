@@ -77,7 +77,7 @@ const JanitorialServices = () => {
             </span>
             <span className="text-xl lg:text-2xl px-2 pb-8 lg:mr-2 text-gray-700">
               Use our
-              <Link className="text-blue-600 hover:underline" href="../quote">
+              <Link className="text-blue-600 hover:underline" href="/quote">
                 {" "}
                 get a quote
               </Link>
@@ -117,7 +117,7 @@ const JanitorialServices = () => {
           <Link
             className="text-2xl py-4 px-8 m-auto text-white bg-green-600 hover:shadow-xl text-center no-underline 
               uppercase border-2 border-green-600 hover:bg-green-500 hover:border-green-500 scale-100 hover:scale-105 self-center cursor-pointer"
-            href="../contact"
+            href="/contact"
           >
             contact us
           </Link>
@@ -128,7 +128,7 @@ const JanitorialServices = () => {
     <h2 className="text-center font-bold px-4 lg:px-0 text-3xl lg:text-4xl uppercase text-gray-50">
       Ready to Get Started?
     </h2>
-    <Link className="link_underline inline-block text-2xl mt-16 text-gray-50" href="../quote">Request a free quote.</Link>
+    <Link className="link_underline inline-block text-2xl mt-16 text-gray-50" href="/quote">Request a free quote.</Link>
   </section> */}
     </main>
   );
