@@ -8,7 +8,7 @@ const Footer = () => {
     <div className="flex flex-col lg:flex-row items-center justify-around mx-auto max-w-screen-2xl">
       <div className="flex flex-col items-center mb-6">
         {/* Logo Image */}
-        <Link className="mb-10 ml-0 lg:ml-4" href="./" title="homepage">
+        <Link className="mb-10 ml-0 lg:ml-4" href="/" title="homepage">
           <Image width={160} height={64} className="lg:ml-12" src="/perfect-scrub-logo.png" alt="" />
         </Link>
         <div className="flex text-green-400">

@@ -79,13 +79,13 @@ const Navbar = () => {
             </li>
 
             <li className="pb-5 ml-3 lg:py-8 lg:px-6">
-              <Link className="hover:text-green-300" href="about">
+              <Link className="hover:text-green-300" href="/about">
                 ABOUT
               </Link>
             </li>
             <li className="dropdown pb-5 ml-3 lg:py-8 lg:px-6 ">
               <span className="flex items-center justify-between gap-2">
-                <Link className="hover:text-green-300" href="facilities/index">
+                <Link className="hover:text-green-300" href="/facilities">
                   FACILITIES
                 </Link>
                 <span id="chevron2" className="w-1/3 mt-1 flex justify-end">
@@ -96,42 +96,42 @@ const Navbar = () => {
               </span>
               <ul id="dropdown2" className="dropdown-content hidden">
                 <li className="dropdown-content-list-item">
-                  <Link href="facilities/office-buildings-cleaning">
+                  <Link href="/facilities/office-buildings-cleaning">
                     Office buildings
                   </Link>
                 </li>
                 <li className="dropdown-content-list-item">
-                  <Link href="facilities/retail-stores-cleaning">
+                  <Link href="/facilities/retail-stores-cleaning">
                     Retail stores and shopping centers
                   </Link>
                 </li>
                 <li className="dropdown-content-list-item">
-                  <Link href="facilities/day-care-cleaning">
+                  <Link href="/facilities/day-care-cleaning">
                     Day Care and Preschool
                   </Link>
                 </li>
                 <li className="dropdown-content-list-item">
-                  <Link href="facilities/school-cleaning">
+                  <Link href="/facilities/school-cleaning">
                     Schools and universities
                   </Link>
                 </li>
                 <li className="dropdown-content-list-item">
-                  <Link href="facilities/medical-office-cleaning">
+                  <Link href="/facilities/medical-office-cleaning">
                     Medical Offices and clinics
                   </Link>
                 </li>
                 <li className="dropdown-content-list-item">
-                  <Link href="facilities/hotel-cleaning">
+                  <Link href="/facilities/hotel-cleaning">
                     Hotels and resorts
                   </Link>
                 </li>
                 <li className="dropdown-content-list-item">
-                  <Link href="facilities/recreational-facilities-cleaning">
+                  <Link href="/facilities/recreational-facilities-cleaning">
                     Sports and recreational facilities
                   </Link>
                 </li>
                 <li className="dropdown-content-list-item">
-                  <Link href="facilities/post-construction-cleaning">
+                  <Link href="/facilities/post-construction-cleaning">
                     Post Construction Clean up
                   </Link>
                 </li>
@@ -140,7 +140,7 @@ const Navbar = () => {
           </ul>
           <Link
             className="inline-block p-2 ml-3 mr-6 font-medium text-sm border-2 mt-2 lg:mt-0 text-green-400 border-green-400 hover:bg-green-400 hover:text-green-50"
-            href="contact"
+            href="/contact"
           >
             GET IN TOUCH
           </Link>
