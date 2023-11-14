@@ -1,22 +1,27 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from '@/styles/Home.module.css'
-
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Inter } from 'next/font/google';
+import HomeFacilitiesList from "@/components/homeFacilitiesList/HomeFacilitiesList";
+import IndexLocationsList from "@/components/indexLocationsList/IndexLocationsList";
 const inter = Inter({ subsets: ['latin'] })
+
 
 export default function Home() {
   return (
     <>
       <Head>
-        <title></title>
         <meta name="description" content="Perfect Scrub for your offices." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
+        <meta
+          content="We operate in the greater toronto area and we specialize in the cleaning of Offices, Schools and Universities, Event Centers, and other facilities"
+          name="description" />
+        <title>Perfect Scrub Cleaning Services- High quality Professional Cleaning for offices and commercial spaces</title>
       </Head>
       <main role="main">
         {/* start of hero (landing) section */}
-        <section className={`${styles.heroContainer} h-screen flex items-start justify-start`}>
+        <section className="hero__container pt-20 md:pt-5 h-screen flex items-start justify-start">
           <div
             className="flex flex-col justify-center items-center h-full w-full md:w-1/2 lg:w-1/3 py-5 bg-gradient-to-b from-transparent to-white md:bg-gradient-to-r md:from-white md:to-transparent">
             <h1
@@ -38,9 +43,9 @@ export default function Home() {
               </li>
             </ul>
             <div className="flex flex-col items-center">
-              <a className="inline-block uppercase text-center px-5 py-4 text-md lg:px-9 lg:py-4 hover:shadow-2xl mx-2 mb-4 lg:mx-8 bg-green-500 
+              <Link className="inline-block uppercase text-center px-5 py-4 text-md lg:px-9 lg:py-4 hover:shadow-2xl mx-2 mb-4 lg:mx-8 bg-green-500 
         border border-green-500 text-green-50 hover:bg-blue-400 hover:border-blue-400 focus:ring-4 focus:ring-green-300"
-                href="quote.html">Get a Quote</a>
+                href="quote">Get a Quote</Link>
               <p
                 className="text-xs text-blue-600 italic font-semibold mt-2 mx-auto mb-2 tracking-widest leading-relaxed text-center">
                 A free, no obligation quote
@@ -98,10 +103,10 @@ export default function Home() {
             </div>
           </div>
           <p className="md:text-xl my-4 mx-auto py-10 text-center">
-            Want to know more about
-            <a href="./about.html" className="text-blue-600 underline">
+            Want to know more about {" "}
+            <Link href="/about" className="text-blue-600 underline">
               why we do this?
-            </a>
+            </Link>
           </p>
         </section>
 
@@ -111,8 +116,8 @@ export default function Home() {
             <Image width={500} height={400} className="w-full lg:w-1/2 object-cover" src="/two-women-cleaning-office.jpg" alt="" />
             <article className="w-full lg:w-1/2 text-left">
               <h2 className="text-3xl font-sans font-light ">
-                <a href="./facilities/office-buildings-cleaning.html" className="hover:underline">
-                  <span className="font-bold">Office Cleaning </span></a>
+                <Link href="/facilities/office-buildings-cleaning" className="hover:underline">
+                  <span className="font-bold">Office Cleaning </span></Link>
                 that makes a difference
               </h2>
               <p className="my-5">Our dedicated cleaners understand the importance of thoroughness. They
@@ -132,51 +137,7 @@ export default function Home() {
               <h2 className="text-3xl font-sans font-light"><span className="font-bold">Facilities</span> we serve</h2>
               <p className="my-5">We provide our services to a wide range of facilities and establishments. Some of the
                 facilities we serve include:</p>
-              <ul className="flex flex-wrap font-medium text-blue-900">
-                <li className="facility-list-item"><a className="facility-list-link"
-                  href="facilities/office-buildings-cleaning.html">
-                  <span>
-                    <Image width={40} height={40} className="w-10" src="/office-building.svg" alt="" />
-                  </span>
-                  <span>Office buildings</span></a></li>
-                <li className="facility-list-item"><a className="facility-list-link" href="facilities/retail-stores-cleaning.html">
-                  <span>
-                    <Image width={40} height={40} className="w-10" src="/supermarket.svg" alt="" />
-                  </span>
-                  <span>Retail stores and shopping centers</span></a></li>
-                <li className="facility-list-item"><a className="facility-list-link" href="facilities/day-care-cleaning.html">
-                  <span>
-                    <Image width={40} height={40} className="w-10" src="/day-care-center.svg" alt="" />
-                  </span>
-                  <span>Day Care and Preschool</span></a></li>
-                <li className="facility-list-item"><a className="facility-list-link" href="facilities/school-cleaning.html">
-                  <span>
-                    <Image width={40} height={40} className="w-10" src="/university.svg" alt="" />
-                  </span>
-                  <span>Schools and universities</span></a></li>
-                <li className="facility-list-item"><a className="facility-list-link" href="facilities/medical-office-cleaning.html">
-                  <span>
-                    <Image width={40} height={40} className="w-10" src="/hospital.svg" alt="" />
-                  </span>
-                  <span>Medical Offices and clinics</span></a></li>
-                <li className="facility-list-item"><a className="facility-list-link" href="facilities/hotel-cleaning.html">
-                  <span>
-                    <Image width={40} height={40} className="w-10" src="/hotel.svg" alt="" />
-                  </span>
-                  <span>Hotels and resorts</span></a></li>
-                <li className="facility-list-item"><a className="facility-list-link"
-                  href="facilities/recreational-facilities-cleaning.html">
-                  <span>
-                    <Image width={40} height={40} className="w-10" src="/gym.svg" alt="" />
-                  </span>
-                  <span>Sports and recreational facilities</span></a></li>
-                <li className="facility-list-item"><a className="facility-list-link"
-                  href="facilities/post-construction-cleaning.html">
-                  <span>
-                    <Image width={40} height={40} className="w-10" src="/construction.svg" alt="" />
-                  </span>
-                  <span>Post Construction Clean up</span></a></li>
-              </ul>
+              <HomeFacilitiesList />
             </article>
             <Image width={300} height={200} src="/gym.jpg" alt="a modern gym" className="w-full md:w-1/2 lg:pr-10 lg:mt-10" />
           </div>
@@ -186,7 +147,7 @@ export default function Home() {
         <section className="benefits-image text-gray-50 relative flex flex-col items-center text-center pt-20 bg-gray-100">
           <div className="flex flex-col mb-4 md:flex-row md:mb-0 z-10">
             <div className="mx-2 mt-0 p-4 bg-transparent">
-              <h2 className="text-3xl font-sans font-light ">Why
+              <h2 className="text-3xl font-sans font-light ">Why{" "}
                 <span className="font-bold">Call us</span>
               </h2>
               <p className="mt-10 m-auto leading-snug py-4 px-4 text-xl font-normal">There are a lot
@@ -251,7 +212,7 @@ export default function Home() {
             <h2 className="text-3xl font-sans font-light "><span className="font-bold">Services</span> we offer</h2>
             <p className="max-w-xl leading-relaxed m-auto text-gray-600 py-4 px-4 text-xl tracking-wider font-normal">
               Every client is unique. We know this. That's why our
-              services can be customized to work for
+              services can be customized to work for{" "}
               <span className="underline">you</span>.
             </p>
             <p className="leading-relaxed  m-auto text-gray-600 py-4 px-4 text-xl tracking-wider font-normal">Ask us about them.
@@ -267,9 +228,9 @@ export default function Home() {
                 <h3 className="card-title">Standard <br />Cleaning</h3>
                 <p className="small-desc">Our standard commercial cleaning service. Can be scheduled as a daily, weekly,
                   or monthly service. </p>
-                <a className="service-link flex justify-end gap-2 inline py-2 px-3 font-semibold mt-6"
-                  href="services/standard-cleaning.html">Standard Clean<Image width={40} height={40} className="w-5" src="/read-more.svg"
-                    alt="" /></a>
+                <Link className="service-link flex justify-end gap-2 inline py-2 px-3 font-semibold mt-6"
+                  href="services/standard-cleaning">Standard Clean<Image width={40} height={40} className="w-5" src="/read-more.svg"
+                    alt="" /></Link>
               </div>
               {/*Service*/}
               <div className="hidden-element card deep_clean_image">
@@ -279,8 +240,8 @@ export default function Home() {
                 <h3 className="card-title">Deep <br />Cleaning</h3>
                 <p className="small-desc">Our standard commercial cleaning service. Can be scheduled as a daily, weekly,
                   or monthly service. </p>
-                <a className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
-                  href="services/deep-cleaning.html">Deep Cleaning <Image width={40} height={40} className="w-5" src="/read-more.svg" alt="" /></a>
+                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                  href="services/deep-cleaning">Deep Cleaning <Image width={40} height={40} className="w-5" src="/read-more.svg" alt="" /></Link>
               </div>
               {/*Service*/}
               <div className="hidden-element card disinfecting_image">
@@ -290,9 +251,9 @@ export default function Home() {
                 <h3 className="card-title">Disinfecting <br />Services</h3>
                 <p className="small-desc"> Our disinfecting service deeply cleans areas of your facility that may be
                   contaminated to prevent outbreaks.</p>
-                <a className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
-                  href="services/disinfecting-services.html">Disinfecting Service<Image width={40} height={40} className="w-5" src="/read-more.svg"
-                    alt="" /></a>
+                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                  href="services/disinfecting-services">Disinfecting Service<Image width={40} height={40} className="w-5" src="/read-more.svg"
+                    alt="" /></Link>
               </div>
               {/*Service*/}
               <div className="hidden-element card carpet_cleaning_image">
@@ -302,9 +263,9 @@ export default function Home() {
                 <h3 className="card-title">Carpet <br />Cleaning</h3>
                 <p className="small-desc">We understand that you need more than the average commercial carpet cleaning
                   service.</p>
-                <a className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
-                  href="services/carpet-cleaning.html">Carpet Cleaning <Image width={40} height={40} className="w-5" src="/read-more.svg"
-                    alt="" /></a>
+                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                  href="services/carpet-cleaning">Carpet Cleaning <Image width={40} height={40} className="w-5" src="/read-more.svg"
+                    alt="" /></Link>
               </div>
               {/*Service*/}
               <div className="hidden-element card washroom_cleaning_image">
@@ -314,9 +275,9 @@ export default function Home() {
                 <h3 className="card-title">Washroom Services and Consumables</h3>
                 <p className="small-desc">Sustaining a spotless, hygienic washroom facility is essential for every
                   organization.</p>
-                <a className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
-                  href="services/washroom-cleaning-and-consumables.html">Washroom and Consumables <Image width={40} height={40} className="w-5"
-                    src="/read-more.svg" alt="" /></a>
+                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                  href="services/washroom-cleaning-and-consumables">Washroom and Consumables <Image width={40} height={40} className="w-5"
+                    src="/read-more.svg" alt="" /></Link>
               </div>
               {/*Service*/}
               <div className="hidden-element card janitorial_services_image">
@@ -326,9 +287,9 @@ export default function Home() {
                 <h3 className="card-title">Janitorial<br /> Services</h3>
                 <p className="small-desc">Sustaining a spotless, hygienic washroom facility is essential for every
                   organization.</p>
-                <a className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
-                  href="services/janitorial-services.html">Janitorial Services <Image width={40} height={40} className="w-5" src="/read-more.svg"
-                    alt="" /></a>
+                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                  href="services/janitorial-services">Janitorial Services <Image width={40} height={40} className="w-5" src="/read-more.svg"
+                    alt="" /></Link>
               </div>
             </div>
           </div>
@@ -346,7 +307,7 @@ export default function Home() {
                 reliability and positive business drive.<span className="font-bold">”</span></p>
               <div className="flex flex-col items-center pb-6 bg-transparent">
                 {/* <Image width={40} height={40} className="rounded-full w-24 border-4 -mt-12 border-white shadow-inner"
-            src="../images/Testimonials/smiling_man.png" alt=""/> */}
+            src="/Testimonials/smiling_man.png" alt=""/> */}
                 <span className="text-sm font-bold mt-2 tracking-wider text-gray-600">Alex Emmanuel</span>
                 <span className="text-sm text-gray-500">VSF CONSULTING INC</span>
               </div>
@@ -365,7 +326,7 @@ export default function Home() {
               <span className="text-base block italic tracking-widest text-center text-blue-100">A free, no obligation
                 quote</span>
             </p>
-            <form action="success.html" className="quote-form py-3 mt-8 sm:w-1/2" name="quote" data-netlify="true"
+            <form action="success" className="quote-form py-3 mt-8 sm:w-1/2" name="quote" data-netlify="true"
               autoComplete="off" netlify-honeypot="bot-field">
               <p className="hidden">
                 <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
@@ -404,9 +365,9 @@ export default function Home() {
                     Take a look at all the locations we cover.
                   </p>
                 </div>
-                {/* <a className="text-2xl py-4 px-8 my-10 text-white bg-green-600 hover:shadow-xl text-center no-underline 
+                {/* <Link className="text-2xl py-4 px-8 my-10 text-white bg-green-600 hover:shadow-xl text-center no-underline 
               uppercase border-2 border-green-600 hover:bg-green-500 hover:border-green-500 self-center cursor-pointer"
-            href="contact.html">Book Now</a> */}
+            href="contact">Book Now</Link> */}
               </div>
             </div>
           </div>
@@ -414,27 +375,11 @@ export default function Home() {
           <div className="flex flex-col lg:w-1/2 bg-white p-6 bg-gradient-to-br from-gray-100 to-gray-300 py-20 px-10">
             <p className="max-w-2xl leading-relaxed text-gray-600 pb-10 text-xl tracking-wider font-semibold text-center">
               Not sure about our coverage area?
-              <a className="text-blue-600 border-b-4 border-blue-600 hover:text-green-500 hover:border-green-500"
-                href="contact.html#contact-us">Call us</a>. <br />Our
+              <Link className="text-blue-600 border-b-4 border-blue-600 hover:text-green-500 hover:border-green-500"
+                href="contact#contact-us">Call us</Link>. <br />Our
               customer service team can help.
             </p>
-            <div className="grid grid-cols-2 lg:grid-cols-3 gap-4 content-around">
-              <div className="hidden-element location">Acton</div>
-              <div className="hidden-element location">Burlington</div>
-              <div className="hidden-element location">Caledon</div>
-              <div className="hidden-element location">Halton Hills</div>
-              <div className="hidden-element location">Brampton</div>
-              <div className="hidden-element location">Oakville</div>
-              <div className="hidden-element location">Milton</div>
-              <div className="hidden-element location">Vaughn</div>
-              <div className="hidden-element location">Markham</div>
-              <div className="hidden-element location">Richmond Hill</div>
-              <div className="hidden-element location">Mississauga</div>
-              <div className="hidden-element location">Bolton</div>
-              <div className="hidden-element location">George Town</div>
-              <div className="hidden-element location">Newmarket</div>
-              <div className="hidden-element location">Etobicoke</div>
-            </div>
+            <IndexLocationsList />
           </div>
         </section>
 
@@ -443,3 +388,4 @@ export default function Home() {
     </>
   )
 }
+
