@@ -60,7 +60,7 @@ const Facilities = () => {
             <ul
               className="facilities grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 font-semibold gap-y-5 gap-x-3 lg:px-10 text-blue-800 lg:mt-20">
               <li className="facility-list-item">
-                <Link className="facility-list-link" href="office-buildings-cleaning">
+                <Link className="facility-list-link" href="/facilities/office-buildings-cleaning">
                   <span>
                     <Image width={500} height={500} className="w-10" src="/office-building.svg" alt="" />
                   </span>
@@ -68,7 +68,7 @@ const Facilities = () => {
                 </Link>
               </li>
               <li className="facility-list-item">
-                <Link className="facility-list-link" href="retail-stores-cleaning">
+                <Link className="facility-list-link" href="/facilities/retail-stores-cleaning">
                   <span>
                     <Image width={500} height={500} className="w-10" src="/supermarket.svg" alt="" />
                   </span>
@@ -76,7 +76,7 @@ const Facilities = () => {
                 </Link>
               </li>
               <li className="facility-list-item">
-                <Link className="facility-list-link" href="day-care-cleaning">
+                <Link className="facility-list-link" href="/facilities/day-care-cleaning">
                   <span>
                     <Image width={500} height={500} className="w-10" src="/day-care-center.svg" alt="" />
                   </span>
@@ -84,7 +84,7 @@ const Facilities = () => {
                 </Link>
               </li>
               <li className="facility-list-item">
-                <Link className="facility-list-link" href="school-cleaning">
+                <Link className="facility-list-link" href="/facilities/school-cleaning">
                   <span>
                     <Image width={500} height={500} className="w-10" src="/university.svg" alt="" />
                   </span>
@@ -92,7 +92,7 @@ const Facilities = () => {
                 </Link>
               </li>
               <li className="facility-list-item">
-                <Link className="facility-list-link" href="medical-office-cleaning">
+                <Link className="facility-list-link" href="/facilities/medical-office-cleaning">
                   <span>
                     <Image width={500} height={500} className="w-10" src="/hospital.svg" alt="" />
                   </span>
@@ -100,7 +100,7 @@ const Facilities = () => {
                 </Link>
               </li>
               <li className="facility-list-item">
-                <Link className="facility-list-link" href="hotel-cleaning">
+                <Link className="facility-list-link" href="/facilities/hotel-cleaning">
                   <span>
                     <Image width={500} height={500} className="w-10" src="/hotel.svg" alt="" />
                   </span>
@@ -108,7 +108,7 @@ const Facilities = () => {
                 </Link>
               </li>
               <li className="facility-list-item">
-                <Link className="facility-list-link" href="recreational-facilities-cleaning">
+                <Link className="facility-list-link" href="/facilities/recreational-facilities-cleaning">
                   <span>
                     <Image width={500} height={500} className="w-10" src="/gym.svg" alt="" />
                   </span>
@@ -116,7 +116,7 @@ const Facilities = () => {
                 </Link>
               </li>
               <li className="facility-list-item">
-                <Link className="facility-list-link" href="post-construction-cleaning">
+                <Link className="facility-list-link" href="/facilities/post-construction-cleaning">
                   <span>
                     <Image width={500} height={500} className="w-10" src="/construction.svg" alt="" />
                   </span>
