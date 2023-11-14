@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Link from "next/link";
 
 const Quote = () => {
   return (
@@ -30,7 +31,7 @@ const Quote = () => {
             </h2>
             <p className="text-gray-700 font-sans text-xl font-semibold mt-4 lg:w-1/2 italic">
               or do you have a{" "}
-              <Link className="text-blue-500 underline" href="contact">
+              <Link className="text-blue-500 underline" href="/contact">
                 question
               </Link>
               ?
