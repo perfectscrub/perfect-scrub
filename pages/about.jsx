@@ -27,7 +27,7 @@ const About = () => {
             width={254}
             height={526}
             className="lg:absolute lg:-bottom-20 left-20 z-20 mx-auto"
-            src="about-us-image.png"
+            src="./about-us-image.png"
             alt=""
           />
           {/* Monogram Overlay */}
