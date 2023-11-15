@@ -31,14 +31,14 @@ export default function Home() {
             </h1>
             <ul className="ml-1 mb-10">
               <li className="text-sm text-blue-800 font-semibold mt-12 ml-1 mr-2 mb-4 leading-relaxed text-left flex">
-                <Image width={50} height={50} className="" src="/green-list-marker.png" alt="" /> Quality you can trust.
+                <Image width={25} height={25} className="mr-2" src="/green-list-marker.png" alt="" /> Quality you can trust.
               </li>
               <li className="text-sm text-blue-800 font-semibold mt-2 ml-1 mr-2 mb-4 leading-relaxed text-left flex">
-                <Image width={50} height={50} className="" src="/green-list-marker.png" alt="" /> Customizable pricing to meet your needs.
+                <Image width={25} height={25} className="mr-2" src="/green-list-marker.png" alt="" /> Customizable pricing to meet your needs.
               </li>
               <li
                 className="text-sm text-blue-800 font-semibold mt-2 ml-1 mr-2 mb-0 leading-relaxed text-left flex items-start">
-                <Image width={50} height={50} className="" src="/green-list-marker.png" alt="" />Take care of business and leave clean up to
+                <Image width={25} height={25} className="mr-2" src="/green-list-marker.png" alt="" />Take care of business and leave clean up to
                 us.
               </li>
             </ul>
