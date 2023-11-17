@@ -640,7 +640,7 @@ form textarea::placeholder {
 }
 /* Navigation Dropdown */
 #nav_content{
-  height: 75vh;
+  max-height: 75vh;
   overflow-y: scroll;
 }
 
@@ -663,6 +663,10 @@ form textarea::placeholder {
 }
 
 @media (min-width: 1024px){  
+  #nav_content{
+    overflow-y:unset;
+  }
+  
   .dropdown {
     @apply relative inline-block z-10;
   }
