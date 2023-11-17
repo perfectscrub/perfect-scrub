@@ -639,10 +639,14 @@ form textarea::placeholder {
   }
 }
 /* Navigation Dropdown */
+#nav_content{
+  height: 75vh;
+  overflow-y: scroll;
+}
+
 .dropdown-content {
   text-align: left;
   margin: 0 0 0 0.8rem;
-  overflow-y: scroll;
   @apply capitalize tracking-wider top-16 -left-16;
 }
 
