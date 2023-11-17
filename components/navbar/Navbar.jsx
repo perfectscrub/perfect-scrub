@@ -1,8 +1,21 @@
+import { useState } from "react";
+
 import Image from "next/image";
 import Link from "next/link";
 import { services } from "@/data";
 
 const Navbar = () => {
+  const [toggleNav, setToggleNav] = useState(false);
+  const [toggleChevron1, setToggleChevron1] = useState(false);
+  const [toggleChevron2, setToggleChevron2] = useState(false);
+
+  const handleNavMenuClick = (option) => {
+    if (option === "nav") setToggleNav((prevState) => !prevState);
+    else if (option === "chevron1")
+      setToggleChevron1((prevState) => !prevState);
+    else setToggleChevron2((prevState) => !prevState);
+  };
+
   return (
     <header
       role="banner"
@@ -41,13 +54,20 @@ const Navbar = () => {
           </Link>
         </div>
         <div className="inline-block h-8 mt-3 mb-2 mr-5 lg:hidden">
-          <button id="nav_toggle" title="menu button" className="h-full w-full">
-            <Image width={40} height={40} src={"/hamburger.svg"} alt=""/>
+          <button
+            id="nav_toggle"
+            title="menu button"
+            className="h-full w-full"
+            onClick={() => handleNavMenuClick("nav")}
+          >
+            <Image width={40} height={40} src={"/hamburger.svg"} alt="" />
           </button>
         </div>
         <div
           id="nav_content"
-          className="w-full hidden py-8 mr-3 lg:flex lg:w-auto lg:py-0 lg:items-center"
+          className={`${
+            toggleNav ? "" : "hidden"
+          } w-full py-8 mr-3 lg:flex lg:w-auto lg:py-0 lg:items-center`}
         >
           <ul className="flex flex-col ml-auto tracking-wider font-medium text-sm text-blue-200 lg:flex-row">
             <li className="dropdown pb-5 ml-3 lg:py-8 lg:px-6">
@@ -55,18 +75,23 @@ const Navbar = () => {
                 <Link className="hover:text-green-300" href="/services">
                   SERVICES
                 </Link>
-                <span id="chevron1" className="w-1/3 mt-1 flex justify-end">
+                <span
+                  id="chevron1"
+                  className="w-1/3 mt-1 flex justify-end"
+                  onClick={() => handleNavMenuClick("chevron1")}
+                >
                   <svg width="14" height="10" fill="#bfdbfe">
                     <polygon points="0,0 10,0 5,8" />
                   </svg>
                 </span>
               </span>
-              <ul id="dropdown1" className="dropdown-content hidden">
+              <ul
+                id="dropdown1"
+                className={`dropdown-content ${toggleChevron1 ? "" : "hidden"}`}
+              >
                 {services.map(({ title, href }, i) => (
                   <li key={i} className="dropdown-content-list-item">
-                    <Link href={href}>
-                      {title}
-                    </Link>
+                    <Link href={href}>{title}</Link>
                   </li>
                 ))}
               </ul>
@@ -88,13 +113,20 @@ const Navbar = () => {
                 <Link className="hover:text-green-300" href="/facilities">
                   FACILITIES
                 </Link>
-                <span id="chevron2" className="w-1/3 mt-1 flex justify-end">
+                <span
+                  id="chevron2"
+                  className="w-1/3 mt-1 flex justify-end"
+                  onClick={() => handleNavMenuClick("chevron2")}
+                >
                   <svg width="14" height="10" fill="#bfdbfe">
                     <polygon points="0,0 10,0 5,8" />
                   </svg>
                 </span>
               </span>
-              <ul id="dropdown2" className="dropdown-content hidden">
+              <ul
+                id="dropdown2"
+                className={`dropdown-content ${toggleChevron2 ? "" : "hidden"}`}
+              >
                 <li className="dropdown-content-list-item">
                   <Link href="/facilities/office-buildings-cleaning">
                     Office buildings
@@ -116,7 +148,7 @@ const Navbar = () => {
                   </Link>
                 </li>
                 <li className="dropdown-content-list-item">
-                  <Link href="/facilities/medical-office-cleaning">
+                  <Link href="/facilities/medical-offices-cleaning">
                     Medical Offices and clinics
                   </Link>
                 </li>
