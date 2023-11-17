@@ -26,7 +26,7 @@ const indexFacilitiesList = [
     },
     {
       title:"Medical Offices and clinics",
-      href:"facilities/medical-office-cleaning",
+      href:"facilities/medical-offices-cleaning",
       imgUrl:"/hospital.svg",
     },
     {
