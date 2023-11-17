@@ -1,3 +1,4 @@
+import LandingSection from "@/components/landing-section/LandingSection";
 import ServicesSideMenu from "@/components/services-side-menu/ServicesSideMenu";
 import Image from "next/image";
 import Link from "next/link";
