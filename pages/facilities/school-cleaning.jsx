@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
+import FacilitiesSideMenu from "@/components/facilities-side-menu/FacilitiesSideMenu";
+import LandingSection from "@/components/landing-section/LandingSection";
 
 const SchoolCleaning = () => {
   return (
@@ -16,25 +18,8 @@ const SchoolCleaning = () => {
       </Head>
       <main role="main">
         {/* Start of 'Facilities' Landing */}
-        <section className="school-bg-image flex">
-          <div className="z-20 self-center md:self-start md:pl-16">
-            <h2 className="text-xs lg:text-base uppercase font-bold mb-2 lg:mb-4 text-gray-100">
-              FACILITIES
-            </h2>
-            <h1 className="font-semibold text-3xl md:text-5xl text-gray-50 mb-8">
-              Schools and <br />
-              Universities
-            </h1>
-          </div>
-          {/* Monogram Overlay */}
-          <Image
-            width={500}
-            height={500}
-            className="absolute max-w-xs z-10 opacity-30 -bottom-5 -left-10 w-3/4"
-            src="/ps-monogram-white.svg"
-            alt=""
-          />
-        </section>
+        <LandingSection bgImg={"school-bg-image"} type={"facilities"} title={"Schools & Universities"} />
+        
 
         {/* Start Information section*/}
         <section className="px-4 lg:px-16 pt-24 pb-0 lg:pt-40 lg:pb-10 flex gap-14">
@@ -77,45 +62,9 @@ const SchoolCleaning = () => {
               and safe learning environment.
             </p>
           </article>
-          <aside className="hidden lg:block">
-            <h3 className="font-sans text-2xl mb-4">
-              Other <span className="font-bold">Facilities</span> we service:
-            </h3>
-            <ul className="pl-3 text-lg">
-              <li className="py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600">
-                <Link href="office-buildings-cleaning">Office Buildings</Link>
-              </li>
-              <li className="py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600">
-                <Link href="retail-stores-cleaning">
-                  Retail stores and shopping centers
-                </Link>
-              </li>
-              <li className="py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600">
-                <Link href="day-care-cleaning">Day Care and Preschool</Link>
-              </li>
-              <li className="active-side-menu py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600">
-                <Link href="school-cleaning">Schools and universities</Link>
-              </li>
-              <li className="py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600">
-                <Link href="medical-office-cleaning">
-                  Medical Offices and clinics
-                </Link>
-              </li>
-              <li className="py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600">
-                <Link href="hotel-cleaning">Hotels and resorts</Link>
-              </li>
-              <li className="py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600">
-                <Link href="recreational-facilities-cleaning">
-                  Sports and recreational facilities
-                </Link>
-              </li>
-              <li className="py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600">
-                <Link href="post-construction-cleaning">
-                  Post Construction Clean up
-                </Link>
-              </li>
-            </ul>
-          </aside>
+
+          {/* Side Menu */}
+          <FacilitiesSideMenu />
         </section>
 
         {/* Start of Small Steps */}
