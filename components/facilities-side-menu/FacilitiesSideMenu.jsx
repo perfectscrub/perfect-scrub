@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
-import { services } from "@/data";
+import { facilities } from "@/data";
 
 const FacilitiesSideMenu = () => {
-  //update active index in state, cause re-render
-  const [activeIndex, setActiveIndex] = useState(0);
-
+  const router = useRouter();
   const handeClick = (i) => {
     console.log("i: ", i);
     setActiveIndex(i);
@@ -17,32 +15,32 @@ const FacilitiesSideMenu = () => {
         Other <span className="font-bold">Facilities</span> we service:
       </h3>
       <ul className="pl-3 text-lg">
-        {facilities.map(({ title, href }, i) => (
-          <li
-            key={i}
-            className={`${
-              i == 1 ? "active" : ""
-            } py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600`}
-            // onClick={()=>handeClick(id)}
-          >
-            <Link href={href} className={`${i == 1 ? "active" : ""}`}>
-              {title}
-            </Link>
-          </li>
-        ))}
+        {facilities.map(({ title, href }, i) => {
+          if (router.pathname.includes(href)) {
+            return (
+              <li
+                key={i}
+                className="active-side-menu py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600"
+              >
+                <Link href={href}>{title}</Link>
+              </li>
+            );
+          }
+          return (
+            <li
+              key={i}
+              className="py-2 pr-1 border-b hover:text-blue-600 hover:border-blue-600"
+            >
+              <Link href={href} className={`${i == 1 ? "active" : ""}`}>
+                {title}
+              </Link>
+            </li>
+          );
+        })}
       </ul>
     </aside>
   );
 };
 
-const facilities = [
-  { href: "office-buildings-cleaning", title: "Office Buildings" },
-  { href: "retail-stores-cleaning", title: "Retail & Shopping centers"},
-  { href: "day-care-cleaning", title: "DayCare & Preschool" },
-  { href: "school-cleaning", title: "Schools & Universities" },
-  { href: "medical-office-cleaning", title: "Medical Offices & Clinics" },
-  { href: "hotel-cleaning", title: "Hotels & Resorts" },
-  { href: "recreational-facilities-cleaning", title: "Sports & Recreational Centers"},
-  { href: "post-construction-cleaning", title: "Post Construction Clean" },
-];
+
 export default FacilitiesSideMenu;
