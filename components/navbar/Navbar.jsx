@@ -72,7 +72,7 @@ const Navbar = () => {
           <ul className="flex flex-col ml-auto tracking-wider font-medium text-sm text-blue-200 lg:flex-row">
             <li className="dropdown pb-5 ml-3 lg:py-8 lg:px-6">
               <span className="flex items-center justify-between gap-2">
-                <Link className="hover:text-green-300" href="/services">
+                <Link className="hover:text-green-300" href="/services" onClick={() => handleNavMenuClick("chevron1")}>
                   SERVICES
                 </Link>
                 <span
@@ -110,7 +110,7 @@ const Navbar = () => {
             </li>
             <li className="dropdown pb-5 ml-3 lg:py-8 lg:px-6 ">
               <span className="flex items-center justify-between gap-2">
-                <Link className="hover:text-green-300" href="/facilities">
+                <Link className="hover:text-green-300" href="/facilities" onClick={() => handleNavMenuClick("chevron2")}>
                   FACILITIES
                 </Link>
                 <span
