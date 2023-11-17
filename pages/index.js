@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { Inter } from 'next/font/google';
 import HomeFacilitiesList from "@/components/homeFacilitiesList/HomeFacilitiesList";
 import IndexLocationsList from "@/components/indexLocationsList/IndexLocationsList";
+import SimpleForm from "@/components/simple-form/SimpleForm";
 const inter = Inter({ subsets: ['latin'] })
 
 
@@ -326,29 +327,8 @@ export default function Home() {
               <span className="text-base block italic tracking-widest text-center text-blue-100">A free, no obligation
                 quote</span>
             </p>
-            <form action="success" className="quote-form py-3 mt-8 sm:w-1/2" name="quote" data-netlify="true"
-              autoComplete="off" netlify-honeypot="bot-field">
-              <p className="hidden">
-                <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
-              </p>
-              <div className="flex flex-col lg:flex-row justify-center gap-y-4 lg:gap-x-4">
-                <div className="flex flex-col px-2 lg:w-1/2 gap-y-4 lg:gap-6">
-                  <input className="quote-form-input" type="text" id="name" name="name" required pattern="\S+.*"
-                    placeholder="Name" />
-                  <input className="quote-form-input" type="email" id="email" name="email" required placeholder="Email" />
-                </div>
-                <div className="flex flex-col px-2 lg:w-1/2 gap-y-4 lg:gap-6">
-                  <input className="quote-form-input" type="tel" id="phone" name="phone" required placeholder="Phone" />
-                  <input className="quote-form-btn" type="submit" id="submit-button" value="Get A Quote" />
-                </div>
-              </div>
-              <span id="success"
-                className="hidden absolute -bottom-10 mt-2 px-4 py-2 font-medium border rounded-sm border-green-500 bg-green-100 text-green-600">Thanks!
-                We'll be in touch soon.</span>
-              <span id="error"
-                className="hidden absolute -bottom-10 mt-2 px-4 py-2 font-medium border rounded-sm border-red-500 bg-red-100 text-red-600">Whoops...
-                Something went wrong.</span>
-            </form>
+            <SimpleForm />
+            
           </div>
         </section>
 
@@ -388,4 +368,3 @@ export default function Home() {
     </>
   )
 }
-
