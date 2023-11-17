@@ -20,3 +20,11 @@ export const facilities = [
     },
     { href: "post-construction-cleaning", title: "Post Construction Clean" },
   ];
+
+  export const footerCompanyLinks = [
+    { href: "/", title: "Home" },
+    { href: "/blog", title: "Blog" },
+    { href: "/about", title: "About" },
+    { href: "/contact", title: "Contact" },
+    { href: "/quote", title: "Get a quote" },
+  ];
