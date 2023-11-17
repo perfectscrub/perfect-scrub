@@ -6,3 +6,17 @@ export const services = [
    { id:4, href:"/services/carpet-cleaning", title:"Carpet Cleaning"},
    {id:5, href:"/services/washroom-cleaning-and-consumables", title:"Washroom & Consumables" }
 ];
+
+export const facilities = [
+    { href: "office-buildings-cleaning", title: "Office Buildings" },
+    { href: "retail-stores-cleaning", title: "Retail & Shopping centers" },
+    { href: "day-care-cleaning", title: "DayCare & Preschool" },
+    { href: "school-cleaning", title: "Schools & Universities" },
+    { href: "medical-offices-cleaning", title: "Medical Offices & Clinics" },
+    { href: "hotel-cleaning", title: "Hotels & Resorts" },
+    {
+      href: "recreational-facilities-cleaning",
+      title: "Sports & Recreational Centers",
+    },
+    { href: "post-construction-cleaning", title: "Post Construction Clean" },
+  ];
