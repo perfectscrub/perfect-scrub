@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
-
-import ServicesAside from "@/components/servicesAside/ServicesAside";
+import LandingSection from "@/components/landing-section/LandingSection";
+import ServicesSideMenu from "@/components/services-side-menu/ServicesSideMenu";
 
 const WashroomCleaningAndConsumables = () => {
   return (
@@ -18,25 +18,7 @@ const WashroomCleaningAndConsumables = () => {
       </Head>
       <main role="main">
         {/* Start of 'Services' Landing */}
-        <section className="washroom-bg-image flex">
-          <div className="z-20 self-center md:self-start md:pl-16">
-            <h2 className="text-xs lg:text-base uppercase font-bold mb-2 lg:mb-4 text-gray-100">
-              SERVICES
-            </h2>
-            <h1 className="font-semibold text-3xl lg:text-5xl text-gray-50 mb-8">
-              Washroom services <br />
-              and Consumables
-            </h1>
-          </div>
-          {/* Monogram Overlay */}
-          <Image
-            width={500}
-            height={500}
-            className="absolute max-w-xs z-10 opacity-30 -bottom-5 -left-10 w-3/4"
-            src="/ps-monogram-white.svg"
-            alt=""
-          />
-        </section>
+        <LandingSection bgImg={"washroom-bg-image"} type={"SERVICES"}  title={"Washroom services \nand Consumables"} />
 
         {/* Start Information section*/}
         <section className="px-4 lg:px-16 pt-24 pb-0 lg:pt-40 lg:pb-10 flex gap-14">
@@ -68,7 +50,7 @@ const WashroomCleaningAndConsumables = () => {
               visitors and staff.
             </p>
           </article>
-          <ServicesAside />
+          <ServicesSideMenu />
         </section>
 
         {/* Start of Small Steps */}
