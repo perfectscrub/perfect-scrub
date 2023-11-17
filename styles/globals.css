@@ -642,6 +642,7 @@ form textarea::placeholder {
 .dropdown-content {
   text-align: left;
   margin: 0 0 0 0.8rem;
+  overflow-y: scroll;
   @apply capitalize tracking-wider top-16 -left-16;
 }
 
