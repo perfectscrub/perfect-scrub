@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Head from 'next/head';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -5,10 +6,21 @@ import { Inter } from 'next/font/google';
 import HomeFacilitiesList from "@/components/homeFacilitiesList/HomeFacilitiesList";
 import IndexLocationsList from "@/components/indexLocationsList/IndexLocationsList";
 import SimpleForm from "@/components/simple-form/SimpleForm";
+import setObserver from "@/utils/observer.util";
+
 const inter = Inter({ subsets: ['latin'] })
 
 
 export default function Home() {
+
+  useEffect(() => {
+    const observer = setObserver();
+    const hiddenElements = document.querySelectorAll(".hidden-element");
+    hiddenElements.forEach(el => observer.observe(el));
+
+    return ()=> (hiddenElements.forEach(el => observer.unobserve(el)))
+  }, [])
+  
   return (
     <>
       <Head>
@@ -328,7 +340,7 @@ export default function Home() {
                 quote</span>
             </p>
             <SimpleForm />
-            
+
           </div>
         </section>
 
@@ -354,7 +366,7 @@ export default function Home() {
 
           <div className="flex flex-col lg:w-1/2 bg-white p-6 bg-gradient-to-br from-gray-100 to-gray-300 py-20 px-10">
             <p className="max-w-2xl leading-relaxed text-gray-600 pb-10 text-xl tracking-wider font-semibold text-center">
-              Not sure about our coverage area?
+              Not sure about our coverage area?{" "}
               <Link className="text-blue-600 border-b-4 border-blue-600 hover:text-green-500 hover:border-green-500"
                 href="contact#contact-us">Call us</Link>. <br />Our
               customer service team can help.
