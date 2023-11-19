@@ -20,6 +20,21 @@
   /* #endregion */
 
   /* #region Background  */
+
+
+  body::-webkit-scrollbar {
+    width: 16px; 
+   }
+   
+   body::-webkit-scrollbar-track {
+     background: #b0cee9;
+   }
+   
+   body::-webkit-scrollbar-thumb {
+     border-radius: 6px;
+     background: linear-gradient(128deg, #12b01c 25%, #56e45f 55%, #12b01c);
+   }
+
   .hero__container {
     background: linear-gradient(#00000000, #00000000), url(/hero-office-interior.jpg);
     @apply bg-cover bg-right;
@@ -290,11 +305,11 @@
   /* #endregion */
 
   /* #region Header underline for big section titles (excludes "Trusted By" and "Get Started"titles) */
-  h2.thick_underline::after {
+  /* h2.thick_underline::after {
     content: '';
-    bottom: -0.75em;
-    @apply absolute border-2 mt-3 w-1/2 left-1/4 border-gray-700;
-  }
+    bottom: -0.15em;
+    @apply absolute border-2 mt-2 w-1/2 left-1/4 border-gray-700;
+  } */
 
   h2.thick_underline-blue::after {
     content: '';
@@ -632,17 +647,27 @@ form textarea::placeholder {
   transition: all 0.5s ease-out;
   color: #ffffff;
 }
+
+
 @media (min-width: 1024px){
   
   .card:hover:before {
     transform: scale(28);
   }
 }
+
+
 /* Navigation Dropdown */
 #nav_content{
   max-height: 75vh;
   overflow-y: scroll;
 }
+
+#nav_content::-webkit-scrollbar {
+ width: 0px; 
+}
+
+
 
 .dropdown-content {
   text-align: left;
@@ -762,11 +787,11 @@ form textarea::placeholder {
 
 /* Facilities List */
 .facility-list-item {
-  @apply p-3 lg:mx-3 lg:mb-4 hover:text-blue-600;
+  @apply p-3 lg:mx-3 lg:mb-4 hover:text-green-500;
 }
 
 .facility-list-link {
-  @apply flex gap-2 items-center w-60;
+  @apply flex gap-2 items-center w-60 ;
 }
 
 
@@ -783,7 +808,9 @@ form textarea::placeholder {
 @media (min-width: 1024px){
 
   .landing-section {
+    max-height: 700px;
     height: 95vh;
+
   }
 }
 
