@@ -27,7 +27,8 @@ module.exports = {
         '98': '392px',
         '99': '396px',
         '100': '400px',
-        mc: "max-content",
+        '200': '800px',
+        '300': '1200px'
       },
       height: {
         '97': '388px',
