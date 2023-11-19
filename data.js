@@ -8,17 +8,14 @@ export const services = [
 ];
 
 export const facilities = [
-    { href: "office-buildings-cleaning", title: "Office Buildings" },
-    { href: "retail-stores-cleaning", title: "Retail & Shopping centers" },
-    { href: "day-care-cleaning", title: "DayCare & Preschool" },
-    { href: "school-cleaning", title: "Schools & Universities" },
-    { href: "medical-offices-cleaning", title: "Medical Offices & Clinics" },
-    { href: "hotel-cleaning", title: "Hotels & Resorts" },
-    {
-      href: "recreational-facilities-cleaning",
-      title: "Sports & Recreational Centers",
-    },
-    { href: "post-construction-cleaning", title: "Post Construction Clean" },
+    { href: "/facilities/office-buildings-cleaning", title: "Office Buildings" },
+    { href: "/facilities/retail-stores-cleaning", title: "Retail & Shopping centers" },
+    { href: "/facilities/day-care-cleaning", title: "DayCare & Preschool" },
+    { href: "/facilities/school-cleaning", title: "Schools & Universities" },
+    { href: "/facilities/medical-offices-cleaning", title: "Medical Offices & Clinics" },
+    { href: "/facilities/hotel-cleaning", title: "Hotels & Resorts" },
+    { href: "/facilities/recreational-facilities-cleaning", title: "Sports & Recreational Centers" },
+    { href: "/facilities/post-construction-cleaning", title: "Post Construction Clean" },
   ];
 
   export const footerCompanyLinks = [
