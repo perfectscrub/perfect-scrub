@@ -1,6 +1,14 @@
-import React from 'react'
+import { useState } from 'react'
+import { submitHandler } from "@/utils/form";
 
 const SimpleForm = () => {
+
+
+
+  const handleFormSubmit = (e) => {
+    submitHandler(e);
+  }
+
   return (
     <form
             action="success"
@@ -9,6 +17,7 @@ const SimpleForm = () => {
             data-netlify="true"
             autoComplete="off"
             netlify-honeypot="bot-field"
+            onSubmit={handleFormSubmit}
           >
             <p className="hidden">
               <label>
@@ -59,4 +68,4 @@ const SimpleForm = () => {
   )
 }
 
-export default SimpleForm
+export default SimpleForm;
