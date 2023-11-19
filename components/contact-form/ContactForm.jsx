@@ -23,7 +23,7 @@ const ContactForm = () => {
               action="success"
               name="contact"
               data-netlify="true"
-              autocomplete="off"
+              autoComplete="off"
               netlify-honeypot="bot-field"
             >
               <p className="hidden">
@@ -41,8 +41,8 @@ const ContactForm = () => {
                     name="name"
                     required
                     pattern="\S+.*"
-                    minlength="1"
-                    maxlength="30"
+                    minLength="1"
+                    maxLength="30"
                     placeholder="the placeholder"
                   />
                   <label htmlFor="name" className="label-name">
@@ -55,8 +55,8 @@ const ContactForm = () => {
                     id="lastname"
                     className="optional-input"
                     name="lastname"
-                    minlength="0"
-                    maxlength="30"
+                    minLength="0"
+                    maxLength="30"
                     title="Please fill a last name. Not required."
                     placeholder="the placeholder"
                   />
@@ -74,8 +74,8 @@ const ContactForm = () => {
                     name="phone"
                     required
                     pattern="^\d{10}$"
-                    minlength="10"
-                    maxlength="10"
+                    minLength="10"
+                    maxLength="10"
                     title="No spaces required"
                     placeholder="the placeholder"
                   />
@@ -104,7 +104,7 @@ const ContactForm = () => {
                   className="optional-input"
                   name="company"
                   pattern="\S*.*"
-                  maxlength="100"
+                  maxLength="100"
                   title="Please fill a company name. Not required."
                   placeholder="the placeholder"
                 />
@@ -113,7 +113,7 @@ const ContactForm = () => {
                 </label>
               </div>
               <div className="mt-4">
-                <label className="font-semibold" for="choose-service">
+                <label className="font-semibold" htmlFor="choose-service">
                   Please choose a service:
                 </label>
                 <div className="select-wrapper mt-2">

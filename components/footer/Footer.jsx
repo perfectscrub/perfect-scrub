@@ -10,9 +10,9 @@ const Footer = () => {
           {/* Logo Image */}
           <Link className="mb-10 ml-0 lg:ml-4" href="/" title="homepage">
             <Image
-              width={160}
-              height={64}
-              className="lg:ml-12"
+              width={188}
+              height={84}
+              className="w-36 h-auto lg:ml-12"
               src="/perfect-scrub-logo.png"
               alt=""
             />
@@ -54,25 +54,25 @@ const Footer = () => {
         </div>
 
         {/* Footer Links */}
-        <div className="flex w-full md:w-2/3 justify-around my-8">
-          <div>
-            <h3 className="text-gray-400 tracking-wider">SERVICES</h3>
-            <ul className="flex flex-col items-start text-sm font-medium text-gray-400 py-2 lg:py-0">
+        <div className="flex flex-col md:flex-row w-full md:w-2/3 justify-between md:justify-around my-8">
+          <div className="mx-4 mb-4">
+            <h3 className="text-gray-400 tracking-wider text-center md:text-left mb-4 text-green-400">SERVICES</h3>
+            <ul className="flex flex-row md:flex-col flex-wrap gap-x-3 items-start text-sm font-medium text-gray-400 py-2 lg:py-0">
               {services.map((service, i) => (
                 <li
                   key={i}
-                  className="mx-1 pb-4 hover:text-gray-300 mb-2 lg:mb-0"
+                  className="mx-1 pb-4 hover:text-gray-300 mb-2 lg:mb-0 hover:text-green-400"
                 >
                   <Link href={service.href}>{service.title}</Link>
                 </li>
               ))}
             </ul>
           </div>
-          <div>
-            <h3 className="text-gray-400 tracking-wider">COMPANY</h3>
-            <ul className="flex flex-col items-start text-sm font-medium text-gray-400 py-2 lg:py-0">
+          <div className="mx-4">
+            <h3 className="text-gray-400 tracking-wider text-center md:text-left mb-4 text-green-400">LINKS</h3>
+            <ul className="flex flex-row md:flex-col flex-wrap gap-x-4 items-start text-sm font-medium text-gray-400 py-2 lg:py-0">
               {footerCompanyLinks.map(({ href, title }) => (
-                <li key={title} className="mx-1 pb-6 hover:text-gray-300 lg:mb-0">
+                <li key={title} className="mx-1 pb-6 hover:text-gray-300 lg:mb-0 hover:text-green-400">
                   <Link href={href}>{title}</Link>
                 </li>
               ))}
