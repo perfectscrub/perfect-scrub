@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import { services } from "@/data";
+import { services, facilities } from "@/data";
 
 const Navbar = () => {
   const [toggleNav, setToggleNav] = useState(false);
@@ -21,21 +21,38 @@ const Navbar = () => {
       role="banner"
       className="fixed w-full z-50 shadow-md px-0 bg-gray-900"
     >
-      <div className="bg-green-500 text-xs text-white p-3 pr-10 flex flex-row items-center justify-center lg:justify-end gap-2">
-        <p className="tracking-wider font-medium">Call us now - </p>
-        <Link
-          className="flex justify-between gap-x-1 items-center"
-          href="tel:6474736478"
-        >
-          <Image
-            width={300}
-            height={300}
-            className="w-2 mt-1"
-            src="/phone-receiver-silhouette.svg"
-            alt=""
-          />
-          <p className="tracking-wider font-medium">647-473-6478</p>
-        </Link>
+      <div className="bg-green-500 text-sm text-white p-3 pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10">
+        <div className="">
+          <Link
+            className="flex justify-between gap-x-2 items-center"
+            href="/quote"
+          >
+            <p className="tracking-wider font-medium">Get a free quote</p>
+            {/* <Image
+              width={300}
+              height={300}
+              className="w-4 mt-1"
+              src="/quote.svg"
+              alt=""
+            /> */}
+          </Link>
+        </div>
+        <div className="">
+          <Link
+            className="flex justify-between gap-x-1 items-center"
+            href="tel:6474736478"
+          >
+          <p className="tracking-wider font-medium hidden md:block">Call us now - </p>
+            <Image
+              width={300}
+              height={300}
+              className="w-3 mt-1"
+              src="/phone-receiver-silhouette.svg"
+              alt=""
+            />
+            <p className="tracking-wider font-medium">647-473-6478</p>
+          </Link>
+        </div>
       </div>
       <nav
         className="max-w-screen-2xl flex flex-row flex-wrap justify-between my-1 ml-auto mr-auto "
@@ -45,9 +62,9 @@ const Navbar = () => {
         <div className="flex items-center ml-5 lg:ml-30">
           <Link href="/" title="perfect scrub">
             <Image
-              width={120}
-              height={48}
-              className="my-2"
+              width={188}
+              height={84}
+              className="my-2 w-28 h-auto"
               src="/perfect-scrub-logo.png"
               alt=""
             />
@@ -72,7 +89,11 @@ const Navbar = () => {
           <ul className="flex flex-col ml-auto tracking-wider font-medium text-sm text-blue-200 lg:flex-row">
             <li className="dropdown pb-5 ml-3 lg:py-8 lg:px-6">
               <span className="flex items-center justify-between gap-2">
-                <Link className="hover:text-green-300" href="/services" onClick={() => handleNavMenuClick("chevron1")}>
+                <Link
+                  className="hover:text-green-300"
+                  href="/services"
+                  onClick={() => handleNavMenuClick("nav")}
+                >
                   SERVICES
                 </Link>
                 <span
@@ -90,7 +111,11 @@ const Navbar = () => {
                 className={`dropdown-content ${toggleChevron1 ? "" : "hidden"}`}
               >
                 {services.map(({ title, href }, i) => (
-                  <li key={i} className="dropdown-content-list-item">
+                  <li
+                    key={i}
+                    className="dropdown-content-list-item"
+                    onClick={() => handleNavMenuClick("nav")}
+                  >
                     <Link href={href}>{title}</Link>
                   </li>
                 ))}
@@ -98,19 +123,23 @@ const Navbar = () => {
             </li>
 
             <li className="pb-5 ml-3 lg:py-8 lg:px-6">
-              <Link className="hover:text-green-300" href="/blog">
+              <Link className="hover:text-green-300" href="/blog" onClick={() => handleNavMenuClick("nav")}>
                 BLOG
               </Link>
             </li>
 
             <li className="pb-5 ml-3 lg:py-8 lg:px-6">
-              <Link className="hover:text-green-300" href="/about">
+              <Link className="hover:text-green-300" href="/about" onClick={() => handleNavMenuClick("nav")}>
                 ABOUT
               </Link>
             </li>
             <li className="dropdown pb-5 ml-3 lg:py-8 lg:px-6 ">
               <span className="flex items-center justify-between gap-2">
-                <Link className="hover:text-green-300" href="/facilities" onClick={() => handleNavMenuClick("chevron2")}>
+                <Link
+                  className="hover:text-green-300"
+                  href="/facilities"
+                  onClick={() => handleNavMenuClick("nav")}
+                >
                   FACILITIES
                 </Link>
                 <span
@@ -127,46 +156,15 @@ const Navbar = () => {
                 id="dropdown2"
                 className={`dropdown-content ${toggleChevron2 ? "" : "hidden"}`}
               >
-                <li className="dropdown-content-list-item">
-                  <Link href="/facilities/office-buildings-cleaning">
-                    Office buildings
-                  </Link>
-                </li>
-                <li className="dropdown-content-list-item">
-                  <Link href="/facilities/retail-stores-cleaning">
-                    Retail stores and shopping centers
-                  </Link>
-                </li>
-                <li className="dropdown-content-list-item">
-                  <Link href="/facilities/day-care-cleaning">
-                    Day Care and Preschool
-                  </Link>
-                </li>
-                <li className="dropdown-content-list-item">
-                  <Link href="/facilities/school-cleaning">
-                    Schools and universities
-                  </Link>
-                </li>
-                <li className="dropdown-content-list-item">
-                  <Link href="/facilities/medical-offices-cleaning">
-                    Medical Offices and clinics
-                  </Link>
-                </li>
-                <li className="dropdown-content-list-item">
-                  <Link href="/facilities/hotel-cleaning">
-                    Hotels and resorts
-                  </Link>
-                </li>
-                <li className="dropdown-content-list-item">
-                  <Link href="/facilities/recreational-facilities-cleaning">
-                    Sports and recreational facilities
-                  </Link>
-                </li>
-                <li className="dropdown-content-list-item">
-                  <Link href="/facilities/post-construction-cleaning">
-                    Post Construction Clean up
-                  </Link>
-                </li>
+                {facilities.map(({ title, href }, i) => (
+                  <li
+                    key={i}
+                    className="dropdown-content-list-item"
+                    onClick={() => handleNavMenuClick("nav")}
+                  >
+                    <Link href={href}>{title}</Link>
+                  </li>
+                ))}
               </ul>
             </li>
           </ul>
