@@ -16,7 +16,7 @@ const About = () => {
         {/* Start of 'About Us' Landing */}
         <section className="landing-section overflow-hidden flex flex-col md:flex-row pt-28 px-4 pl-6 lg:pt-16 lg:pl-32 bg-gradient-to-b from-blue-600 to-blue-900">
           <div className="lg:mt-20 lg:w-1/2">
-            <h1 className="font-semibold text-md uppercase lg:text-2xl text-green-300 mb-8">
+            <h1 className="font-semibold text-md uppercase lg:text-2xl text-green-300 mb-8 mt-4">
               About Us
             </h1>
             <p className="font-semibold lg:w-5/6 text-3xl lg:text-4xl text-gray-50">
@@ -38,12 +38,12 @@ const About = () => {
         </section>
 
         {/* Start of About Us longer description/story */}
-        <section className="flex flex-col items-center pt-16 lg:pt-20 pb-40 px-4">
+        <section className="flex flex-col items-center pt-16 lg:pt-20 pb-40 px-4 gap-4">
           <h2 className="thick_underline tracking-wider text-center font-sans font-light text-3xl lg:text-4xl uppercase text-gray-700">
             A Closer Look At <span className="font-bold">Who We Are</span>
           </h2>
           <div>
-            <p className="max-w-prose pt-24 pb-2 lg:px-0 text-gray-700">
+            <p className="max-w-prose pt-12 pb-2 lg:px-0 text-gray-700">
               Hi there, my name is Bukola, and I am the CEO of Perfect Scrub
               Cleaning.
             </p>
@@ -66,6 +66,14 @@ const About = () => {
               received.
             </p>
           </div>
+          <div className="mt-4">
+            <Image
+              width={600}
+              height={369}
+              src={"/customer-care.jpg"}
+              alt="customer care people"
+            />
+          </div>
           <div>
             <h2 className="text-3xl font-sans font-light mt-12">
               Our <span className="font-bold">Customers Matter </span>to us
@@ -83,6 +91,14 @@ const About = () => {
               cleaning service for all areas, making sure you don’t have to hire
               multiple contractors to get the service you need.
             </p>
+            <div className="mt-6">
+              <Image
+                width={600}
+                height={369}
+                src={"/our-promise.jpg"}
+                alt="group with their thumbs up"
+              />
+            </div>
             <h2 className="text-3xl font-sans font-light mt-12">
               Our <span className="font-bold">Promise</span>
             </h2>
