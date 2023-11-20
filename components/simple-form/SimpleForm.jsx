@@ -1,10 +1,6 @@
-import { useState } from 'react'
+import { submitHandler } from "@/utils/form";
 
 const SimpleForm = () => {
-
-
-
-  
 
   return (
     <form
@@ -14,6 +10,7 @@ const SimpleForm = () => {
             data-netlify="true"
             autoComplete="off"
             netlify-honeypot="bot-field"
+            onSubmit={submitHandler}
           >
             <p className="hidden">
               <label>

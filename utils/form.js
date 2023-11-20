@@ -8,16 +8,15 @@ export function submitHandler(e) {
     // form data sent to Netlify server
     const formData = new FormData(form);
     // const data = Object.fromEntries(formData)
-    // console.log(data);
+    const body = new URLSearchParams(formData).toString()
+    console.log(body)
     fetch('/', {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString()
+        body: body
     })
         .then(handleErrors)
-        .then(() => {
-            form.reset();
-        })
+        
         .catch((error) => {
             console.log(error)
         });
