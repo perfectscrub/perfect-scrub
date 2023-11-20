@@ -6,14 +6,14 @@ const HeroSection = () => {
   return (
     <section className="hero__container pt-20 md:pt-5 h-screen flex items-start justify-start">
       <div className="flex flex-col justify-center items-center lg:gap-y-6 h-full w-full md:w-1/2 lg:w-2/3 py-5 bg-gradient-to-b from-gray-50 via-transparent to-green-50 md:bg-gradient-to-r md:from-white md:to-transparent">
-        <h1 className="text-center text-3xl px-2 pt-12 lg:text-4xl lg:px-20 uppercase text-blue-800 font-semibold tracking-wide">
+        <h1 className="text-center text-3xl px-2 pt-12 lg:mt-10 lg:text-4xl lg:px-10 uppercase text-blue-800 font-semibold tracking-wide italic">
           {/* A<br /> */}
-          <span className="italic">Professional</span>
+          <span className="">Professional</span>
           <br /> 
           <span className="text-green-700"> Clean</span>
           <span className="text-green-700"> every</span>
           <br /> 
-           <span className="text-blue-700"> time</span>
+           <span className=""> time</span>
         </h1>
         <ul className="mx-2 mt-6 mb-6">
 
@@ -33,7 +33,7 @@ const HeroSection = () => {
         <div className="flex flex-col items-center">
           <Link
             className="inline-block uppercase text-center px-5 py-4 text-md lg:px-9 lg:py-4 hover:shadow-2xl mx-2 mb-4 lg:mx-8 bg-blue-600 
-        border border-green-500 text-white hover:bg-blue-400 hover:border-blue-400 focus:ring-4 focus:ring-green-300"
+        border-0 rounded-md border-blue-800 text-white hover:bg-blue-400 hover:border-blue-400 focus:ring-8 focus:ring-blue-300"
             href="/quote"
           >
             Get a Quote
