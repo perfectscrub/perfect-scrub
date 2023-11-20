@@ -57,7 +57,7 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
         </div>
       </div>
       <nav
-        className="max-w-screen-2xl flex flex-row flex-wrap justify-between my-1 ml-auto mr-auto "
+        className="max-w-screen-2xl flex flex-row flex-wrap justify-between pt-1 pb-2 ml-auto mr-auto "
         role="navigation"
       >
         {/* COMPANY LOGO (SVG)  */}
@@ -66,13 +66,13 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
             <Image
               width={188}
               height={84}
-              className="my-2 w-24 h-auto"
+              className="my-0 w-20 h-auto"
               src="/perfect-scrub-logo.png"
               alt=""
             />
           </Link>
         </div>
-        <div className="inline-block h-8 mt-3 mb-2 mr-5 lg:hidden">
+        <div className="inline-block h-8 mt-2 mb-2 mr-5 lg:hidden">
           <button
             id="nav_toggle"
             title="menu button"
