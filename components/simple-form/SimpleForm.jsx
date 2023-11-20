@@ -2,6 +2,14 @@ import { submitHandler } from "@/utils/form";
 
 const SimpleForm = () => {
 
+  const handleFormSubmit = (e)=>{
+    e.preventDefault();
+    const form = e.currentTarget
+    submitHandler(form, "quote");
+    form.reset()
+
+  }
+
   return (
     <form
             action="success"
@@ -10,7 +18,7 @@ const SimpleForm = () => {
             data-netlify="true"
             autoComplete="off"
             netlify-honeypot="bot-field"
-            onSubmit={submitHandler}
+            onSubmit={handleFormSubmit}
           >
             <p className="hidden">
               <label>

@@ -2,11 +2,11 @@
 // Purpose: Submit form data to Netlify server & show status to user
 
 
-export function submitHandler(e) {
-    const form = e.currentTarget;
-    e.preventDefault();
+export function submitHandler(form, formName) {
+    
     // form data sent to Netlify server
     const formData = new FormData(form);
+    formData.append("form-name", formName);
     // const data = Object.fromEntries(formData)
     const body = new URLSearchParams(formData).toString()
     console.log(body)
@@ -15,11 +15,10 @@ export function submitHandler(e) {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         body: body
     })
-        .then(handleErrors)
-        
-        .catch((error) => {
-            console.log(error)
-        });
+    .then(handleErrors)
+    .catch((error) => {
+        console.log(error)
+    });
 };
 
 // Error Handler
