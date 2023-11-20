@@ -40,6 +40,9 @@
     @apply bg-cover bg-right;
     background-position: 68%;
   }
+  .hero__container h1 {
+    line-height: 1.35;
+  }
 
   .about_us-image {
     background: url(/about-us-image.png);
