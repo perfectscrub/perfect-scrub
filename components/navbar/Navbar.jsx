@@ -4,8 +4,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { services, facilities } from "@/data";
 
-const Navbar = () => {
-  const [toggleNav, setToggleNav] = useState(false);
+const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
+  
   const [toggleChevron1, setToggleChevron1] = useState(false);
   const [toggleChevron2, setToggleChevron2] = useState(false);
 
@@ -21,20 +21,22 @@ const Navbar = () => {
       role="banner"
       className="fixed w-full z-50 shadow-md px-0 bg-gray-900"
     >
-      <div className="bg-green-500 text-sm text-white p-3 pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10">
+      <div 
+      onClick={handleNavClose}
+      className="bg-green-500 text-xs md:text-sm text-white p-3 pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10">
         <div className="">
           <Link
             className="flex justify-between gap-x-2 items-center"
             href="/quote"
           >
-            <p className="tracking-wider font-medium">Get a free quote</p>
-            {/* <Image
+            <Image
               width={300}
               height={300}
               className="w-4 mt-1"
               src="/quote.svg"
               alt=""
-            /> */}
+            />
+            <p className="tracking-wider font-medium">Get a free quote</p>
           </Link>
         </div>
         <div className="">
@@ -50,7 +52,7 @@ const Navbar = () => {
               src="/phone-receiver-silhouette.svg"
               alt=""
             />
-            <p className="tracking-wider font-medium">647-473-6478</p>
+            <p className="tracking-wider font-medium">1-647-473-6478</p>
           </Link>
         </div>
       </div>
@@ -60,11 +62,11 @@ const Navbar = () => {
       >
         {/* COMPANY LOGO (SVG)  */}
         <div className="flex items-center ml-5 lg:ml-30">
-          <Link href="/" title="perfect scrub">
+          <Link href="/" title="perfect scrub" onClick={handleNavClose}>
             <Image
               width={188}
               height={84}
-              className="my-2 w-28 h-auto"
+              className="my-2 w-24 h-auto"
               src="/perfect-scrub-logo.png"
               alt=""
             />
@@ -171,6 +173,7 @@ const Navbar = () => {
           <Link
             className="inline-block p-2 ml-3 mr-6 font-medium text-sm border-2 mt-2 lg:mt-0 text-green-400 border-green-400 hover:bg-green-400 hover:text-green-50"
             href="/contact"
+            onClick={() => handleNavMenuClick("nav")}
           >
             GET IN TOUCH
           </Link>

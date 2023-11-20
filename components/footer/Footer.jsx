@@ -2,9 +2,9 @@ import Image from "next/image";
 import Link from "next/link";
 import { services, footerCompanyLinks } from "@/data";
 
-const Footer = () => {
+const Footer = ({handleNavClose}) => {
   return (
-    <footer role="contentinfo" className="py-16 bg-gray-900">
+    <footer role="contentinfo" className="py-16 bg-gray-900" onClick={handleNavClose}>
       <div className="flex flex-col lg:flex-row items-center justify-around mx-auto max-w-screen-2xl">
         <div className="flex flex-col items-center mb-6">
           {/* Logo Image */}
