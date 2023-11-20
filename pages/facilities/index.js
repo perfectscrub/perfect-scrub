@@ -63,7 +63,7 @@ const Facilities = () => {
               <li className="facility-list-item">
                 <Link className="facility-list-link" href="/facilities/office-buildings-cleaning">
                   <span>
-                    <Image width={500} height={500} className="w-10" src="/office-building.svg" alt="" />
+                    <Image width={40} height={40} className="" src="/office-building.svg" alt="" />
                   </span>
                   <span>Office buildings</span>
                 </Link>
@@ -71,7 +71,7 @@ const Facilities = () => {
               <li className="facility-list-item">
                 <Link className="facility-list-link" href="/facilities/retail-stores-cleaning">
                   <span>
-                    <Image width={500} height={500} className="w-10" src="/supermarket.svg" alt="" />
+                    <Image width={40} height={40} className="" src="/supermarket.svg" alt="" />
                   </span>
                   <span>Retail stores and shopping centers</span>
                 </Link>
@@ -79,7 +79,7 @@ const Facilities = () => {
               <li className="facility-list-item">
                 <Link className="facility-list-link" href="/facilities/day-care-cleaning">
                   <span>
-                    <Image width={500} height={500} className="w-10" src="/day-care-center.svg" alt="" />
+                    <Image width={50} height={50} className="w-10 h-auto" src="/day-care-center.svg" alt="" />
                   </span>
                   <span>Day Care and Preschool</span>
                 </Link>
@@ -87,7 +87,7 @@ const Facilities = () => {
               <li className="facility-list-item">
                 <Link className="facility-list-link" href="/facilities/school-cleaning">
                   <span>
-                    <Image width={500} height={500} className="w-10" src="/university.svg" alt="" />
+                    <Image width={50} height={50} className="w-10 h-auto" src="/university.svg" alt="" />
                   </span>
                   <span>Schools and universities</span>
                 </Link>
@@ -95,7 +95,7 @@ const Facilities = () => {
               <li className="facility-list-item">
                 <Link className="facility-list-link" href="/facilities/medical-office-cleaning">
                   <span>
-                    <Image width={500} height={500} className="w-10" src="/hospital.svg" alt="" />
+                    <Image width={50} height={50} className="w-10 h-auto" src="/hospital.svg" alt="" />
                   </span>
                   <span>Medical Offices and clinics</span>
                 </Link>
@@ -103,7 +103,7 @@ const Facilities = () => {
               <li className="facility-list-item">
                 <Link className="facility-list-link" href="/facilities/hotel-cleaning">
                   <span>
-                    <Image width={500} height={500} className="w-10" src="/hotel.svg" alt="" />
+                    <Image width={40} height={40} className="" src="/hotel.svg" alt="" />
                   </span>
                   <span>Hotels and resorts</span>
                 </Link>
@@ -111,7 +111,7 @@ const Facilities = () => {
               <li className="facility-list-item">
                 <Link className="facility-list-link" href="/facilities/recreational-facilities-cleaning">
                   <span>
-                    <Image width={500} height={500} className="w-10" src="/gym.svg" alt="" />
+                    <Image width={50} height={50} className="w-10 h-auto" src="/gym.svg" alt="" />
                   </span>
                   <span>Sports and recreational facilities</span>
                 </Link>
@@ -119,7 +119,7 @@ const Facilities = () => {
               <li className="facility-list-item">
                 <Link className="facility-list-link" href="/facilities/post-construction-cleaning">
                   <span>
-                    <Image width={500} height={500} className="w-10" src="/construction.svg" alt="" />
+                    <Image width={50} height={50} className="w-10 h-auto" src="/construction.svg" alt="" />
                   </span>
                   <span>Post Construction Clean up</span>
                 </Link></li>
