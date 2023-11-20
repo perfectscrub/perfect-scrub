@@ -44,6 +44,7 @@ const ContactForm = () => {
                     minLength="1"
                     maxLength="30"
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="name" className="label-name">
                     <span className="content-name">First Name</span>
@@ -59,6 +60,7 @@ const ContactForm = () => {
                     maxLength="30"
                     title="Please fill a last name. Not required."
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="lastname" className="label-lastname">
                     <span className="content-optional">Last Name</span>
@@ -78,6 +80,7 @@ const ContactForm = () => {
                     maxLength="10"
                     title="No spaces required"
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="phone" className="label-phone">
                     <span className="content-phone">Phone</span>
@@ -91,6 +94,7 @@ const ContactForm = () => {
                     name="email"
                     required
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="email" className="label-email">
                     <span className="content-email">Email</span>
@@ -107,6 +111,7 @@ const ContactForm = () => {
                   maxLength="100"
                   title="Please fill a company name. Not required."
                   placeholder="the placeholder"
+                  autoComplete="off"
                 />
                 <label htmlFor="company" className="label-company">
                   <span className="content-optional">Company</span>
@@ -143,6 +148,7 @@ const ContactForm = () => {
                   minLength="10"
                   maxLength="100"
                   required
+                  autoComplete="off"
                 ></textarea>
               </div>
               <button

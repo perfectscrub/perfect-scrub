@@ -43,6 +43,7 @@ const QuoteForm = () => {
                     minLength="1"
                     maxLength="30"
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="name" className="label-name">
                     <span className="content-name">First Name</span>
@@ -58,6 +59,7 @@ const QuoteForm = () => {
                     maxLength="30"
                     title="Please fill a last name. Not required."
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="lastname" className="label-lastname">
                     <span className="content-optional">Last Name</span>
@@ -75,6 +77,7 @@ const QuoteForm = () => {
                     pattern="^\d{10}$"
                     minLength="10"
                     maxLength="10"
+                    autoComplete="off"
                     title="No spaces required"
                     placeholder="the placeholder"
                   />
@@ -90,6 +93,7 @@ const QuoteForm = () => {
                     name="email"
                     required
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="email" className="label-email">
                     <span className="content-email">Email</span>
@@ -106,6 +110,7 @@ const QuoteForm = () => {
                   maxLength="100"
                   title="Please fill a company name. Not required."
                   placeholder="the placeholder"
+                  autoComplete="off"
                 />
                 <label htmlFor="company" className="label-company">
                   <span className="content-optional">Company</span>
@@ -121,6 +126,7 @@ const QuoteForm = () => {
                     maxLength="150"
                     title="Office Address"
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="address" className="label-address">
                     <span className="content-address">Address</span>
@@ -133,6 +139,7 @@ const QuoteForm = () => {
                     className="optional-input"
                     name="sq-footage"
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="sq-footage" className="label-sq-footage">
                     <span className="content-sq-footage">Square Footage</span>
@@ -149,6 +156,7 @@ const QuoteForm = () => {
                     maxLength="150"
                     title="Number of washrooms"
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="washrooms" className="label-washrooms">
                     <span className="content-washrooms">
@@ -163,6 +171,7 @@ const QuoteForm = () => {
                     className="optional-input"
                     name="offices"
                     placeholder="the placeholder"
+                    autoComplete="off"
                   />
                   <label htmlFor="offices" className="label-offices">
                     <span className="content-offices">
@@ -182,6 +191,7 @@ const QuoteForm = () => {
                   minLength="10"
                   maxLength="100"
                   required
+                  autoComplete="off"
                 ></textarea>
               </div>
               <p className="my-4">
@@ -194,6 +204,7 @@ const QuoteForm = () => {
                     id="yes"
                     name="previous-cleaning-service"
                     value="yes"
+                    autoComplete="off"
                   />
                   <label htmlFor="yes" className="label-yes">
                     Yes
@@ -205,6 +216,7 @@ const QuoteForm = () => {
                     id="no"
                     name="previous-cleaning-service"
                     value="no"
+                    autoComplete="off"
                   />
                   <label htmlFor="no" className="label-no">
                     No
@@ -219,6 +231,7 @@ const QuoteForm = () => {
                     id="referral"
                     name="found by referral"
                     value="referral"
+                    autoComplete="off"
                   />
                   Referral
                 </label>
@@ -228,6 +241,7 @@ const QuoteForm = () => {
                     id="search"
                     name="found by search"
                     value="search"
+                    autoComplete="off"
                   />
                   {" "}Internet Search
                 </label>
@@ -237,6 +251,7 @@ const QuoteForm = () => {
                     id="social-media"
                     name="found by social media"
                     value="social-media"
+                    autoComplete="off"
                   />
                   Social Media
                 </label>
@@ -246,6 +261,7 @@ const QuoteForm = () => {
                     id="other"
                     name="found by other means"
                     value="other"
+                    autoComplete="off"
                   />
                   Other
                 </label>
