@@ -77,3 +77,9 @@ export const testimonials = [
   }
 
 ]
+
+export const taglines = [
+  "Take care of business and leave the cleaning to us",
+  "Customize pricing to meet your needs",
+  "Quality you can trust",
+]
