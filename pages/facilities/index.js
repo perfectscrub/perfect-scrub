@@ -21,7 +21,7 @@ const Facilities = () => {
           </div>
           {/* Facilities Overlapping Image */}
           <div className="h-80 mt-12 md:w-1/2 lg:h-full overflow-hidden lg:relative">
-            <Image width={254} height={526} className="lg:absolute lg:-bottom-20 left-20 z-20 mx-auto" src="/about-us-image.png" alt="" />
+            <Image width={254} height={526} priority className="lg:absolute lg:-bottom-20 left-20 z-20 mx-auto" src="/about-us-image.png" alt="" />
             {/* Monogram Overlay */}
             <div className="ps-monogram-image object-cover w-100 h-80 absolute hidden lg:block lg:-bottom-5 lg:right-0 opacity-10 z-10" />
           </div>

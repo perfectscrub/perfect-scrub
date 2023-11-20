@@ -31,6 +31,7 @@ const About = () => {
               className="lg:absolute lg:-bottom-20 left-20 z-20 mx-auto"
               src="/about-us-image.png"
               alt=""
+              priority
             />
             {/* Monogram Overlay */}
             <div className="ps-monogram-image object-cover w-100 h-80 absolute hidden lg:block lg:-bottom-5 lg:right-0 opacity-10 z-10" />
