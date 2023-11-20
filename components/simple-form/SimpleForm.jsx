@@ -1,13 +1,10 @@
 import { useState } from 'react'
-import { submitHandler } from "@/utils/form";
 
 const SimpleForm = () => {
 
 
 
-  const handleFormSubmit = (e) => {
-    submitHandler(e);
-  }
+  
 
   return (
     <form
@@ -17,7 +14,6 @@ const SimpleForm = () => {
             data-netlify="true"
             autoComplete="off"
             netlify-honeypot="bot-field"
-            onSubmit={handleFormSubmit}
           >
             <p className="hidden">
               <label>
@@ -34,6 +30,7 @@ const SimpleForm = () => {
                   required
                   pattern="\S+.*"
                   placeholder="Name"
+                  autoComplete="off"
                 />
                 <input
                   className="quote-form-input"
@@ -42,6 +39,7 @@ const SimpleForm = () => {
                   name="email"
                   required
                   placeholder="Email"
+                  autoComplete="off"
                 />
               </div>
               <div className="flex flex-col lg:w-1/2 gap-y-4 lg:gap-6">
@@ -55,12 +53,14 @@ const SimpleForm = () => {
                   minLength="10"
                   maxLength="10"
                   placeholder="Phone"
+                  autoComplete="off"
                 />
                 <input
                   className="quote-form-btn"
                   type="submit"
                   id="submit-button"
                   value="Get Quote"
+                  autoComplete="off"
                 />
               </div>
             </div>
