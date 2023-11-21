@@ -80,6 +80,6 @@ export const testimonials = [
 
 export const taglines = [
   { id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the cleaning to us", effect: "fadeIn"},
-  { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "fadeInRight"},
+  { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "backInUp"},
   { id: 3, img: "/hero-office-interior.jpg", text: "Quality you can trust", effect: "fadeIn"},
 ]
