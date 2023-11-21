@@ -22,6 +22,9 @@
   /* #region Background  */
 
 
+  body{
+    overflow-x: hidden;
+  }
   body::-webkit-scrollbar {
     width: 16px; 
    }
@@ -35,14 +38,36 @@
      background: linear-gradient(128deg, #12b01c 25%, #56e45f 55%, #12b01c);
    }
 
-  .hero__container {
-    background: linear-gradient(#00000000, #00000000), url(/office-cleaning-indoors.jpg);
-    @apply bg-cover bg-right;
-    background-position: 68%;
+  .hero-container {
+    height: 100vh;
   }
-  .hero__container h1 {
+  .hero-container h1 {
     line-height: 1.35;
   }
+
+  .bg-slider-fade-in {
+    animation: fade-in 8s;
+  }
+
+  .text-shadow-effect {
+    text-shadow: 2px 2px rgba(47, 61, 64, 0.44);
+  }
+
+  
+@keyframes fade-in-out {
+  0% {
+    opacity: 0.5;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
 
   .about_us-image {
     background: url(/about-us-image.png);
@@ -55,7 +80,7 @@
     background-position: 40% 50%;
   }
 
-  .get_in_touch-image {
+  .get-in-touch-image {
     background:  url(/customer-service.jpg);
     @apply bg-center;
   }
@@ -75,32 +100,32 @@
     @apply bg-cover bg-left;
   }
 
-  .standard_clean_image {
+  .standard-clean-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.6)), url(/standard-clean-small.jpg);
     @apply bg-cover bg-center;
   }
 
-  .deep_clean_image {
+  .deep-clean-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/deep-steam-clean-small.jpg);
     @apply bg-cover bg-center;
   }
   
-  .disinfecting_image {
+  .disinfecting-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/disinfect-small.jpg);
     @apply bg-cover bg-center;
   }
   
-  .carpet_cleaning_image {
+  .carpet-cleaning-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/carpet-cleaning-small.jpg);
     @apply bg-cover bg-center;
   }
   
-  .washroom_cleaning_image {
+  .washroom-cleaning-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/washroom-cleaning-small.jpg);
     @apply bg-cover bg-center;
   }
   
-  .janitorial_services_image {
+  .janitorial-services-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/janitor-cart-small.jpg);
     @apply bg-cover bg-center;
   }
@@ -181,7 +206,7 @@
     @apply bg-right;
   }
   
-  .get_in_touch-image,
+  .get-in-touch-image,
   .get-a-quote-image,
   .standard-bg-image,
   .janitorial-bg-image,
@@ -203,7 +228,7 @@
 
   @media (min-width: 768px){
 
-    .get_in_touch-image {
+    .get-in-touch-image {
       background: url(/customer-service.jpg);
       background-position: 70%;
     } 
@@ -283,7 +308,7 @@
       background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/facilities/day-care-big.jpg);
     }
 
-    .get_in_touch-image,
+    .get-in-touch-image,
     .get-a-quote-image,
     .standard-bg-image,
     .janitorial-bg-image,
@@ -786,6 +811,7 @@ form textarea::placeholder {
     transform: scale(1);
   }
 }
+
 
 
 /* Facilities List */

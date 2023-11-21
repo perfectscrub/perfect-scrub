@@ -17,7 +17,7 @@ const ServicesSection = () => {
             {/* Start of Sevices */}
             <div className="flex flex-row flex-wrap justify-center pt-12 max-w-screen-2xl">
               {/*Service*/}
-              <div className="hidden-element card standard_clean_image">
+              <div className="hidden-element card standard-clean-image">
                 <div className="corner p-1 mb-1">
                   <Image src={"/bucket-icon.svg"} width={40} height={40} alt="" />
                 </div>
@@ -29,7 +29,7 @@ const ServicesSection = () => {
                     alt="" /></Link>
               </div>
               {/*Service*/}
-              <div className="hidden-element card deep_clean_image">
+              <div className="hidden-element card deep-clean-image">
                 <div className="corner p-1 mb-1">
                   <Image src={"/clean-icon.svg"} width={30} height={30} alt="" />
                 </div>
@@ -40,7 +40,7 @@ const ServicesSection = () => {
                   href="services/deep-cleaning">Deep Cleaning <Image width={20} height={20} className="w-5" src="/read-more.svg" alt="" /></Link>
               </div>
               {/*Service*/}
-              <div className="hidden-element card disinfecting_image">
+              <div className="hidden-element card disinfecting-image">
                 <div className="corner p-1 mb-1">
                   <Image src={"/disinfect-icon.svg"} width={30} height={30} alt="" />
                 </div>
@@ -52,7 +52,7 @@ const ServicesSection = () => {
                     alt="" /></Link>
               </div>
               {/*Service*/}
-              <div className="hidden-element card carpet_cleaning_image">
+              <div className="hidden-element card carpet-cleaning-image">
                 <div className="corner p-1 mb-1">
                   <Image src={"/carpet-clean-icon.svg"} width={30} height={30} alt="" />
                 </div>
@@ -64,7 +64,7 @@ const ServicesSection = () => {
                     alt="" /></Link>
               </div>
               {/*Service*/}
-              <div className="hidden-element card washroom_cleaning_image">
+              <div className="hidden-element card washroom-cleaning-image">
                 <div className="corner p-1 mb-1">
                   <Image src={"/dispenser-icon.svg"} width={30} height={30} alt="" />
                 </div>
@@ -77,7 +77,7 @@ const ServicesSection = () => {
                 </Link>
               </div>
               {/*Service*/}
-              <div className="hidden-element card janitorial_services_image">
+              <div className="hidden-element card janitorial-services-image">
                 <div className="corner p-1 mb-1 pl-1">
                   <Image src={"/janitor-icon.svg"} width={30} height={30} alt="" />
                 </div>
