@@ -1,18 +1,19 @@
+import { useRouter } from "next/router";
 import { submitHandler } from "@/utils/form";
 
 const SimpleForm = () => {
+  const router = useRouter();
 
   const handleFormSubmit = (e)=>{
     e.preventDefault();
     const form = e.currentTarget
     submitHandler(form, "quote");
-    form.reset()
+    router.push("/success");
 
   }
 
   return (
     <form
-            action="success"
             className="quote-form py-3 mt-8 sm:w-1/2"
             name="quote"
             data-netlify="true"

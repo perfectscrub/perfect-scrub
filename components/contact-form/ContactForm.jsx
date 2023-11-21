@@ -1,6 +1,18 @@
+import { useRouter } from "next/router";
 import Link from 'next/link';
+import { submitHandler } from "@/utils/form";
 
 const ContactForm = () => {
+  const router = useRouter();
+
+  const handleFormSubmit = (e)=>{
+    e.preventDefault();
+    const form = e.currentTarget
+    submitHandler(form, "contact");
+    router.push("/success");
+
+  }
+
   return (
     <section className="relative contact bg-gradient-bl from-gray-50 to-blue-200 px-4 py-12 lg:pt-24 lg:pb-32">
           {/* Form */}
@@ -25,6 +37,7 @@ const ContactForm = () => {
               data-netlify="true"
               autoComplete="off"
               netlify-honeypot="bot-field"
+              onSubmit={handleFormSubmit}
             >
               <p className="hidden">
                 <label>
