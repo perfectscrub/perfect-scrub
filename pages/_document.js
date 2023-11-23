@@ -7,8 +7,11 @@ export default function Document() {
       <body>
         <Main />
         <NextScript />
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQTH22WV"
-          height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+        <noscript
+          dangerouslySetInnerHTML={{
+            __html: `<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WQTH22WV" height="0" width="0" style="display: none; visibility: hidden;" />`,
+          }}
+        />
       </body>
     </Html>
   )
