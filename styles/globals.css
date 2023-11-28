@@ -6,6 +6,7 @@
 
 
 @layer components {
+
   /* #region DEFAULTS */
   html {
     @apply bg-gray-50;
@@ -22,58 +23,34 @@
   /* #region Background  */
 
 
-  body{
+  body {
     overflow-x: hidden;
+    background: #f3f5fd;
   }
+
   body::-webkit-scrollbar {
-    width: 16px; 
-   }
-   
-   body::-webkit-scrollbar-track {
-     background: #b0cee9;
-   }
-   
-   body::-webkit-scrollbar-thumb {
-     border-radius: 6px;
-     background: linear-gradient(128deg, #12b01c 25%, #56e45f 55%, #12b01c);
-   }
-
-  .hero-container {
-    height: 100vh;
-  }
-  .hero-container h1 {
-    line-height: 1.35;
+    width: 14px;
   }
 
-  .bg-slider-fade-in {
-    animation: fade-in 8s;
+  body::-webkit-scrollbar-track {
+    background: #d7eafa;
+  }
+
+  body::-webkit-scrollbar-thumb {
+    border-radius: 6px;
+    background: linear-gradient(128deg, #12b01c 25%, #56e45f 55%, #12b01c);
   }
 
   .text-shadow-effect {
     text-shadow: 2px 2px rgba(47, 61, 64, 0.44);
   }
 
-  
-@keyframes fade-in-out {
-  0% {
-    opacity: 0.5;
-  }
-  10% {
-    opacity: 1;
-  }
-  90% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0.5;
-  }
-}
 
   .about_us-image {
     background: url(/about-us-image.png);
     @apply bg-cover bg-center;
   }
-  
+
   .benefits-image {
     background: url(/commercial-building-small.jpg);
     @apply bg-cover;
@@ -81,7 +58,7 @@
   }
 
   .get-in-touch-image {
-    background:  url(/customer-service.jpg);
+    background: url(/customer-service.jpg);
     @apply bg-center;
   }
 
@@ -99,6 +76,17 @@
     background: url(/ps-monogram-white.svg);
     @apply bg-cover bg-left;
   }
+  
+  .commercial-cleaning-image {
+    background: linear-gradient(to bottom, rgba(47, 61, 64, 0.5) 20%, rgba(47, 61, 64, 0.4) 30%, transparent),  url(/office-cleaning-indoors.jpg);
+    @apply bg-cover;
+    background-position: 68% 50%;
+  }
+
+  .residential-cleaning-image {
+    background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%, transparent), url(/residential-cleaning.jpg);
+    @apply bg-cover bg-right;
+  }
 
   .standard-clean-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.6)), url(/standard-clean-small.jpg);
@@ -109,22 +97,22 @@
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/deep-steam-clean-small.jpg);
     @apply bg-cover bg-center;
   }
-  
+
   .disinfecting-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/disinfect-small.jpg);
     @apply bg-cover bg-center;
   }
-  
+
   .carpet-cleaning-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/carpet-cleaning-small.jpg);
     @apply bg-cover bg-center;
   }
-  
+
   .washroom-cleaning-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/washroom-cleaning-small.jpg);
     @apply bg-cover bg-center;
   }
-  
+
   .janitorial-services-image {
     background: linear-gradient(to bottom, rgba(245, 250, 251, 0.697), rgba(47, 61, 64, 0.44), rgba(47, 61, 64, 0.8)), url(/janitor-cart-small.jpg);
     @apply bg-cover bg-center;
@@ -139,53 +127,53 @@
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/deep-steam-clean.jpg);
     @apply bg-cover bg-center;
   }
-  
+
   .disinfecting-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/disinfect-big.jpg);
     @apply bg-cover bg-center;
   }
-  
+
   .carpet-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/carpet-cleaning.jpg);
     @apply bg-cover bg-center;
   }
-  
+
   .washroom-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%, rgba(10, 39, 135, 0.6)), url(/washroom-cleaning.jpg);
     background-position: 50% 10%;
   }
-  
+
   .janitorial-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/janitor-cart.jpg);
     @apply bg-cover;
     background-position: 70%;
   }
-  
+
   .location-image {
     background: url(/toronto-city-hall-small.jpg);
     @apply bg-cover bg-left;
   }
-  
-  
+
+
   .school-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/facilities/university.jpg);
     background-position: 80%;
   }
-  
+
   .retail-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/facilities/retail-store.jpg);
   }
-  
+
   .recreational-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/facilities/bowling-alley.jpg);
     background-position: 50%;
   }
-  
+
   .construction-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/facilities/new-construction.jpg);
     background-position: 10%;
   }
-  
+
   .office-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/facilities/office-building.jpg);
     background-position: 70%;
@@ -195,17 +183,17 @@
     background: linear-gradient(to bottom, rgb(30 64 175), transparent 80%), url(/facilities/medical-office.jpg);
     background-position: 30%;
   }
-  
+
   .hotel-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/facilities/hotel-lobby.jpg);
     background-position: 30%;
   }
-  
+
   .day-care-bg-image {
     background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%), url(/facilities/day-care.jpg);
     @apply bg-right;
   }
-  
+
   .get-in-touch-image,
   .get-a-quote-image,
   .standard-bg-image,
@@ -221,74 +209,77 @@
   .office-bg-image,
   .medical-bg-image,
   .hotel-bg-image,
-  .day-care-bg-image {
+  .day-care-bg-image,
+  .commercial-cleaning-image,
+  .residential-cleaning-image {
     height: 95vh;
     @apply relative flex flex-col items-center pt-40 overflow-hidden bg-cover bg-no-repeat;
   }
 
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
 
     .get-in-touch-image {
       background: url(/customer-service.jpg);
       background-position: 70%;
-    } 
+    }
 
     .get-a-quote-image {
       background: url(/get-a-quote.jpg);
       background-position: top center;
-    } 
+    }
+
     .location-image {
       background: url(/toronto-city-hall.jpg);
       @apply bg-cover bg-left;
     }
-    
+
     .standard-bg-image {
-      background: linear-gradient(to right, rgb(30 64 175),  transparent 55%), url(/standard-clean.jpg);
+      background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/standard-clean.jpg);
       @apply bg-cover bg-center;
     }
-  
+
     .deep-bg-image {
-      background: linear-gradient(to right, rgb(30 64 175),  transparent 55%), url(/deep-steam-clean.jpg);
+      background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/deep-steam-clean.jpg);
       @apply bg-cover bg-center;
     }
-    
+
     .disinfecting-bg-image {
-      background: linear-gradient(to right, rgb(30 64 175),  transparent 55%), url(/disinfect-big.jpg);
+      background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/disinfect-big.jpg);
       @apply bg-cover bg-center;
     }
-    
+
     .carpet-bg-image {
-      background: linear-gradient(to right, rgb(30 64 175),  transparent 55%), url(/carpet-cleaning.jpg);
+      background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/carpet-cleaning.jpg);
       @apply bg-center;
     }
-    
+
     .washroom-bg-image {
-      background: linear-gradient(to right, rgb(30 64 175),  transparent 55%), url(/washroom-cleaning.jpg);
+      background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/washroom-cleaning.jpg);
       @apply bg-center;
     }
-    
+
     .janitorial-bg-image {
-      background: linear-gradient(to right, rgb(30 64 175),  transparent 55%), url(/janitor-cart-big.jpg);
+      background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/janitor-cart-big.jpg);
       @apply bg-cover bg-center;
     }
 
     .school-bg-image {
-      background: linear-gradient(to right, rgb(30 64 175),  transparent 55%), url(/facilities/university-big.jpg);
+      background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/facilities/university-big.jpg);
     }
-    
+
     .retail-bg-image {
       background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/facilities/retail-store-big.jpg);
     }
-    
+
     .recreational-bg-image {
       background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/facilities/bowling-alley-big.jpg);
       background-position: 50%;
     }
-    
+
     .construction-bg-image {
       background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/facilities/new-construction-big.jpg);
     }
-    
+
     .office-bg-image {
       background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/facilities/office-building-big.jpg);
       @apply bg-center;
@@ -328,7 +319,7 @@
       @apply bg-cover;
     }
   }
-  
+
 
   /* #endregion */
 
@@ -359,22 +350,25 @@
     @apply border-18;
   }
 }
+
 /* #endregion */
 
 /* #region Dropdown Reset & Animation (<details>)*/
-details > summary::-webkit-details-marker {
+details>summary::-webkit-details-marker {
   display: none;
 }
 
-details > summary:first-of-type {
+details>summary:first-of-type {
   list-style-type: none;
 }
+
 /* #endregion */
 
 /* #region Applied to FAQ dropdown on toggle open */
 svg {
   transition: transform 0.2s ease-in;
 }
+
 .open summary,
 .open summary svg {
   @apply text-blue-500;
@@ -440,42 +434,42 @@ form .input-animated label span {
 
 /* only works for adjacent elements below the initial element */
 
-form .input-animated .required-input:not(:placeholder-shown) + label:after,
+form .input-animated .required-input:not(:placeholder-shown)+label:after,
 form textarea:not(:placeholder-shown) {
   border-color: var(--error);
 }
 
-form .input-animated input:not(:placeholder-shown) + .label-name .content-name,
-form .input-animated input:not(:placeholder-shown) + .label-email .content-email,
-form .input-animated input:not(:placeholder-shown) + .label-phone .content-phone {
+form .input-animated input:not(:placeholder-shown)+.label-name .content-name,
+form .input-animated input:not(:placeholder-shown)+.label-email .content-email,
+form .input-animated input:not(:placeholder-shown)+.label-phone .content-phone {
   color: var(--error);
 }
 
-form .input-animated .optional-input:not(:placeholder-shown) + label .content-optional,
-form .input-animated .required-input:valid + .label-lastname .content-lastname,
-form .input-animated .required-input:valid + .label-name .content-name,
-form .input-animated .required-input:valid + .label-phone .content-phone,
-form .input-animated .required-input:valid + .label-email .content-email {
+form .input-animated .optional-input:not(:placeholder-shown)+label .content-optional,
+form .input-animated .required-input:valid+.label-lastname .content-lastname,
+form .input-animated .required-input:valid+.label-name .content-name,
+form .input-animated .required-input:valid+.label-phone .content-phone,
+form .input-animated .required-input:valid+.label-email .content-email {
   color: var(--success);
 }
 
-form .input-animated .optional-input:not(:placeholder-shown) + label::after,
-form .input-animated .required-input:valid + label::after,
+form .input-animated .optional-input:not(:placeholder-shown)+label::after,
+form .input-animated .required-input:valid+label::after,
 form textarea:valid {
   border-color: var(--success);
 }
 
 
-form .input-animated input:focus + label span,
-form .input-animated .required-input:valid + label span,
-form .input-animated input:not(:placeholder-shown) + label span {
+form .input-animated input:focus+label span,
+form .input-animated .required-input:valid+label span,
+form .input-animated input:not(:placeholder-shown)+label span {
   transform: translateY(-200%);
   @apply text-xs font-medium;
 }
 
-form .input-animated input:focus + label:after,
-form .required-input:valid + label:after,
-form input:not(:placeholder-shown) + label:after {
+form .input-animated input:focus+label:after,
+form .required-input:valid+label:after,
+form input:not(:placeholder-shown)+label:after {
   transform: translateX(0%);
 }
 
@@ -517,7 +511,7 @@ form textarea::placeholder {
 }
 
 /* Contact Form */
-#choose-service  {
+#choose-service {
   appearance: none;
   box-sizing: border-box;
   box-shadow: inset 1px 1px 3px #ccc;
@@ -535,8 +529,8 @@ form textarea::placeholder {
 /* Quote form */
 
 /* Small Quote form */
-.quote-form{
-  @apply  w-full flex flex-col px-2;
+.quote-form {
+  @apply w-full flex flex-col px-2;
 }
 
 .quote-form-input {
@@ -545,8 +539,7 @@ form textarea::placeholder {
 }
 
 .quote-form-btn {
-  @apply rounded uppercase font-semibold text-center px-4 py-4 shadow-md bg-green-300 text-gray-50 hover:bg-green-700 
-  focus:ring-4 focus:ring-green-300;
+  @apply rounded uppercase font-semibold text-center px-4 py-4 shadow-md bg-green-300 text-gray-50 hover:bg-green-700 focus:ring-4 focus:ring-green-300;
 }
 
 .quote-form-input:focus {
@@ -677,8 +670,8 @@ form textarea::placeholder {
 }
 
 
-@media (min-width: 1024px){
-  
+@media (min-width: 1024px) {
+
   .card:hover:before {
     transform: scale(28);
   }
@@ -686,13 +679,13 @@ form textarea::placeholder {
 
 
 /* Navigation Dropdown */
-#nav_content{
+#nav_content {
   max-height: 75vh;
   overflow-y: scroll;
 }
 
 #nav_content::-webkit-scrollbar {
- width: 0px; 
+  width: 0px;
 }
 
 
@@ -715,15 +708,15 @@ form textarea::placeholder {
   @apply bg-blue-800;
 }
 
-@media (min-width: 1024px){  
-  #nav_content{
-    overflow-y:unset;
+@media (min-width: 1024px) {
+  #nav_content {
+    overflow-y: unset;
   }
-  
+
   .dropdown {
     @apply relative inline-block z-10;
   }
-  
+
   .dropdown-content {
     @apply absolute z-50 w-56 bg-gray-900 shadow-lg border-t-4 border-blue-400;
     opacity: 0;
@@ -731,25 +724,25 @@ form textarea::placeholder {
     transition: opacity 1s ease;
   }
 
-  
+
   .dropdown:hover .dropdown-content {
     @apply block;
     opacity: 1;
   }
-  
+
   .dropdown-content a {
     @apply px-3 py-1 no-underline block text-left;
   }
-  
+
   /* .dropdown-content a:hover {
     @apply bg-blue-200;
   } */
-  
+
 }
 
 .location {
   /* width: 10rem; */
-  @apply py-2 px-2 mr-2 mb-1 md:px-8 md:m-3  text-gray-800 font-semibold text-center inline; 
+  @apply py-2 px-2 mr-2 mb-1 md:px-8 md:m-3 text-gray-800 font-semibold text-center inline;
 }
 
 /* Animate element to appear on screen */
@@ -784,7 +777,7 @@ form textarea::placeholder {
   @apply bg-opacity-60;
 }
 
-@media (min-width: 648px){
+@media (min-width: 648px) {
   .benefit-svg-opacity {
     @apply opacity-50;
   }
@@ -804,9 +797,11 @@ form textarea::placeholder {
   0% {
     transform: scale(1);
   }
+
   50% {
     transform: scale(1.1);
   }
+
   100% {
     transform: scale(1);
   }
@@ -820,7 +815,7 @@ form textarea::placeholder {
 }
 
 .facility-list-link {
-  @apply flex gap-2 items-center w-60 ;
+  @apply flex gap-2 items-center w-60;
 }
 
 
@@ -834,7 +829,7 @@ form textarea::placeholder {
 }
 
 /* About us */
-@media (min-width: 1024px){
+@media (min-width: 1024px) {
 
   .landing-section {
     max-height: 700px;
