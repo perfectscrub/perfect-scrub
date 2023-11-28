@@ -1,7 +1,16 @@
+import { useEffect } from "react";
+import setObserver from "@/utils/observer.util";
 import Image from 'next/image';
 import Link from "next/link";
 
 const ServicesSection = () => {
+  useEffect(() => {
+    const observer = setObserver();
+    const hiddenElements = document.querySelectorAll(".hidden-element");
+    hiddenElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect()
+  }, [])
   return (
     <section className="flex flex-col items-center text-center pt-20 lg:pb-30 lg:pt-20 pb-20 bg-white">
           <div>

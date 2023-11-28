@@ -1,6 +1,15 @@
+import { useEffect } from "react";
+import setObserver from "@/utils/observer.util";
 import Link from 'next/link';
 import IndexLocationsList from "../indexLocationsList/IndexLocationsList";
 const LocationsSection = () => {
+  useEffect(() => {
+    const observer = setObserver();
+    const hiddenElements = document.querySelectorAll(".hidden-element");
+    hiddenElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect()
+  }, [])
   return (
     <section className="p-0 flex flex-col lg:flex-row bg-gray-700">
           <div className="location-image lg:w-1/2 max-h-full relative">

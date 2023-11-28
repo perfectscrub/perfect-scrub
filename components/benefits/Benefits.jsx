@@ -1,6 +1,15 @@
+import { useEffect } from "react";
+import setObserver from "@/utils/observer.util";
 import Image from 'next/image';
 
 const Benefits = () => {
+  useEffect(() => {
+    const observer = setObserver();
+    const hiddenElements = document.querySelectorAll(".hidden-element");
+    hiddenElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect()
+  }, [])
   return (
     <section className="benefits-image text-gray-50 relative flex flex-col items-center text-center pt-20 bg-gray-100">
           <div className="flex flex-col mb-4 md:flex-row md:mb-0 z-10">
