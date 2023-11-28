@@ -10,7 +10,7 @@ const Highlight = () => {
             <Image width={500} height={400} className="w-full lg:w-1/2 object-cover" src="/two-women-cleaning-office.jpg" alt="" />
             <article className="w-full lg:w-1/2 text-left">
               <h2 className="text-3xl font-sans font-light ">
-                <Link href="/facilities/office-buildings-cleaning" className="hover:underline">
+                <Link href="/commercial-cleaning/office-buildings-cleaning" className="hover:underline">
                   <span className="font-bold">Office Cleaning</span></Link>
                 {" "}that makes a difference
               </h2>

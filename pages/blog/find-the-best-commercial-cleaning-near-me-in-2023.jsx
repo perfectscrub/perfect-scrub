@@ -112,7 +112,7 @@ const FindTheBestCommercialCleaningNearMeIn2023 = () => {
             <p className="mb-4">
               We at Perfect Scrub Cleaning are committed to helping you create a{" "}
               <Link
-                href="/facilities/office-buildings-cleaning"
+                href="/commercial-cleaning/office-buildings-cleaning"
                 className="text-blue-700"
               >
                 clean office workspace
@@ -516,7 +516,7 @@ const FindTheBestCommercialCleaningNearMeIn2023 = () => {
             <p className="mb-4">
               Perfect Scrub covers an extensive range of{" "}
               <Link
-                href="/facilities"
+                href="/commercial-cleaning"
                 className="underline text-blue-700"
               >
                 facilities and businesses that require cleaning services
