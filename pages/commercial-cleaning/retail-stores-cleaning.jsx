@@ -1,5 +1,3 @@
-import Image from "next/image";
-import Link from "next/link";
 import Head from "next/head";
 import FacilitiesSideMenu from "@/components/facilities-side-menu/FacilitiesSideMenu";
 import LandingSection from "@/components/landing-section/LandingSection";

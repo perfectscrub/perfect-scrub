@@ -1,7 +1,6 @@
 import Head from "next/head";
 import EasySteps from "@/components/easy-steps/EasySteps";
 import ServicesSection from "@/components/services-section/ServicesSection";
-import React from "react";
 import HeroLandingSection from "@/components/hero-landing/HeroLandingSection";
 
 const Residential = () => {
