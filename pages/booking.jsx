@@ -10,7 +10,6 @@ const Booking = () => {
         src="https://perfectscrubcleaning.bookingkoala.com/booknow?embed=true"
         style={{border:"none", height:"1000px", overflow:"hidden"}}
         width="100%"
-        scrolling="true"
       ></iframe>
       <Script
         src="https://perfectscrubcleaning.bookingkoala.com/resources/embed.js"
