@@ -10,8 +10,9 @@ const Login = () => {
 
       ></iframe>
       <Script
+        id="login-script"
         src="https://perfectscrubcleaning.bookingkoala.com/resources/embed.js"
-        strategy="beforeInteractive"
+        strategy="afterInteractive"
       ></Script>
     </div>
   )
