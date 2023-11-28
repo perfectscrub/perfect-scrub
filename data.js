@@ -29,42 +29,42 @@ export const footerCompanyLinks = [
 export const indexFacilitiesList = [
   {
     title: "Office buildings",
-    href: "commercial-cleaning/office-buildings-cleaning",
+    href: "/commercial-cleaning/office-buildings-cleaning",
     imgUrl: "/office-building.svg",
   },
   {
     title: "Retail stores and shopping centers",
-    href: "commercial-cleaning/retail-stores-cleaning",
+    href: "/commercial-cleaning/retail-stores-cleaning",
     imgUrl: "/supermarket.svg",
   },
   {
     title: "Day Care and Preschool",
-    href: "commercial-cleaning/day-care-cleaning",
+    href: "/commercial-cleaning/day-care-cleaning",
     imgUrl: "/day-care-center.svg",
   },
   {
     title: "Schools and universities",
-    href: "commercial-cleaning/school-cleaning",
+    href: "/commercial-cleaning/school-cleaning",
     imgUrl: "/university.svg",
   },
   {
     title: "Medical Offices and clinics",
-    href: "commercial-cleaning/medical-offices-cleaning",
+    href: "/commercial-cleaning/medical-offices-cleaning",
     imgUrl: "/hospital.svg",
   },
   {
     title: "Hotels and resorts",
-    href: "commercial-cleaning/hotel-cleaning",
+    href: "/commercial-cleaning/hotel-cleaning",
     imgUrl: "/hotel.svg",
   },
   {
     title: "Sports and recreational facilities",
-    href: "commercial-cleaning/recreational-facilities-cleaning",
+    href: "/commercial-cleaning/recreational-facilities-cleaning",
     imgUrl: "/gym.svg",
   },
   {
     title: "Post Construction Clean up",
-    href: "commercial-cleaning/post-construction-cleaning",
+    href: "/commercial-cleaning/post-construction-cleaning",
     imgUrl: "/construction.svg",
   },
 ];
