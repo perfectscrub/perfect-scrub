@@ -16,7 +16,6 @@ const Booking = () => {
         src="https://perfectscrubcleaning.bookingkoala.com/resources/embed.js"
         strategy="beforeInteractive"
       >
-        {window.top.postMessage(JSON.stringify({message: 'Great'}), 'https://perfectscrubcleaning.bookingkoala.com')}
       </Script>
     </div>
   );
