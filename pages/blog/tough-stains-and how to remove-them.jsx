@@ -4,6 +4,17 @@ import Head from "next/head";
 
 const ToughStainsAndHowToRemoveThem = () => {
   return (
+    <>
+    <Head>
+        <meta
+          content="Blog | Tough Stains - Do you know how to remove them"
+          name="description"
+        />
+        <title>
+          Perfect Scrub Cleaning Services - Tough Stains - Do you know how to remove them
+        </title>
+      </Head>
+    
     <main role="main">
       {/* Start of Blog*/}
       <section className="pt-40 pb-40 lg:pt-60 lg:pb-32">
@@ -144,6 +155,7 @@ const ToughStainsAndHowToRemoveThem = () => {
         </article>
       </section>
     </main>
+    </>
   );
 };
 
