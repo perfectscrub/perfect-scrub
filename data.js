@@ -14,7 +14,7 @@ export const facilities = [
   { href: "/commercial-cleaning/school-cleaning", title: "Schools & Universities" },
   { href: "/commercial-cleaning/medical-offices-cleaning", title: "Medical Offices & Clinics" },
   { href: "/commercial-cleaning/hotel-cleaning", title: "Hotels & Resorts" },
-  { href: "/commercial-cleaning/recreational-commercial-cleaning-cleaning", title: "Sports & Recreational Centers" },
+  { href: "/commercial-cleaning/recreational-facilities-cleaning", title: "Sports & Recreational Centers" },
   { href: "/commercial-cleaning/post-construction-cleaning", title: "Post Construction Clean" },
 ];
 
@@ -59,7 +59,7 @@ export const indexFacilitiesList = [
   },
   {
     title: "Sports and recreational facilities",
-    href: "commercial-cleaning/recreational-commercial-cleaning-cleaning",
+    href: "commercial-cleaning/recreational-facilities-cleaning",
     imgUrl: "/gym.svg",
   },
   {
