@@ -12,15 +12,15 @@ const HeroLandingSection = ({ bgImg, title, type }) => {
           {title}
         </h1>
       </div>
-      <div className="z-20 md:self-start px-2 lg:w-1/2">
+      <div className="z-20 md:self-end px-2 lg:w-1/2">
 
       {type === "Residential Cleaning" ? (
-          <section className="flex flex-col justify-center mb-2 py-6 px-4 bg-white/60 text-center rounded-md lg:w-3/4">
-          <div className="">
+          <section className="glass flex flex-col justify-center mb-10 py-6 lg:py-16 px-4 bg-white/30 text-center rounded-md lg:w-3/4 ">
+          <div className="mb-5">
             <h2 className="text-2xl font-sans font-light ">
               <span className="font-bold">Book</span> a clean for your home
             </h2>
-            <p className="leading-relaxed m-auto text-gray-600 py-2 px-2 text-lg tracking-wider font-normal">
+            <p className="leading-relaxed m-auto text-gray-700 py-2 px-2 text-lg tracking-wider font-normal">
               Do you need to get you home cleaned?
             </p>
           </div>
