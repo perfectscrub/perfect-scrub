@@ -8,20 +8,20 @@ export const services = [
 ];
 
 export const facilities = [
-  { href: "/facilities/office-buildings-cleaning", title: "Office Buildings" },
-  { href: "/facilities/retail-stores-cleaning", title: "Retail & Shopping centers" },
-  { href: "/facilities/day-care-cleaning", title: "DayCare & Preschool" },
-  { href: "/facilities/school-cleaning", title: "Schools & Universities" },
-  { href: "/facilities/medical-offices-cleaning", title: "Medical Offices & Clinics" },
-  { href: "/facilities/hotel-cleaning", title: "Hotels & Resorts" },
-  { href: "/facilities/recreational-facilities-cleaning", title: "Sports & Recreational Centers" },
-  { href: "/facilities/post-construction-cleaning", title: "Post Construction Clean" },
+  { href: "/commercial-cleaning/office-buildings-cleaning", title: "Office Buildings" },
+  { href: "/commercial-cleaning/retail-stores-cleaning", title: "Retail & Shopping centers" },
+  { href: "/commercial-cleaning/day-care-cleaning", title: "DayCare & Preschool" },
+  { href: "/commercial-cleaning/school-cleaning", title: "Schools & Universities" },
+  { href: "/commercial-cleaning/medical-offices-cleaning", title: "Medical Offices & Clinics" },
+  { href: "/commercial-cleaning/hotel-cleaning", title: "Hotels & Resorts" },
+  { href: "/commercial-cleaning/recreational-commercial-cleaning-cleaning", title: "Sports & Recreational Centers" },
+  { href: "/commercial-cleaning/post-construction-cleaning", title: "Post Construction Clean" },
 ];
 
 export const footerCompanyLinks = [
   { href: "/", title: "Home" },
   { href: "/blog", title: "Blog" },
-  { href: "/about", title: "About" },
+  { href: "/about", title: "About us" },
   { href: "/contact", title: "Contact" },
   { href: "/quote", title: "Get a quote" },
 ];
@@ -29,42 +29,42 @@ export const footerCompanyLinks = [
 export const indexFacilitiesList = [
   {
     title: "Office buildings",
-    href: "facilities/office-buildings-cleaning",
+    href: "commercial-cleaning/office-buildings-cleaning",
     imgUrl: "/office-building.svg",
   },
   {
     title: "Retail stores and shopping centers",
-    href: "facilities/retail-stores-cleaning",
+    href: "commercial-cleaning/retail-stores-cleaning",
     imgUrl: "/supermarket.svg",
   },
   {
     title: "Day Care and Preschool",
-    href: "facilities/day-care-cleaning",
+    href: "commercial-cleaning/day-care-cleaning",
     imgUrl: "/day-care-center.svg",
   },
   {
     title: "Schools and universities",
-    href: "facilities/school-cleaning",
+    href: "commercial-cleaning/school-cleaning",
     imgUrl: "/university.svg",
   },
   {
     title: "Medical Offices and clinics",
-    href: "facilities/medical-offices-cleaning",
+    href: "commercial-cleaning/medical-offices-cleaning",
     imgUrl: "/hospital.svg",
   },
   {
     title: "Hotels and resorts",
-    href: "facilities/hotel-cleaning",
+    href: "commercial-cleaning/hotel-cleaning",
     imgUrl: "/hotel.svg",
   },
   {
     title: "Sports and recreational facilities",
-    href: "facilities/recreational-facilities-cleaning",
+    href: "commercial-cleaning/recreational-commercial-cleaning-cleaning",
     imgUrl: "/gym.svg",
   },
   {
     title: "Post Construction Clean up",
-    href: "facilities/post-construction-cleaning",
+    href: "commercial-cleaning/post-construction-cleaning",
     imgUrl: "/construction.svg",
   },
 ];
@@ -78,8 +78,8 @@ export const testimonials = [
 
 ]
 
-export const taglines = [
-  { id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the cleaning to us", effect: "fadeIn"},
-  { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "backInUp"},
-  { id: 3, img: "/hero-office-interior.jpg", text: "Quality you can trust", effect: "fadeIn"},
-]
+export const sliderImgs = {
+  0:{ id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the cleaning to us", effect: "fadeIn"},
+  1:{ id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "backInUp"},
+  2:{ id: 3, img: "/hero-office-interior.jpg", text: "Quality you can trust", effect: "fadeIn"},
+}
