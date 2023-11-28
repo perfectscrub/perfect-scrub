@@ -37,7 +37,7 @@ const EasySteps = ({imageOption}) => {
                   {" "}
                   get a quote
                 </Link>
-                form to inform us about your cleaning needs
+                {" "}form to inform us about your cleaning needs
               </span>
             </div>
             <div className="w-full md:w-72 border-8 rounded-2xl border-blue-600 px-2 py-6 mb-8 lg:ml-10 font-plexSerif font-semibold flex flex-col lg:mb-16 pb-2 ring-4 ring-blue-300 ring-inset">

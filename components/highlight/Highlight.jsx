@@ -39,4 +39,4 @@ const Highlight = () => {
   )
 }
 
-export default Highlight
+export default Highlight;
