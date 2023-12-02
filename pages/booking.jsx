@@ -4,9 +4,10 @@ import React from "react";
 const Booking = () => {
   return (
     <div className="pt-20">
+      {/* add loader  with z index */}
       <iframe
         src="https://perfectscrubcleaning.bookingkoala.com/booknow?embed=true"
-        style={{ border: "none", height: "1000px", overflow: "hidden" }}
+        style={{ border: "none", minHeight: "1000px", overflow: "hidden" }}
         width="100%"
       ></iframe>
       <Script
