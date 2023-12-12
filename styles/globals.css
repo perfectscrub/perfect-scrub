@@ -50,6 +50,7 @@
   .text-shadow-effect {
     text-shadow: 2px 2px rgba(47, 61, 64, 0.44);
   }
+
   
 
   .about_us-image {
@@ -83,7 +84,7 @@
     @apply bg-cover bg-left;
   }
 
-  .home-cleaning-image {
+  .hero-image {
     background: linear-gradient(to bottom, rgba(47, 61, 64, 0.5) 20%, rgba(47, 61, 64, 0.4) 30%, transparent), url(/office-cleaning-indoors.jpg);
     @apply bg-cover;
     background-position: 88% 50%;
@@ -96,7 +97,7 @@
   }
 
   .residential-cleaning-image {
-    background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%, transparent), url(/residential-cleaning.jpg);
+    background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%, transparent), url(/home-interior.jpg);
     @apply bg-cover bg-right;
   }
 
@@ -312,13 +313,36 @@
     .day-care-bg-image {
       background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/facilities/day-care-big.jpg);
     }
+
+    .get-in-touch-image,
+    .get-a-quote-image,
+    .standard-bg-image,
+    .janitorial-bg-image,
+    .deep-bg-image,
+    .disinfecting-bg-image,
+    .carpet-bg-image,
+    .washroom-bg-image,
+    .school-bg-image,
+    .retail-bg-image,
+    .recreational-bg-image,
+    .construction-bg-image,
+    .office-bg-image,
+    .medical-bg-image,
+    .hotel-bg-image,
+    .day-care-bg-image,
+    .home-cleaning-image,
+    .commercial-cleaning-image,
+    .residential-cleaning-image {
+      height: 90vh;
+      @apply bg-cover;
+    }
   }
 
   .glass {
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(9px);
-    -webkit-backdrop-filter: blur(9px);
+    backdrop-filter: blur(3px);
+    -webkit-backdrop-filter: blur(3px);
     border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
