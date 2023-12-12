@@ -6,7 +6,7 @@ import { indexFacilitiesList } from "@/data";
 
 const HomeFacilitiesList = () => {
   return (
-    <ul className="flex flex-wrap font-medium text-blue-900">
+    <ul className="flex flex-row flex-wrap font-normal text-blue-900">
       {indexFacilitiesList.map((facility, i) => (
         <li key={i} className="facility-list-item">
           <Link className="facility-list-link" href={facility.href}>
@@ -14,7 +14,7 @@ const HomeFacilitiesList = () => {
               <Image
                 width={40}
                 height={40}
-                className="w-10 h-auto"
+                className="w-8 h-auto"
                 src={facility.imgUrl}
                 alt={facility.title}
               />
