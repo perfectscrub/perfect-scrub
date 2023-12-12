@@ -21,7 +21,7 @@ const Contact = () => {
           {/* Monogran Overlay */}
           <MonogramOverlay />
           {/* Contact Image */}
-          <div className="get-in-touch-image w-full lg:w-1/2 place-self-end"></div>
+          <div className="get-in-touch-image w-full lg:w-1/2 place-self-end"/>
         </section>
         {/* Contact Form */}
         <ContactForm />
