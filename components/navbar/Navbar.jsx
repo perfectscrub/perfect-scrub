@@ -4,11 +4,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { services, facilities } from "@/data";
 
-const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
-  
+const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
   const [toggleChevron1, setToggleChevron1] = useState(false);
   const [toggleChevron2, setToggleChevron2] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered1, setIsHovered1] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
 
   const handleNavMenuClick = (option) => {
     if (option === "nav") setToggleNav((prevState) => !prevState);
@@ -22,9 +22,10 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
       role="banner"
       className="fixed w-full z-50 shadow-md px-0 bg-gray-900"
     >
-      <div 
-      onClick={handleNavClose}
-      className="bg-green-500 text-xs md:text-sm text-white p-3 pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10">
+      <div
+        onClick={handleNavClose}
+        className="bg-green-500 text-xs md:text-sm text-white p-3 pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10"
+      >
         <div className="">
           <Link
             className="flex justify-between gap-x-2 items-center"
@@ -45,7 +46,9 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
             className="flex justify-between gap-x-1 items-center"
             href="tel:6474736478"
           >
-          <p className="tracking-wider font-medium hidden md:block">Call us now - </p>
+            <p className="tracking-wider font-medium hidden md:block">
+              Call us now -{" "}
+            </p>
             <Image
               width={300}
               height={300}
@@ -89,8 +92,12 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
             toggleNav ? "" : "hidden"
           } w-full py-8 mr-3 lg:flex lg:w-auto lg:py-0 lg:items-center`}
         >
-          <ul className="flex flex-col lg:items-center tracking-wider font-medium text-sm text-blue-200 lg:flex-row">
-            <li className="dropdown pb-5 ml-3 lg:py-8 lg:px-6" onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}>
+          <ul className="flex flex-col lg:items-center tracking-wider font-medium text-xs text-blue-200 lg:flex-row">
+            <li
+              className="dropdown pb-5 ml-3 lg:py-8 lg:px-6"
+              onMouseEnter={() => setIsHovered1(true)}
+              onMouseLeave={() => setIsHovered1(false)}
+            >
               <span className="flex items-center justify-between gap-2">
                 <Link
                   className="hover:text-green-300"
@@ -104,7 +111,12 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
                   className="mt-1 flex justify-end"
                   onClick={() => handleNavMenuClick("chevron1")}
                 >
-                  <svg className={""} width="14" height="10" fill={`${isHovered?"#6ee7b7f2":"#bfdbfe"}`}>
+                  <svg
+                    className={""}
+                    width="14"
+                    height="10"
+                    fill={`${isHovered1 ? "#6ee7b7f2" : "#bfdbfe"}`}
+                  >
                     <polygon points="0,0 10,0 5,8" />
                   </svg>
                 </span>
@@ -126,17 +138,29 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
             </li>
 
             <li className="pb-5 ml-3 lg:py-8 lg:px-3">
-              <Link className="hover:text-green-300" href="/blog" onClick={() => handleNavMenuClick("nav")}>
+              <Link
+                className="hover:text-green-300"
+                href="/blog"
+                onClick={() => handleNavMenuClick("nav")}
+              >
                 BLOG
               </Link>
             </li>
 
             <li className="pb-5 ml-3 lg:py-8 lg:px-3">
-              <Link className="hover:text-green-300" href="/about" onClick={() => handleNavMenuClick("nav")}>
+              <Link
+                className="hover:text-green-300"
+                href="/about"
+                onClick={() => handleNavMenuClick("nav")}
+              >
                 ABOUT US
               </Link>
             </li>
-            <li className="dropdown pb-5 ml-3 lg:py-6 lg:px-3 " onMouseEnter={()=>setIsHovered(true)} onMouseLeave={()=>setIsHovered(false)}>
+            <li
+              className="dropdown pb-5 ml-3 lg:py-6 lg:px-3 "
+              onMouseEnter={() => setIsHovered2(true)}
+              onMouseLeave={() => setIsHovered2(false)}
+            >
               <span className="flex items-center justify-between gap-2 lg:text-center">
                 <Link
                   className="hover:text-green-300"
@@ -150,7 +174,12 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
                   className="pl-2 mt-1 flex justify-end md:justify-center"
                   onClick={() => handleNavMenuClick("chevron2")}
                 >
-                  <svg className={""} width="14" height="10" fill={`${isHovered?"#6ee7b7f2":"#bfdbfe"}`}>
+                  <svg
+                    className={""}
+                    width="14"
+                    height="10"
+                    fill={`${isHovered2 ? "#6ee7b7f2" : "#bfdbfe"}`}
+                  >
                     <polygon points="0,0 10,0 5,8" />
                   </svg>
                 </span>
@@ -171,12 +200,20 @@ const Navbar = ({toggleNav, setToggleNav, handleNavClose}) => {
               </ul>
             </li>
             <li className="pb-5 ml-3 lg:py-6 lg:px-3 lg:text-center">
-              <Link className="hover:text-green-300" href="/residential" onClick={() => handleNavMenuClick("nav")}>
-              <span className="lg:block">HOME</span> CLEANING
+              <Link
+                className="hover:text-green-300"
+                href="/residential"
+                onClick={() => handleNavMenuClick("nav")}
+              >
+                <span className="lg:block">HOME</span> CLEANING
               </Link>
             </li>
             <li className="pb-5 ml-3 lg:py-8 lg:px-3">
-              <Link className="hover:text-green-300" href="/login" onClick={() => handleNavMenuClick("nav")}>
+              <Link
+                className="hover:text-green-300"
+                href="/login"
+                onClick={() => handleNavMenuClick("nav")}
+              >
                 LOGIN
               </Link>
             </li>
