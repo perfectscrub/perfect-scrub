@@ -23,6 +23,12 @@
   /* #region Background  */
 
 
+  header,
+  body {
+    max-width: 1600px;
+    margin: 0 auto;
+  }
+
   body {
     overflow-x: hidden;
     background: #f3f5fd;
@@ -44,7 +50,7 @@
   .text-shadow-effect {
     text-shadow: 2px 2px rgba(47, 61, 64, 0.44);
   }
-
+  
 
   .about_us-image {
     background: url(/about-us-image.png);
@@ -77,10 +83,16 @@
     @apply bg-cover bg-left;
   }
 
-  .commercial-cleaning-image {
+  .home-cleaning-image {
     background: linear-gradient(to bottom, rgba(47, 61, 64, 0.5) 20%, rgba(47, 61, 64, 0.4) 30%, transparent), url(/office-cleaning-indoors.jpg);
     @apply bg-cover;
-    background-position: 68% 50%;
+    background-position: 88% 50%;
+  }
+
+  .commercial-cleaning-image {
+    background: linear-gradient(to bottom, rgba(47, 61, 64, 0.5) 20%, rgba(47, 61, 64, 0.4) 30%, transparent), url(/buffing-floor.jpg);
+    @apply bg-cover;
+    background-position: 88% 50%;
   }
 
   .residential-cleaning-image {
@@ -210,9 +222,11 @@
   .medical-bg-image,
   .hotel-bg-image,
   .day-care-bg-image,
+  .home-cleaning-image,
   .commercial-cleaning-image,
   .residential-cleaning-image {
     height: 95vh;
+    max-height: 1000px;
     @apply relative flex flex-col items-center pt-40 overflow-hidden bg-cover bg-no-repeat;
   }
 
@@ -298,34 +312,14 @@
     .day-care-bg-image {
       background: linear-gradient(to right, rgb(30 64 175), transparent 55%), url(/facilities/day-care-big.jpg);
     }
-
-    .get-in-touch-image,
-    .get-a-quote-image,
-    .standard-bg-image,
-    .janitorial-bg-image,
-    .deep-bg-image,
-    .disinfecting-bg-image,
-    .carpet-bg-image,
-    .washroom-bg-image,
-    .school-bg-image,
-    .retail-bg-image,
-    .recreational-bg-image,
-    .construction-bg-image,
-    .office-bg-image,
-    .medical-bg-image,
-    .hotel-bg-image,
-    .day-care-bg-image {
-      height: 90vh;
-      @apply bg-cover;
-    }
   }
 
   .glass {
     background: rgba(255, 255, 255, 0.3);
     box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-radius: 10px;
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.18);
   }
 
@@ -824,7 +818,7 @@ form textarea::placeholder {
 }
 
 .facility-list-link {
-  @apply flex gap-2 items-center w-60;
+  @apply flex gap-2 items-center;
 }
 
 
