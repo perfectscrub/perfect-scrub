@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
   return (
     <main role="main" className="layout">
       <Navbar toggleNav={toggleNav} setToggleNav={setToggleNav} handleNavClose={handleNavClose} />
-      <main className="layout-main" onClick={handleNavClose}>
+      <main className="layout-main pt-16" onClick={handleNavClose}>
         {children}
       </main>
       <Footer handleNavClose={handleNavClose}/>
