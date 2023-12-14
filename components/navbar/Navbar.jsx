@@ -202,7 +202,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
             <li className="pb-5 ml-3 lg:py-6 lg:px-3 lg:text-center">
               <Link
                 className="hover:text-green-300"
-                href="/residential"
+                href="/residential-cleaning"
                 onClick={() => handleNavMenuClick("nav")}
               >
                 <span className="lg:block">HOME</span> CLEANING
