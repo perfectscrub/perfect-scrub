@@ -2,6 +2,7 @@ import Head from "next/head";
 import LandingSection from "@/components/landing-section/LandingSection";
 import FacilitiesSideMenu from "@/components/facilities-side-menu/FacilitiesSideMenu";
 import EasySteps from "@/components/easy-steps/EasySteps";
+import { commercial_steps } from "@/data";
 
 const MedicalOfficeCleaning = () => {
   return (
@@ -64,7 +65,7 @@ const MedicalOfficeCleaning = () => {
         </section>
 
         {/* Start of Small Steps */}
-        <EasySteps imageOption={"worker"} />
+        <EasySteps type={"commercial"} steps={commercial_steps}/>
       </main>
     </>
   );

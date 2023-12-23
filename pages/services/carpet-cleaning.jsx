@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Head from "next/head";
 import EasySteps from "@/components/easy-steps/EasySteps";
+import { commercial_steps } from "@/data";
 
 const CarpetCleaning = () => {
   return (
@@ -66,7 +67,7 @@ const CarpetCleaning = () => {
         </section>
 
         {/* Start of Small Steps */}
-        <EasySteps imageOption={"woman"}/>
+        <EasySteps type={"commercial"} steps={commercial_steps}/>
       </main>
     </>
   );

@@ -2,6 +2,7 @@ import ServicesSideMenu from "@/components/services-side-menu/ServicesSideMenu";
 import Head from "next/head";
 import LandingSection from "@/components/landing-section/LandingSection";
 import EasySteps from "@/components/easy-steps/EasySteps";
+import { commercial_steps } from "@/data";
 
 const StandardCleaning = () => {
   return (
@@ -47,7 +48,7 @@ const StandardCleaning = () => {
         </section>
 
         {/* Start of Small Steps */}
-        <EasySteps imageOption={"man"} />
+        <EasySteps type={"commercial"} steps={commercial_steps}/>
       </main>
     </>
   );

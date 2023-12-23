@@ -2,6 +2,7 @@ import ServicesSideMenu from "@/components/services-side-menu/ServicesSideMenu";
 import Head from "next/head";
 import LandingSection from "@/components/landing-section/LandingSection";
 import EasySteps from "@/components/easy-steps/EasySteps";
+import { commercial_steps } from "@/data";
 
 const DeepCleaning = () => {
   return (
@@ -45,7 +46,7 @@ const DeepCleaning = () => {
         </section>
 
         {/* Start of Small Steps */}
-        <EasySteps imageOption={"worker"} />
+        <EasySteps type={"commercial"} steps={commercial_steps}/>
       </main>
     </>
   );
