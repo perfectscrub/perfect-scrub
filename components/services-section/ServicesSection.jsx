@@ -30,7 +30,7 @@ const ServicesSection = () => {
                 <div className="corner p-1 mb-1">
                   <Image src={"/bucket-icon.svg"} width={40} height={40} alt="" />
                 </div>
-                <h3 className="card-title">Standard <br />Cleaning</h3>
+                <h3 className="card-title">Standard <br />Clean</h3>
                 <p className="small-desc">Our standard commercial cleaning service. Can be scheduled as a daily, weekly,
                   or monthly service. </p>
                 <Link className="service-link flex justify-end gap-2 inline py-2 px-3 font-semibold mt-6"
@@ -42,11 +42,11 @@ const ServicesSection = () => {
                 <div className="corner p-1 mb-1">
                   <Image src={"/clean-icon.svg"} width={30} height={30} alt="" />
                 </div>
-                <h3 className="card-title">Deep <br />Cleaning</h3>
+                <h3 className="card-title">Deep <br />Clean</h3>
                 <p className="small-desc">Our standard commercial cleaning service. Can be scheduled as a daily, weekly,
                   or monthly service. </p>
                 <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
-                  href="services/deep-cleaning">Deep Cleaning <Image width={20} height={20} className="w-5" src="/read-more.svg" alt="" /></Link>
+                  href="services/deep-cleaning">Deep Clean <Image width={20} height={20} className="w-5" src="/read-more.svg" alt="" /></Link>
               </div>
               {/*Service*/}
               <div className="hidden-element card disinfecting-image">
@@ -65,11 +65,11 @@ const ServicesSection = () => {
                 <div className="corner p-1 mb-1">
                   <Image src={"/carpet-clean-icon.svg"} width={30} height={30} alt="" />
                 </div>
-                <h3 className="card-title">Carpet <br />Cleaning</h3>
+                <h3 className="card-title">Carpet <br />Clean</h3>
                 <p className="small-desc">We understand that you need more than the average commercial carpet cleaning
                   service.</p>
                 <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
-                  href="services/carpet-cleaning">Carpet Cleaning <Image width={20} height={20} className="w-5" src="/read-more.svg"
+                  href="services/carpet-cleaning">Carpet Clean <Image width={20} height={20} className="w-5" src="/read-more.svg"
                     alt="" /></Link>
               </div>
               {/*Service*/}
@@ -77,7 +77,7 @@ const ServicesSection = () => {
                 <div className="corner p-1 mb-1">
                   <Image src={"/dispenser-icon.svg"} width={30} height={30} alt="" />
                 </div>
-                <h3 className="card-title">Washroom Services and Consumables</h3>
+                <h3 className="card-title">Washroom and Consumables</h3>
                 <p className="small-desc">Sustaining a spotless, hygienic washroom facility is essential for every
                   organization.</p>
                 <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
