@@ -1,9 +1,9 @@
 export const services = [
-  { id: 0, href: "/services/standard-cleaning", title: "Standard Cleaning" },
-  { id: 1, href: "/services/deep-cleaning", title: "Deep Cleaning" },
+  { id: 0, href: "/services/standard-cleaning", title: "Standard Clean" },
+  { id: 1, href: "/services/deep-cleaning", title: "Deep Clean" },
   { id: 2, href: "/services/disinfecting-services", title: "Disinfecting Services" },
   { id: 3, href: "/services/janitorial-services", title: "Janitorial Services" },
-  { id: 4, href: "/services/carpet-cleaning", title: "Carpet Cleaning" },
+  { id: 4, href: "/services/carpet-cleaning", title: "Carpet Clean" },
   { id: 5, href: "/services/washroom-cleaning-and-consumables", title: "Washroom & Consumables" }
 ];
 
@@ -23,6 +23,8 @@ export const footerCompanyLinks = [
   { href: "/blog", title: "Blog" },
   { href: "/about", title: "About us" },
   { href: "/contact", title: "Contact" },
+  { href: "/commercial-cleaning", title: "Commercial" },
+  { href: "/residential-cleaning", title: "Residential" },
   { href: "/quote", title: "Get a quote" },
 ];
 
@@ -83,3 +85,52 @@ export const sliderImgs = {
   1:{ id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "backInUp"},
   2:{ id: 3, img: "/hero-office-interior.jpg", text: "Quality you can trust", effect: "fadeIn"},
 }
+
+export const residential_steps = [
+  {
+    title: "Book Online",
+    text: "Fill out our quick and easy booking Form in just a few minutes",
+    src: "/booking-a-clean.jpg",
+    alt: "a woman using a laptop"
+  },
+  {
+    title: "Confirmation",
+    text: "Your booking is confirmed and you are assigned a professional Service Provider.",
+    src: "/confirmation.jpg",
+    alt: "two happy friends with thumbs up"
+  },
+  {
+    title: "We clean your home",
+    text: "We come in and clean your residence at the scheduled time.",
+    src: "/we-clean.jpg",
+    alt: "a professional house-cleaner"
+  },
+];
+
+export const commercial_steps = [
+  {
+    title: "Fill quote form",
+    text: "Use our get a quote form to inform us about your cleaning needs",
+    src: "/booking-a-clean.jpg",
+    alt: "a woman using a laptop"
+  },
+  {
+    title: "We Contact you",
+    text: "We will get in touch with you and process your cleaning request",
+    src: "/confirmation.jpg",
+    alt: "two happy friends with thumbs up"
+  },
+  {
+    title: "We clean your Office",
+    text: "A cleaning crew will be at your location on your designated start date",
+    src: "/we-clean.jpg",
+    alt: "a professional house-cleaner"
+  },
+];
+
+export const bookingBenefits = [
+  "customer service- we respond quickly",
+  "Multiple ways to get in touch with us- by call, text, email",
+  "your own dedicated log-in page- if you choose",
+  "you can schedule and reschedule your clean",
+];
