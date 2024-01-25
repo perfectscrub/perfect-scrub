@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from 'next/link';
 import Head from "next/head";
 import EasySteps from "@/components/easy-steps/EasySteps";
+import { commercial_steps } from "@/data";
 
 const Services = () => {
   return (
@@ -42,7 +43,7 @@ const Services = () => {
         <section className="md:px-20 p-4 lg:py-18">
           <div className="grid grid-cols-3 text-gray-500 gap-6">
             <p className="col-span-3 md:col-span-1 text-2xl font-medium leading-10 lg:text-3xl text-gray-700 pt-8 pb-4">
-              We provide best-in-industry services.
+              We provide best in industry services.
             </p>
             <p className="col-span-3  md:col-span-2 max-w-prose leading-loose mb-5">
               A clean and tidy environment is important to you. Whether it's your
@@ -138,7 +139,7 @@ const Services = () => {
         </section>
 
         {/* Start of Small Steps */}
-        <EasySteps imageOption={"woman"} />
+        <EasySteps type={"commercial"} steps={commercial_steps}/>
       </main>
     </>
   );

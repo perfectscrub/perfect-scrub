@@ -1,7 +1,7 @@
 import Head from "next/head";
 import EasySteps from "@/components/easy-steps/EasySteps";
-import ServicesSection from "@/components/services-section/ServicesSection";
 import HeroLandingSection from "@/components/hero-landing/HeroLandingSection";
+import { residential_steps } from "@/data";
 
 const Residential = () => {
   return (
@@ -18,12 +18,8 @@ const Residential = () => {
         title={"We Leave your home spotless"}
         type={"Residential Cleaning"}
       />
-      {/* Booking */}
       
-      {/* explain the service */}
-      <ServicesSection />
-      {/* contact */}
-      <EasySteps imageOption={"man"} />
+      <EasySteps type={"residential"} steps={residential_steps}/>
     </>
   );
 };
