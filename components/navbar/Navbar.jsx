@@ -21,12 +21,12 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
     <header
       role="banner"
       className="fixed w-full z-50 shadow-md px-0 bg-gray-900"
+      onClick={handleNavClose}
     >
       <div
-        onClick={handleNavClose}
-        className="bg-green-500 text-xs md:text-sm text-white p-3 pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10"
+        className="bg-green-500 text-xs md:text-sm text-white p-3 lg:pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10"
       >
-        <div className="">
+        <div>
           <Link
             className="flex justify-between gap-x-2 items-center"
             href="/quote"
@@ -41,7 +41,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
             <p className="tracking-wider font-medium">Get a free quote</p>
           </Link>
         </div>
-        <div className="">
+        <div>
           <Link
             className="flex justify-between gap-x-1 items-center"
             href="tel:6474736478"
@@ -68,9 +68,9 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
         <div className="flex items-center ml-5 lg:ml-10">
           <Link href="/" title="perfect scrub" onClick={handleNavClose}>
             <Image
-              width={188}
-              height={84}
-              className="my-0 w-20 h-auto"
+              width={300}
+              height={135}
+              className="my-0 w-20 lg:w-32 h-auto"
               src="/perfect-scrub-logo.png"
               alt=""
             />
