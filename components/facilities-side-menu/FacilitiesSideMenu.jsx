@@ -5,10 +5,8 @@ import { facilities } from "@/data";
 const FacilitiesSideMenu = () => {
   const router = useRouter();
   const handeClick = (i) => {
-    console.log("i: ", i);
     setActiveIndex(i);
   };
-  // console.log('activeIndex', activeIndex);
   return (
     <aside className="hidden lg:block">
       <h3 className="font-sans text-2xl mb-4">

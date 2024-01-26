@@ -9,7 +9,6 @@ export function submitHandler(form, formName) {
     formData.append("form-name", formName);
     // const data = Object.fromEntries(formData)
     const body = new URLSearchParams(formData).toString()
-    console.log(body)
     fetch('/', {
         method: 'POST',
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
@@ -17,7 +16,7 @@ export function submitHandler(form, formName) {
     })
     .then(handleErrors)
     .catch((error) => {
-        console.log(error)
+        
     });
 };
 
