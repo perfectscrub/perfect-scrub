@@ -76,7 +76,41 @@ export const testimonials = [
     text: "It was a great pleasure engaging your services at our office and for the impressive services at your most inconvenient time frame. This depicts commitment, reliability and positive business drive.",
     author: "Alex Emmanuel",
     business: "VSF CONSULTING INC"
-  }
+  },
+  {
+    text: "Wow! I've never seen my apartment this clean...best deep cleaning service i've experienced so far. Thanks for exceeding my expectations. I would always recommend Perfect scrub to friends and family 👍",
+    author: "Adebimpe Coker",
+    business: "N/A"
+  },
+  {
+    text: `I recently hired the Perfect Scrub team to clean my retail store (Daveenah), and I must say that I am thoroughly impressed with their services. From the moment I contacted them, they were professional, courteous, and efficient.
+
+    The team arrived on time and got straight to work. They were thorough in their cleaning, paying attention to every detail, and ensuring that every nook and cranny was spotless. They even went above and beyond by cleaning areas that I hadn't even thought of.
+    
+    What impressed me the most was their attention to detail. They took the time to clean every surface, including the floors, walls, and windows. They even cleaned the shelves and display cases, making sure that everything was dust-free and sparkling clean.
+    
+    Overall, I am extremely satisfied with the services provided by this cleaning business. They exceeded my expectations in every way, and I would highly recommend them to anyone looking for a reliable and professional cleaning service. Thank you for making my store look and feel brand new again!`,
+    author: "Ola Olufelo",
+    business: "N/A"
+  },
+  {
+    text: `@houzeofglam Brampton our experience with Perfect Scrub Cleaning has been nothing but spectacular. They are super detailed and efficient. We will surely continue to use your service. Thanks for bringing back the shine in my salon.`,
+    author: "omotolani Akinwale",
+    business: "N/A"
+  },
+  {
+    text: `What an excellent service at a short notice!
+    Committed, articulated, diligent and impressive services.
+    Worth patronizing! Recommended. An evolving Janitorial company within the GTA.`,
+    author: "Kinetics IRS",
+    business: "N/A"
+  },
+  {
+    text: `It's in the name "Peferct Scrub" . Great job, timely and no mess left behind. Thank you guys, I will definitely be recommending your services.`,
+    author: "kanmi Olu",
+    business: "N/A"
+  },
+
 
 ]
 
