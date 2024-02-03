@@ -16,7 +16,7 @@ const HomeFacilitiesList = () => {
                 height={40}
                 className="w-8 h-auto"
                 src={facility.imgUrl}
-                alt={facility.title}
+                alt={facility.alt}
               />
             </span>
             <span>{facility.title}</span>

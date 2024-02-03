@@ -8,14 +8,14 @@ export const services = [
 ];
 
 export const facilities = [
-  { href: "/commercial-cleaning/office-buildings-cleaning", title: "Office Buildings" },
-  { href: "/commercial-cleaning/retail-stores-cleaning", title: "Retail & Shopping centers" },
-  { href: "/commercial-cleaning/day-care-cleaning", title: "DayCare & Preschool" },
-  { href: "/commercial-cleaning/school-cleaning", title: "Schools & Universities" },
-  { href: "/commercial-cleaning/medical-offices-cleaning", title: "Medical Offices & Clinics" },
-  { href: "/commercial-cleaning/hotel-cleaning", title: "Hotels & Resorts" },
-  { href: "/commercial-cleaning/recreational-facilities-cleaning", title: "Sports & Recreational Centers" },
-  { href: "/commercial-cleaning/post-construction-cleaning", title: "Post Construction Clean" },
+  { href: "/commercial-cleaning/office-buildings-cleaning", title: "Office Buildings", alt: "" },
+  { href: "/commercial-cleaning/retail-stores-cleaning", title: "Retail & Shopping centers", alt: "" },
+  { href: "/commercial-cleaning/day-care-cleaning", title: "DayCare & Preschool", alt: "" },
+  { href: "/commercial-cleaning/school-cleaning", title: "Schools & Universities", alt: "" },
+  { href: "/commercial-cleaning/medical-offices-cleaning", title: "Medical Offices & Clinics", alt: "" },
+  { href: "/commercial-cleaning/hotel-cleaning", title: "Hotels & Resorts", alt: "" },
+  { href: "/commercial-cleaning/recreational-facilities-cleaning", title: "Sports & Recreational Centers", alt: "" },
+  { href: "/commercial-cleaning/post-construction-cleaning", title: "Post Construction Clean", alt: "" },
 ];
 
 export const footerCompanyLinks = [
@@ -33,41 +33,49 @@ export const indexFacilitiesList = [
     title: "Office buildings",
     href: "/commercial-cleaning/office-buildings-cleaning",
     imgUrl: "/office-building.svg",
+    alt: "",
   },
   {
     title: "Retail stores and shopping centers",
     href: "/commercial-cleaning/retail-stores-cleaning",
     imgUrl: "/supermarket.svg",
+    alt: "",
   },
   {
     title: "Day Care and Preschool",
     href: "/commercial-cleaning/day-care-cleaning",
     imgUrl: "/day-care-center.svg",
+    alt: "",
   },
   {
     title: "Schools and universities",
     href: "/commercial-cleaning/school-cleaning",
     imgUrl: "/university.svg",
+    alt: "",
   },
   {
     title: "Medical Offices and clinics",
     href: "/commercial-cleaning/medical-offices-cleaning",
     imgUrl: "/hospital.svg",
+    alt: "",
   },
   {
     title: "Hotels and resorts",
     href: "/commercial-cleaning/hotel-cleaning",
     imgUrl: "/hotel.svg",
+    alt: "",
   },
   {
     title: "Sports and recreational facilities",
     href: "/commercial-cleaning/recreational-facilities-cleaning",
     imgUrl: "/gym.svg",
+    alt: "",
   },
   {
     title: "Post Construction Clean up",
     href: "/commercial-cleaning/post-construction-cleaning",
     imgUrl: "/construction.svg",
+    alt: "",
   },
 ];
 
@@ -115,9 +123,9 @@ export const testimonials = [
 ]
 
 export const sliderImgs = {
-  0:{ id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the cleaning to us", effect: "fadeIn"},
-  1:{ id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "backInUp"},
-  2:{ id: 3, img: "/hero-office-interior.jpg", text: "Quality you can trust", effect: "fadeIn"},
+  0: { id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the cleaning to us", effect: "fadeIn" },
+  1: { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "backInUp" },
+  2: { id: 3, img: "/hero-office-interior.jpg", text: "Quality you can trust", effect: "fadeIn" },
 }
 
 export const residential_steps = [
