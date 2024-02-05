@@ -898,7 +898,7 @@ form textarea::placeholder {
 }
 
 .facility-list-link {
-  @apply flex gap-2 items-center;
+  @apply flex flex-col gap-2 items-center justify-center;
 }
 
 
@@ -927,9 +927,11 @@ form textarea::placeholder {
 
 
 /* TESTIMONIAL */
-
+/* .slideShowContainer {
+  
+} */
 .slideShow {
-  margin: 0 auto 1em;
+  margin: 0 auto;
   overflow: hidden;
   max-width: 300px;
   width: 100%;
@@ -951,7 +953,6 @@ form textarea::placeholder {
 .slide {
   display: inline-block;
   width: 100%;
-  height: 400px;
   padding: 1em 0.5em;
 }
 
@@ -966,4 +967,22 @@ form textarea::placeholder {
 
 .slide p {
   white-space: normal;
+}
+
+.slideShowBtns {
+  text-align: center;
+}
+
+.slideShowBtn {
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 15px 7px 0px;
+  background-color: #c4c4c4;
+}
+
+.activeSlide {
+  background-color: rgb(39, 71, 251);
 }
