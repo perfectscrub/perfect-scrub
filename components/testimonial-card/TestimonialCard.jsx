@@ -8,7 +8,7 @@ const TestimonialCard = ({ testimonial: { text, author, business } }) => {
   return (
     <div className="slide">
       <div className="slideContainer">
-        <Image width={100} height={40} src={"/five-stars.png"} className="mx-auto"/>
+        <Image width={100} height={40} src={"/five-stars.png"} alt="star rating" className="mx-auto"/>
         {text.length <= 250 ? (
           <p className="w-full block py-2 text-center text-gray-600">
             <span className="font-bold text-5xl">“</span>
@@ -35,7 +35,7 @@ const TestimonialCard = ({ testimonial: { text, author, business } }) => {
             - {author}
           </span>
           {business === "N/A" ? null : (
-            <span className="text-sm text-gray-500">{business}</span>
+            <span className="text-xs italic text-gray-500">{business}</span>
           )}
         </div>
       </div>
