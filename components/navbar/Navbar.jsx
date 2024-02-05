@@ -24,7 +24,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
       onClick={handleNavClose}
     >
       <div
-        className="bg-green-500 text-xs md:text-sm text-white p-3 lg:pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10"
+        className="bg-green-700 text-xs md:text-sm text-white p-3 lg:pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10"
       >
         <div>
           <Link
