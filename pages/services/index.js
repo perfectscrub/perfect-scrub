@@ -32,7 +32,6 @@ const Services = () => {
               className="lg:absolute lg:-bottom-20 left-20 z-20 mx-auto"
               src="/about-us-image.png"
               alt=""
-              priority
             />
             {/* Monogram Overlay  */}
             <div className="ps-monogram-image object-cover w-100 h-80 absolute hidden lg:block lg:-bottom-5 lg:right-0 opacity-10 z-10"></div>
@@ -40,8 +39,8 @@ const Services = () => {
         </section>
 
         {/* Start of Services */}
-        <section className="md:px-20 p-4 lg:py-18">
-          <div className="grid grid-cols-3 text-gray-500 gap-6">
+        <section className="md:px-20 p-4 md:py-20">
+          <div className="grid grid-cols-3 text-gray-800 gap-6">
             <p className="col-span-3 md:col-span-1 text-2xl font-medium leading-10 lg:text-3xl text-gray-700 pt-8 pb-4">
               We provide best in industry services.
             </p>
@@ -54,8 +53,8 @@ const Services = () => {
               to your specific needs.
             </p>
           </div>
-          <div className="grid grid-cols-4 text-gray-500 gap-6 md:mb-10">
-            <p className="col-span-4  md:col-start-3 md:col-span-2 text-2xl font-medium leading-10 lg:text-3xl text-gray-700 pt-8 pb-4">
+          <div className="grid grid-cols-4 text-gray-800 gap-6 md:mb-10">
+            <p className="col-span-4  md:col-start-3 md:col-span-2 text-2xl font-medium leading-10 lg:text-3xl pt-8 pb-4">
               Services we provide include:
             </p>
             <div className="col-span-4  md:col-start-1 md:col-end-3 block lg:gap-x-10">
@@ -68,7 +67,7 @@ const Services = () => {
               />
             </div>
             {/* Service List */}
-            <ul className="col-span-4 md:col-start-3 md:col-end-5 self-start list-disc cursor-pointer ml-10 pl-3 pt-5 text-lg mb-8">
+            <ul className="col-span-4 md:col-start-3 md:col-end-5 self-start list-disc cursor-pointer ml-10 pl-3 pt-5 text-gray-800 text-lg mb-8">
               <li className="py-2 pr-1 hover:text-blue-600">
                 <Link href="standard-cleaning">Standard Cleaning</Link>
               </li>
@@ -97,7 +96,7 @@ const Services = () => {
               <h3 className="font-sans text-2xl font-light mb-2 text-gray-700">
                 Skilled <span className="font-bold">Professionals</span>
               </h3>
-              <p className="text-gray-500 leading-loose mb-8">
+              <p className="leading-loose mb-8">
                 Our team of highly trained and experienced professionals takes
                 pride in delivering exceptional cleaning services with attention
                 to detail. We utilize the latest cleaning techniques, advanced
@@ -109,7 +108,7 @@ const Services = () => {
                 <span className="font-bold">Care for </span>
                 our work and <span className="font-bold">our customers</span>
               </h3>
-              <p className="text-gray-500 leading-loose mb-8">
+              <p className="leading-loose mb-8">
                 Customer satisfaction is at the heart of everything we do. We
                 strive to provide you with a seamless and hassle-free experience
                 from the moment you contact us to the completion of the cleaning
@@ -117,7 +116,7 @@ const Services = () => {
                 always available to address any questions or concerns you may
                 have.
               </p>
-              <p className="text-lg lg:text-2xl font-medium mb-8 text-gray-600">
+              <p className="text-lg lg:text-2xl font-medium mb-8 text-green-700">
                 Take the stress out of cleaning and let Perfect Srcub Cleaning
                 Services handle it all for you. Sit back, relax, and enjoy a
                 spotless and inviting space. We are committed to delivering
@@ -128,10 +127,10 @@ const Services = () => {
             {/* image */}
             <div className="col-span-4 lg:col-span-2 place-self-center w-full max-w-sm lg:block">
               <Image
-                width={500}
-                height={1000}
+                width={800}
+                height={1136}
                 className="object-cover"
-                src="/cleaning-service-team-2.png"
+                src="/cleaning-service-team.png"
                 alt="A team of cleaners smiling"
               />
             </div>
