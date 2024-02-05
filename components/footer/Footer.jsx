@@ -8,7 +8,7 @@ const Footer = ({handleNavClose}) => {
       <div className="flex flex-col lg:flex-row items-center justify-around mx-auto max-w-screen-2xl">
         <div className="flex flex-col items-center mb-6">
           {/* Logo Image */}
-          <Link className="mb-10 ml-0 lg:ml-4" href="/" title="homepage">
+          <Link className="mb-10 ml-0 lg:ml-4" href="/" title="back to homepage">
             <Image
               width={300}
               height={135}
@@ -22,6 +22,7 @@ const Footer = ({handleNavClose}) => {
             <Link
               className="hover:text-green-500"
               href="https://web.facebook.com/profile.php?id=100092968671969"
+              title="facebook"
             >
               <svg
                 className="mx-4 fill-current"
@@ -38,6 +39,7 @@ const Footer = ({handleNavClose}) => {
             <Link
               className="hover:text-green-500"
               href="https://www.instagram.com/perfectscrubcleaning/"
+              title="instagram"
             >
               <svg
                 className="mx-4 fill-current"
