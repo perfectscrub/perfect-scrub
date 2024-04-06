@@ -124,6 +124,12 @@ export const testimonials = [
     business: "N/A",
     id: 6,
   },
+  {
+    text: `Thank you for helping me by cleaning after my reno.  It was certainly needed and feels so much better to have it clean. I will definitely recommend you and your company to my friends for a job well done.`,
+    author: "Kathy Lewis",
+    business: "Carpe Diem",
+    id: 7,
+  },
 
 
 ]
