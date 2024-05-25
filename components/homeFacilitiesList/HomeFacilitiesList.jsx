@@ -10,7 +10,7 @@ const HomeFacilitiesList = () => {
       {indexFacilitiesList.map((facility, i) => (
         <li key={i} className="facility-list-item">
           <Link className="facility-list-link" href={facility.href}>
-            <span>
+            <div>
               <Image
                 width={40}
                 height={40}
@@ -18,8 +18,8 @@ const HomeFacilitiesList = () => {
                 src={facility.imgUrl}
                 alt={facility.alt}
               />
-            </span>
-            <span>{facility.title}</span>
+            </div>
+            <p className="w-28 pl-2 text-xs text-center">{facility.title}</p>
           </Link>
         </li>
       ))}

@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import "animate.css"
-import { taglines } from "@/data";
+import { sliderImgs } from "@/data";
 
 const BackgroundSlider = () => {
   const [currentBg, setCurrentBg] = useState(0);
@@ -19,16 +19,17 @@ const BackgroundSlider = () => {
   }, [currentBg]);
 
   const sliderStyles = {
-    backgroundImage: `url(${taglines[currentBg].img})`,
+    backgroundImage: `url(${sliderImgs[currentBg].img})`,
     backgroundSize: "cover",
-    backgroundPosition: "68%",
+    backgroundPosition: "center",
+    backgroundRepeat: "no-repeat",
     height: "inherit",
   };
 
   return (
     
     <div
-      className={`animate__animated animate__${taglines[currentBg].effect} pt-20 md:pt-5 h-screen flex items-start justify-start`}
+      className={`animate__animated animate__${sliderImgs[currentBg].effect} md:pt-5 h-screen flex items-start justify-start`}
       style={sliderStyles}
     >
       <div className="flex flex-col justify-around items-center lg:gap-y-6 h-full w-full md:w-1/2 lg:w-2/3 py-5 bg-gradient-to-b from-gray-50 via-transparent to-green-50 md:bg-gradient-to-r md:from-white md:to-transparent">
@@ -42,7 +43,7 @@ const BackgroundSlider = () => {
           <span className=""> time</span>
         </h1>
         <p className="text-shadow-effect text-xl lg:text-2xl italic font-semibold text-blue-800 m-3 tracking-wide text-center flex items-center lowercase">
-          {taglines[currentBg].text}
+          {sliderImgs[currentBg].text}
         </p>
         <div className="flex flex-col items-center">
           <Link

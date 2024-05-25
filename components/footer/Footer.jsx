@@ -58,12 +58,12 @@ const Footer = ({handleNavClose}) => {
         {/* Footer Links */}
         <div className="flex flex-col md:flex-row w-full md:w-2/3 justify-between md:justify-around my-8">
           <div className="mx-4 mb-4">
-            <h3 className="text-gray-400 tracking-wider text-center md:text-left mb-4 text-green-400">SERVICES</h3>
+            <h3 className="tracking-wider text-center md:text-left mb-4 text-green-400">SERVICES</h3>
             <ul className="flex flex-row md:flex-col flex-wrap gap-x-3 items-start text-sm font-medium text-gray-400 py-2 lg:py-0">
               {services.map((service, i) => (
                 <li
                   key={i}
-                  className="mx-1 pb-4 hover:text-gray-300 mb-2 lg:mb-0 hover:text-green-400"
+                  className="mx-1 pb-4 mb-2 lg:mb-0 hover:text-green-400"
                 >
                   <Link href={service.href}>{service.title}</Link>
                 </li>
@@ -71,10 +71,10 @@ const Footer = ({handleNavClose}) => {
             </ul>
           </div>
           <div className="mx-4">
-            <h3 className="text-gray-400 tracking-wider text-center md:text-left mb-4 text-green-400">LINKS</h3>
+            <h3 className="tracking-wider text-center md:text-left mb-4 text-green-400">LINKS</h3>
             <ul className="flex flex-row md:flex-col flex-wrap gap-x-4 items-start text-sm font-medium text-gray-400 py-2 lg:py-0">
               {footerCompanyLinks.map(({ href, title }) => (
-                <li key={title} className="mx-1 pb-6 hover:text-gray-300 lg:pb-3 hover:text-green-400">
+                <li key={title} className="mx-1 pb-6 lg:pb-3 hover:text-green-400">
                   <Link href={href}>{title}</Link>
                 </li>
               ))}

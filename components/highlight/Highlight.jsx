@@ -33,7 +33,7 @@ const Highlight = () => {
                 facilities we serve include:</p>
               <HomeFacilitiesList />
             </article>
-            <Image width={600} height={400} src="/facilities/gym-cleaner.jpg" alt="a modern gym" className="w-full md:w-1/2 lg:mt-10" />
+            <Image width={1000} height={400} src="/facilities/gym-cleaner.jpg" alt="a modern gym" className="hidden lg:block w-full md:w-1/2 lg:mt-10 object-contain rounded-md" />
           </div>
         </section>
   )

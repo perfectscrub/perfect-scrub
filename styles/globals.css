@@ -58,23 +58,24 @@
     flex-direction: column;
   }
 
-  .hero-1 {
-    height: 50%;
+  /* .hero-1 {
+    height: 80%;
     width: 100%;
     background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%), url(/carpet-cleaner.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-  }
+    background-position: center;
+  } */
 
-  .hero-2 {
+  /* .hero-2 {
     height: 50%;
-    width: 100%;
+    width: 100%; */
     
     /* clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 30% 100%); */
-    background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%), url(/home-interior.jpg);
+    /* background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%), url(/home-interior.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-  }
+  } */
 
 
 
@@ -112,13 +113,13 @@
   .hero-image {
     background: linear-gradient(to bottom, rgba(47, 61, 64, 0.5) 20%, rgba(47, 61, 64, 0.4) 30%, transparent), url(/office-cleaning-indoors.jpg);
     @apply bg-cover;
-    background-position: 88% 50%;
+    /* background-position: 88% 50%; */
   }
 
   .commercial-cleaning-image {
     background: linear-gradient(to bottom, rgba(47, 61, 64, 0.5) 20%, rgba(47, 61, 64, 0.4) 30%, transparent), url(/buffing-floor.jpg);
     @apply bg-cover;
-    background-position: 88% 50%;
+    /* background-position: 88% 50%; */
   }
 
   .residential-cleaning-image {
@@ -259,7 +260,7 @@
   @media (min-width: 768px) {
     .hero-1 {
       height: 100%;
-      width: 80%;
+      /* width: 80%; */
       z-index: 1;
       background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%), url(/carpet-cleaner.jpg);
       background-repeat: no-repeat;

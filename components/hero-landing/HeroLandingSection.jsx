@@ -14,9 +14,9 @@ const HeroLandingSection = ({ bgImg, title, type }) => {
       </div>
       <div className="z-20 md:self-end px-2 lg:w-1/2">
 
-      {type === "Residential Cleaning" ? (
+      {/* {type === "Residential Cleaning" ? (
           <ResidentialBooking />
-      ) : null}
+      ) : null} */}
       </div>
       {/* Monogram Overlay */}
       <MonogramOverlay />

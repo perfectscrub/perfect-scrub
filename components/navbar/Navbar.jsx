@@ -199,7 +199,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
                 ))}
               </ul>
             </li>
-            <li className="pb-5 ml-3 lg:py-6 lg:px-3 lg:text-center">
+            {/* <li className="pb-5 ml-3 lg:py-6 lg:px-3 lg:text-center">
               <Link
                 className="hover:text-green-300"
                 href="/residential-cleaning"
@@ -207,7 +207,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
               >
                 <span className="lg:block">HOME</span> CLEANING
               </Link>
-            </li>
+            </li> */}
             <li className="pb-5 ml-3 lg:py-8 lg:px-3">
               <Link
                 className="hover:text-green-300"

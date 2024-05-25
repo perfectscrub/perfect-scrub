@@ -24,7 +24,7 @@ export const footerCompanyLinks = [
   { href: "/about", title: "About us" },
   { href: "/contact", title: "Contact" },
   { href: "/commercial-cleaning", title: "Commercial" },
-  { href: "/residential-cleaning", title: "Residential" },
+  // { href: "/residential-cleaning", title: "Residential" },
   { href: "/quote", title: "Get a quote" },
 ];
 
@@ -142,7 +142,7 @@ export const testimonials = [
 
 export const sliderImgs = {
   0: { id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the cleaning to us", effect: "fadeIn" },
-  1: { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "backInUp" },
+  1: { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "fadeIn" },
   2: { id: 3, img: "/hero-office-interior.jpg", text: "Quality you can trust", effect: "fadeIn" },
 }
 
