@@ -47,8 +47,12 @@
     background: linear-gradient(128deg, #12b01c 25%, #56e45f 55%, #12b01c);
   }
 
+  .title-shadow-effect {
+    text-shadow: 2px 2px 8px rgba(219, 228, 230, 0.44);
+  }
+
   .text-shadow-effect {
-    text-shadow: 2px 2px rgba(47, 61, 64, 0.44);
+    text-shadow: 2px 2px 7px rgba(95, 108, 110, 0.44);
   }
 
   .hero-container {

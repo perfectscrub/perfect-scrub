@@ -141,9 +141,9 @@ export const testimonials = [
 ]
 
 export const sliderImgs = {
-  0: { id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the cleaning to us", effect: "fadeIn" },
-  1: { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs", effect: "fadeIn" },
-  2: { id: 3, img: "/hero-office-interior.jpg", text: "Quality you can trust", effect: "fadeIn" },
+  0: { id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the clean up to us.", effect: "fadeIn" },
+  1: { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs.", effect: "fadeIn" },
+  2: { id: 3, img: "/hero-office-interior.jpg", text: "Reliability and quality you can trust.", effect: "fadeIn" },
 }
 
 export const residential_steps = [
