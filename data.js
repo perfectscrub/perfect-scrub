@@ -130,6 +130,12 @@ export const testimonials = [
     business: "Carpe Diem",
     id: 7,
   },
+  {
+    text: `Awesome, thank you so much! I definitely will use you again and refer you to others. Thank you so much again.`,
+    author: "Kandi Roy",
+    business: "Director, Absolute Angels Daycare",
+    id: 8,
+  },
 
 
 ]
