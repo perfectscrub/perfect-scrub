@@ -13,14 +13,14 @@ const Quote = () => {
         />
       </Head>
       <main role="main">
-        <section className="landing-section relative overflow-hidden flex flex-col lg:flex-row lg:justify-around pt-28 lg:pt-44 lg:pl-10 bg-gradient-to-br from-blue-600 to-green-400">
+        <section className="landing-section relative overflow-hidden flex flex-col lg:flex-row lg:justify-between pt-28 lg:pt-44 lg:pl-10 bg-gradient-to-br from-blue-600 to-green-400">
           <h1 className="font-semibold text-3xl lg:text-5xl text-gray-50 mt-10 mx-10 mb-8">
             Get A Quote
           </h1>
           {/* Monogran Overlay */}
           <MonogramOverlay />
           {/* Contact Info */}
-          <div className="get-a-quote-image w-full lg:w-1/2 place-self-end"></div>
+          <div className="get-a-quote-image w-full lg:w-1/2 self-end"/>
         </section>
 
         {/* Quote Form */}

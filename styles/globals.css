@@ -3,7 +3,44 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+    --primary: 221.2 83.2% 53.3%;
+    --primary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 44%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 221.2 83.2% 53.3%;
+    --radius: 0.5rem;
+  }
+}
 
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
 
 @layer components {
 
@@ -74,9 +111,9 @@
   /* .hero-2 {
     height: 50%;
     width: 100%; */
-    
-    /* clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 30% 100%); */
-    /* background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%), url(/home-interior.jpg);
+
+  /* clip-path: polygon(70% 0%, 100% 0%, 100% 100%, 30% 100%); */
+  /* background: linear-gradient(to bottom, rgba(47, 61, 64, 0.44) 20%, rgba(47, 61, 64, 0.6) 40%), url(/home-interior.jpg);
     background-repeat: no-repeat;
     background-size: cover;
   } */
@@ -401,11 +438,11 @@
   }
 
   .easy-steps {
-    background: rgba( 255, 255, 255, 0.4 );
-box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-backdrop-filter: blur( 3.5px );
--webkit-backdrop-filter: blur( 3.5px );
-border-radius: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(3.5px);
+    -webkit-backdrop-filter: blur(3.5px);
+    border-radius: 10px;
   }
 
 
@@ -490,8 +527,8 @@ form .input-animated {
 }
 
 form .input-animated input {
-  @apply block border-none pt-5 pb-4 w-full outline-none;
-  background-color: #fbfbfb;
+  @apply block border-none pt-5 pb-4 w-full outline-none bg-blue-100;
+  /* background-color: #fbfbfb; */
 }
 
 form .input-animated input::placeholder {
@@ -569,8 +606,8 @@ form input:invalid {
 
 /* TEXTAREA ONLY */
 form textarea {
-  @apply mt-8 border-2 border-gray-400 w-full;
-  background-color: #fbfbfb;
+  @apply mt-8 border-2 border-gray-400 w-full bg-blue-100;
+  /* background-color: #fbfbfb; */
 }
 
 form textarea:focus {
@@ -947,7 +984,7 @@ form textarea::placeholder {
   .slideShow {
     max-width: 500px;
   }
-  
+
 }
 
 .slider {

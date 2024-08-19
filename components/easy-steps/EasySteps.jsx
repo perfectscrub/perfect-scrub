@@ -4,7 +4,7 @@ import Link from "next/link";
 const EasySteps = ({ type, steps }) => {
   return (
     <section className="flex flex-col px-4 py-20 justify-center bg-white text-center">
-      <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold">
+      <h2 className="text-2xl md:text-3xl lg:text-4xl pb-4 font-bold">
         Get it done in 3 Easy Steps!
       </h2>
       <div className="flex flex-col md:flex-row flex-wrap px-4 py-16 justify-center bg-white">

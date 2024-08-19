@@ -14,7 +14,7 @@ const Contact = () => {
         />
       </Head>
       <main role="main">
-        <section className="landing-section relative overflow-hidden flex flex-col lg:flex-row lg:justify-around pt-28 lg:pt-44 lg:pl-10 bg-gradient-to-br from-blue-600 to-green-400">
+        <section className="landing-section relative overflow-hidden flex flex-col lg:flex-row lg:justify-between pt-28 lg:pt-44 lg:pl-10 bg-gradient-to-br from-blue-600 to-green-400">
           <h1 className="font-semibold text-3xl lg:text-5xl text-gray-50 mt-10 mx-10 mb-8">
             Contact Us
           </h1>
@@ -28,13 +28,13 @@ const Contact = () => {
 
         <section
           id="contact-us"
-          className="flex justify-center items-center py-16 bg-gradient-to-br from-blue-100 via-blue-300 to-green-300 text-xl"
+          className="flex justify-center items-center py-16 bg-gradient-to-b from-blue-100 via-blue-200 to-blue-300 text-xl"
         >
           {/* Contact Info */}
           <div className="w-full lg:w-3/4 rounded-md overflow-hidden lg:shadow-2xl z-20">
-            <div className="bg-gray-200 w-full bg-white bg-opacity-30 h-full py-12">
+            <div className=" w-full bg-white bg-opacity-30 h-full py-12">
               <div className="flex flex-col items-center justify-center">
-                <h2 className="font-medium mb-5 text-center text-gray-700">
+                <h2 className="font-bold text-3xl mb-10 text-center text-gray-800">
                   Get in Touch
                 </h2>
                 <div>

@@ -209,7 +209,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
                 <span className="lg:block">HOME</span> CLEANING
               </Link>
             </li> */}
-            <li className="pb-5 ml-3 lg:py-8 lg:px-3">
+            {/* <li className="pb-5 ml-3 lg:py-8 lg:px-3">
               <Link
                 className="hover:text-green-300"
                 href="/login"
@@ -217,7 +217,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
               >
                 LOGIN
               </Link>
-            </li>
+            </li> */}
           </ul>
           <Link
             className="inline-block p-2 ml-3 mr-6 font-medium text-sm border-2 mt-2 lg:mt-0 text-green-400 border-green-400 hover:bg-green-400 hover:text-green-50"
