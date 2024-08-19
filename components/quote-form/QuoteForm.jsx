@@ -14,9 +14,9 @@ const QuoteForm = () => {
 
   }
   return (
-    <section className="contact bg-gradient-bl from-gray-50 to-blue-200 px-4 py-12 lg:pt-24 lg:pb-32">
+    <section className="contact bg-blue-100 px-4 py-12 lg:pt-24 lg:pb-32">
           {/* Form */}
-          <div className="text-gray-700 bg-white p-4 pb-8 mx-auto max-w-2xl">
+          <div className="text-gray-700 bg-blue-100 p-4 pb-8 mx-auto max-w-2xl">
             <h2 className="font-sans text-4xl font-semibold mt-6">
               Need a quote?
             </h2>
@@ -27,7 +27,7 @@ const QuoteForm = () => {
               </Link>
               ?
             </p>
-            <p className="text-blue-700 font-sans text-base font-semibold mt-4 lg:w-1/2">
+            <p className="text-blue-700 font-sans text-base font-semibold mt-4 pb-4">
               Fill out the form below and we'll get back to you.
             </p>
             <form

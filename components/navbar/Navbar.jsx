@@ -167,7 +167,8 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
                   href="/commercial-cleaning"
                   onClick={() => handleNavMenuClick("nav")}
                 >
-                  <span className="lg:block">COMMERCIAL</span> CLEANING
+                  <span className="lg:block">COMMERCIAL</span> 
+                  {/* CLEANING */}
                 </Link>
                 <span
                   id="chevron2"

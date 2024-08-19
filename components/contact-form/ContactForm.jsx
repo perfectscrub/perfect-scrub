@@ -14,7 +14,7 @@ const ContactForm = () => {
   }
 
   return (
-    <section className="relative bg-white px-4 py-12 lg:pt-24 lg:pb-32">
+    <section className="relative bg-blue-100 px-4 py-12 lg:pt-24 lg:pb-32">
           {/* Form */}
           <div className="text-gray-700 bg-transparent p-4 pb-8 mx-auto max-w-2xl">
             <h2 className="font-sans text-4xl font-semibold mt-6">
