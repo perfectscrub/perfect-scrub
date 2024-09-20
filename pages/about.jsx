@@ -31,7 +31,6 @@ const About = () => {
               className="lg:absolute lg:-bottom-20 left-20 z-20 mx-auto"
               src="/about-us-image.png"
               alt=""
-              
             />
             {/* Monogram Overlay */}
             <div className="ps-monogram-image object-cover w-100 h-80 absolute hidden lg:block lg:-bottom-5 lg:right-0 opacity-10 z-10" />
@@ -41,30 +40,33 @@ const About = () => {
         {/* Start of About Us longer description/story */}
         <section className="flex flex-col items-center pt-16 lg:pt-20 pb-40 px-4 gap-4">
           <h2 className="thick_underline tracking-wider text-center font-sans font-light text-3xl lg:text-4xl uppercase text-gray-700">
-            A Closer Look At <span className="font-bold">Who We Are</span>
+            Welcome to Perfect Scrub Cleaning!
           </h2>
           <div>
             <p className="max-w-prose pt-12 pb-2 lg:px-0 text-gray-700">
-              Hi there, my name is Bukola, and I am the CEO of Perfect Scrub
-              Cleaning.
+              At Perfect Scrub Cleaning, we believe a clean space is a happy
+              one. Based in Ontario, we aim to transform your environment into a
+              haven of wellness and peace. We specialize in commercial cleaning
+              services tailored to meet the unique needs of your business,
+              ensuring every corner shines and promotes a healthy atmosphere for
+              your employees and clients alike.
             </p>
             <p className="max-w-prose pt-5 pb-2 lg:px-0 text-gray-700">
-              My husband and father of my two kids has long had a passion for
-              cleaning. He cleans so much on a regular basis our little girls
-              nicknamed him Mr. Clean a while back. I on the other hand have
-              always leaned towards business and entrepreneurship having started
-              a small business in the past.
+              Our dedicated team of cleaning professionals is committed to
+              excellence. With meticulous attention to detail and the use of
+              eco-friendly products, we not only clean but also enhance your
+              workspace’s overall well-being. We understand that a clean
+              environment boosts productivity and morale, and we strive to
+              provide a service that exceeds your expectations.
             </p>
             <p className="max-w-prose pt-5 pb-2 lg:px-0 text-gray-700">
-              With our passion intact, we saw the opportunity to bring our brand
-              and desire for quality cleaning to the market. So, the idea for
-              Perfect Scrub was born to tackle several pain points in the
-              industry.
+              Whether you operate an office, or retail space, or require
+              post-construction cleaning, Perfect Scrub Cleaning will make your
+              space immaculate. Let us take care of the cleaning, so you can
+              focus on what you do best.
             </p>
             <p className="max-w-prose pt-5 pb-2 lg:px-0 text-gray-700">
-              We continue to satisfy our clients’ demands with our quality
-              service and are pleased with the positive feedback we have
-              received.
+              Join us in creating a healthier, happier workplace!
             </p>
           </div>
           <div className="mt-4">
@@ -75,7 +77,7 @@ const About = () => {
               alt="customer care people"
             />
           </div>
-          <div>
+          {/* <div>
             <h2 className="text-3xl font-sans font-light mt-12">
               Our <span className="font-bold">Customers Matter </span>to us
             </h2>
@@ -133,7 +135,7 @@ const About = () => {
               household name that has earned the trust of all our customers and
               become the preferred cleaning company in Ontario.
             </p>
-          </div>
+          </div> */}
           <p className="text-sm font-semibold text-gray-600 pt-10">
             - The Perfect Scrub Team
           </p>
