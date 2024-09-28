@@ -27,13 +27,13 @@ const Highlight = () => {
             </article>
           </div>
           <div className="px-4 mb-6 md:mx-8 lg:mb-14 flex flex-col lg:flex-row lg:gap-x-4">
-            <article className="w-full lg:w-1/2 text-left pl-2 max-w-2xl flex flex-col">
+            <article className="w-full flex flex-col">
               <h2 className="text-3xl font-sans font-light"><span className="font-bold">Facilities</span> we serve</h2>
               <p className="my-5">We provide our services to a wide range of facilities and establishments. Some of the
                 facilities we serve include:</p>
               <HomeFacilitiesList />
             </article>
-            <Image width={1000} height={400} src="/facilities/gym-cleaner.jpg" alt="a modern gym" className="hidden lg:block w-full md:w-1/2 lg:mt-10 object-contain rounded-md" />
+            {/* <Image width={1000} height={400} src="/facilities/gym-cleaner.jpg" alt="a modern gym" className="hidden lg:block w-full md:w-1/2 lg:mt-10 object-contain rounded-md" /> */}
           </div>
         </section>
   )

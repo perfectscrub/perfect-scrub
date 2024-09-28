@@ -1,9 +1,10 @@
+"use client";
 import Link from "next/link";
-import { useRouter } from "next/router";
+import { usePathname } from "next/navigation";
 import { services } from "@/data";
 
 const ServicesSideMenu = () => {
-  const router = useRouter();
+  const pathname = usePathname();
 
   return (
     <aside className="hidden lg:block">
@@ -12,7 +13,7 @@ const ServicesSideMenu = () => {
       </h3>
       <ul className="pl-3 text-lg">
         {services.map(({ id, title, href }, i) => {
-          if (router.pathname.includes(href)) {
+          if (pathname.includes(href)) {
             return (
               <li
                 key={id}

@@ -86,12 +86,12 @@ const Footer = ({handleNavClose}) => {
       {/* Fine Print */}
       <div className="flex flex-col items-center mt-12 lg:mt-24 text-xs text-gray-400">
         <div className="mb-4">
-          <Link className="mx-4 hover:text-gray-300" href="privacy-policy">
+          <Link className="mx-4 hover:text-gray-300" href="/privacy-policy">
             Privacy Policy
           </Link>
           <Link
             className="mx-4 hover:text-gray-300"
-            href="terms-and-conditions"
+            href="/terms-and-conditions"
           >
             Terms &amp; Conditions
           </Link>

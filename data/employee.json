@@ -1,0 +1,17 @@
+[
+    {
+        "firstName":"",
+        "lastName":"",
+        "middleName":"",
+        "dob":"",
+        "socialInsuranceNo":"",
+        "citizenship":"",
+        "citizenshipImage":"",
+        "education": "",
+        "next-of-kin":{"name":"", "phone":"", "address":""},
+        "photo":"", 
+        "trainingsIds":[],
+        "certificateEarned":"",
+        "leaveRequest": "Paid, Unpaid, Maternity/paternity"
+    }
+]

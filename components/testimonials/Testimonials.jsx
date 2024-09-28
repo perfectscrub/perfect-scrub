@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState, useRef } from "react";
 import TestimonialCard from "../testimonial-card/TestimonialCard";
 import { testimonials } from "@/data";
@@ -30,36 +31,42 @@ const Testimonials = () => {
         Our Client Testimonials
       </h2>
       <div className="flex flex-col-reverse md:flex-row justify-around items-center">
-        <Image width={500} height={400} src={"/testimonials.png"} alt="" className="md:self-end p-5" />
+        <Image
+          width={500}
+          height={400}
+          src={"/testimonials.png"}
+          alt=""
+          className="md:self-end p-5"
+        />
         <div className="slideShowContainer">
-        <div className="slideShow">
-          <div
-            className="slider"
-            style={{
-              transform: `translate3d(${-sliderPosition * 100}%, 0, 0)`,
-            }}
-          >
-            {testimonials.map((testimonial) => (
-              <TestimonialCard
-                key={testimonial.author + testimonial.id}
-                testimonial={testimonial}
-                className="slide"
+          <div className="slideShow">
+            <div
+              className="slider"
+              style={{
+                transform: `translate3d(${-sliderPosition * 100}%, 0, 0)`,
+              }}
+            >
+              {testimonials.map((testimonial) => (
+                <TestimonialCard
+                  key={testimonial.author + testimonial.id}
+                  testimonial={testimonial}
+                  className="slide"
                 />
-                ))}
+              ))}
+            </div>
+          </div>
+          <div className="slideShowBtns">
+            {testimonials.map((testimonial, index) => (
+              <div
+                className={`slideShowBtn ${
+                  sliderPosition === index ? "activeSlide" : ""
+                }`}
+                key={testimonial.author + testimonial.id}
+                onClick={() => setSliderPosition(index)}
+              ></div>
+            ))}
           </div>
         </div>
-        <div className="slideShowBtns">
-          {
-            testimonials.map((testimonial, index) => (
-              <div 
-              className={`slideShowBtn ${sliderPosition === index? "activeSlide":""}`}
-              key={testimonial.author + testimonial.id}
-              onClick={()=>setSliderPosition(index)}
-              ></div>
-            ))
-          }
-        </div>
-      </div>
       </div>
     </section>
   );
