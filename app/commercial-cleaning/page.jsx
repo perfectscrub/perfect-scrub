@@ -3,6 +3,7 @@ import Benefits from "@/components/benefits/Benefits";
 import ServicesSection from "@/components/services-section/ServicesSection";
 import QuoteSection from "@/components/quote-section/QuoteSection";
 import LandingSection from "@/components/landing-section/LandingSection";
+import HomeFacilitiesList from "@/components/homeFacilitiesList/HomeFacilitiesList";
 
 export const metadata = {
   title: " Facilities Page",
@@ -19,10 +20,14 @@ const Facilities = () => {
         title={"A Proper Clean"}
         type={"Commercial Cleaning"}
       />
-      {/* Highlight Service  */}
-      <Highlight />
-      {/* Start of Benefits Section  */}
-      <Benefits />
+
+      <div className="md:max-w-[400px] lg:max-w-[900px] xl:max-w-[1200px] mx-auto py-20 ">
+        <h2 className="text-3xl font-bold font-sans text-center mb-10">
+          Facilities & Businesses we offer services to
+        </h2>
+
+        <HomeFacilitiesList />
+      </div>
       {/* Start of Services Section */}
       <ServicesSection />
       {/* Start of 'Ready To Get Started' Section */}

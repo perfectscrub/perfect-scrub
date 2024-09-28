@@ -115,8 +115,8 @@ const Services = () => {
               always available to address any questions or concerns you may
               have.
             </p>
-            <p className="text-lg lg:text-2xl font-medium mb-8 text-green-700">
-              Take the stress out of cleaning and let Perfect Srcub Cleaning
+            <p className="lg:text-[18px] leading-9 font-medium mb-8 text-green-700">
+              Take the stress out of cleaning and let Perfect Scrub Cleaning
               Services handle it all for you. Sit back, relax, and enjoy a
               spotless and inviting space. We are committed to delivering
               excellence in every aspect of our service, ensuring your complete
