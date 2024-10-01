@@ -41,7 +41,6 @@ const Locations = ({ locationsData, setLocationsData }) => {
             </div>
           ))}
         </div>
-        <hr />
       </div>
     </section>
   );
