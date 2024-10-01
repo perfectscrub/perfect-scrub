@@ -9,7 +9,7 @@ const DashboardSidebar = ({showMenu}) => {
   return (
     <aside
       className={cn(
-        "translate-x-[-2000px] md:translate-x-0 absolute opacity-0 md:opacity-100 md:relative md:block w-64 bg-white p-6 shadow-md transition-all duration-[3000ms]",
+        "translate-x-[-2000px] md:translate-x-0 absolute opacity-0 md:opacity-100 md:relative md:block w-64 bg-white p-6 shadow-md transition-all",
         { "translate-x-0 opacity-100 min-h-screen z-50": showMenu }
       )}
     >

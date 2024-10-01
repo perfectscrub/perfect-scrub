@@ -57,7 +57,7 @@ export default function AdminDashboard({
       handleTabClick(changeTab);
       router.replace("/admin");
     }
-  }, [changeTab]);
+  }, [changeTab, router, handleTabClick]);
 
   return (
     <div className="flex h-screen bg-gray-100">

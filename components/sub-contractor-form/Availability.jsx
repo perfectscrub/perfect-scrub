@@ -13,7 +13,7 @@ const Availability = ({ availabilityData, setAvailabilityData }) => {
       <div className="col-span-2 flex flex-col gap-6">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 px-3">
           {availabilityData.map((day, index) => (
-            <div className="flex gap-3">
+            <div key={day} className="flex gap-3">
               <Checkbox
                 key={day.text}
                 id={day.text}
