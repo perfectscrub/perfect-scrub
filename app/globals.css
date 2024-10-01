@@ -11,7 +11,7 @@
     --card-foreground: 240 10% 3.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 240 10% 3.9%;
-    --primary: 240 5.9% 10%;
+    --primary: 124 81% 38%;
     --primary-foreground: 0 0% 98%;
     --secondary: 240 4.8% 95.9%;
     --secondary-foreground: 240 5.9% 10%;
@@ -99,7 +99,7 @@
 
   body {
     overflow-x: hidden;
-    background: #f3f5fd;
+    background: hsl(228, 71%, 97%);
   }
 
   body::-webkit-scrollbar {
@@ -112,7 +112,7 @@
 
   body::-webkit-scrollbar-thumb {
     border-radius: 6px;
-    background: linear-gradient(128deg, #12b01c 25%, #56e45f 55%, #12b01c);
+    background: linear-gradient(128deg, hsl(124, 81%, 38%) 25%, #56e45f 55%, #12b01c);
   }
 
   .title-shadow-effect {
@@ -250,7 +250,7 @@
   }
 
   .washroom-bg-image {
-    background: linear-gradient(to bottom, rgb(10, 39, 135), transparent 80%, rgba(10, 39, 135, 0.6)), url(/washroom-cleaning.jpg);
+    background: linear-gradient(to bottom, #0a2787, transparent 80%, rgba(10, 39, 135, 0.6)), url(/washroom-cleaning.jpg);
     background-position: 50% 10%;
   }
 

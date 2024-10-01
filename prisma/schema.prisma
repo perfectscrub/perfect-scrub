@@ -9,3 +9,78 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Contractor {
+  id                    String             @id @default(cuid())
+  slug                  String             @unique
+  firstname             String
+  lastname              String
+  businessName          String             @unique
+  businessCategory      String
+  email                 String             @unique
+  phone                 String             @unique
+  address               String
+  city                  String
+  postcode              String
+  businessAddress       String
+  businessCity          String
+  province              String
+  businessPostcode      String
+  hasVehicle            Boolean            @default(false)
+  driversLicence        String?
+  insurance             String
+  employmentStatus      String
+  availabilityDays      String
+  locations             String
+  experience            String
+  experienceDescription String
+  hasEquipment          String
+  references            Reference[]
+  emergencyContacts     EmergencyContact[]
+  createdAt             DateTime           @default(now())
+  updatedAt             DateTime           @updatedAt
+}
+
+model Reference {
+  id           Int          @id @default(autoincrement())
+  name         String
+  relationship String
+  phone        String
+  contractors  Contractor[]
+}
+
+model EmergencyContact {
+  id           Int          @id @default(autoincrement())
+  name         String
+  relationship String
+  phone        String
+  email        String
+  contractors  Contractor[]
+}
+
+model User {
+  id        Int     @id @default(autoincrement())
+  firstName String
+  lastName  String
+  email     String  @unique
+  isAdmin   Boolean @default(false)
+
+  // @@unique([firstName, lastName])
+}
+
+// model Employee {
+//   id                Int    @id @default(autoincrement())
+//   firstName         String
+//   lastName          String
+//   middleName        String
+//   dob               String
+//   socialInsuranceNo String
+//   citizenship       String
+//   citizenshipImage  String
+//   education         String
+//   nextOfKin         String //{"name":"", "phone":"", "address"}
+//   photo             String
+//   trainingsIds      String
+//   certificateEarned String
+//   leaveRequest      String //"Paid, Unpaid, Maternity/paternity
+// }
