@@ -1,14 +1,22 @@
 import Image from "next/image";
 import Link from "next/link";
-import { services, footerCompanyLinks } from "@/data";
+import { services, footerCompanyLinks } from "@/utils/data";
 
-const Footer = ({handleNavClose}) => {
+const Footer = ({ handleNavClose }) => {
   return (
-    <footer role="contentinfo" className="py-16 bg-gray-900" onClick={handleNavClose}>
+    <footer
+      role="contentinfo"
+      className="py-16 bg-gray-900"
+      onClick={handleNavClose}
+    >
       <div className="flex flex-col lg:flex-row items-center justify-around mx-auto max-w-screen-2xl">
         <div className="flex flex-col items-center mb-6">
           {/* Logo Image */}
-          <Link className="mb-10 ml-0 lg:ml-4" href="/" title="back to homepage">
+          <Link
+            className="mb-10 ml-0 lg:ml-4"
+            href="/"
+            title="back to homepage"
+          >
             <Image
               width={300}
               height={135}
@@ -58,7 +66,9 @@ const Footer = ({handleNavClose}) => {
         {/* Footer Links */}
         <div className="flex flex-col md:flex-row w-full md:w-2/3 justify-between md:justify-around my-8">
           <div className="mx-4 mb-4">
-            <h3 className="tracking-wider text-center md:text-left mb-4 text-green-400">SERVICES</h3>
+            <h3 className="tracking-wider text-center md:text-left mb-4 text-green-400">
+              SERVICES
+            </h3>
             <ul className="flex flex-row md:flex-col flex-wrap gap-x-3 items-start text-sm font-medium text-gray-400 py-2 lg:py-0">
               {services.map((service, i) => (
                 <li
@@ -71,10 +81,15 @@ const Footer = ({handleNavClose}) => {
             </ul>
           </div>
           <div className="mx-4">
-            <h3 className="tracking-wider text-center md:text-left mb-4 text-green-400">LINKS</h3>
+            <h3 className="tracking-wider text-center md:text-left mb-4 text-green-400">
+              LINKS
+            </h3>
             <ul className="flex flex-row md:flex-col flex-wrap gap-x-4 items-start text-sm font-medium text-gray-400 py-2 lg:py-0">
               {footerCompanyLinks.map(({ href, title }) => (
-                <li key={title} className="mx-1 pb-6 lg:pb-3 hover:text-green-400">
+                <li
+                  key={title}
+                  className="mx-1 pb-6 lg:pb-3 hover:text-green-400"
+                >
                   <Link href={href}>{title}</Link>
                 </li>
               ))}
@@ -86,12 +101,12 @@ const Footer = ({handleNavClose}) => {
       {/* Fine Print */}
       <div className="flex flex-col items-center mt-12 lg:mt-24 text-xs text-gray-400">
         <div className="mb-4">
-          <Link className="mx-4 hover:text-gray-300" href="privacy-policy">
+          <Link className="mx-4 hover:text-gray-300" href="/privacy-policy">
             Privacy Policy
           </Link>
           <Link
             className="mx-4 hover:text-gray-300"
-            href="terms-and-conditions"
+            href="/terms-and-conditions"
           >
             Terms &amp; Conditions
           </Link>
@@ -101,6 +116,5 @@ const Footer = ({handleNavClose}) => {
     </footer>
   );
 };
-
 
 export default Footer;

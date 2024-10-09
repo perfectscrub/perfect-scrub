@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 import setObserver from "@/utils/observer.util";
 import Link from 'next/link';

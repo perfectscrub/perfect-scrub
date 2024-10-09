@@ -1,9 +1,10 @@
-import { useRouter } from "next/router";
+"use client";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { facilities } from "@/data";
+import { facilities } from "@/utils/data";
 
 const FacilitiesSideMenu = () => {
-  const router = useRouter();
+  const pathname = usePathname();
   const handeClick = (i) => {
     setActiveIndex(i);
   };
@@ -14,7 +15,7 @@ const FacilitiesSideMenu = () => {
       </h3>
       <ul className="pl-3 text-lg">
         {facilities.map(({ title, href }, i) => {
-          if (router.pathname.includes(href)) {
+          if (pathname.includes(href)) {
             return (
               <li
                 key={i}
@@ -39,6 +40,5 @@ const FacilitiesSideMenu = () => {
     </aside>
   );
 };
-
 
 export default FacilitiesSideMenu;

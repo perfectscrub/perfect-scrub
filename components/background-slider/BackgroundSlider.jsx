@@ -1,7 +1,8 @@
+"use client";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-import "animate.css"
-import { sliderImgs } from "@/data";
+import "animate.css";
+import { sliderImgs } from "@/utils/data";
 
 const BackgroundSlider = () => {
   const [currentBg, setCurrentBg] = useState(0);
@@ -27,7 +28,6 @@ const BackgroundSlider = () => {
   };
 
   return (
-    
     <div
       className={`animate__animated animate__${sliderImgs[currentBg].effect} md:pt-5 h-screen flex items-start justify-start`}
       style={sliderStyles}

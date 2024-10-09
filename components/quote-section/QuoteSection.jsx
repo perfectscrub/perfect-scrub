@@ -5,7 +5,7 @@ const QuoteSection = () => {
   return (
     <section id="get-quote" className="pt-0 bg-white">
           <div
-            className="flex flex-col md:flex-row items-center justify-around py-10 bg-gradient-to-br from-blue-400 to-blue-800">
+            className="flex flex-col md:flex-row items-center justify-around py-20 bg-gradient-to-br from-blue-400 to-blue-800">
 
             <p className="text-2xl font-sans font-semibold text-white">
               Ready to Get Started?
