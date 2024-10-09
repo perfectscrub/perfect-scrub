@@ -1,10 +1,17 @@
 import React from "react";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import CanadaPhoneInput from "./PhoneInput";
 
 const EmergencyContacts = ({
   emergencyContactInfo,
   setEmergencyContactInfo,
+  contactPhone1,
+  setContactPhone1,
+  contactPhone2,
+  setContactPhone2,
+  contactPhone3,
+  setContactPhone3,
 }) => {
   return (
     <section className="border-t-2 pt-5">
@@ -52,17 +59,13 @@ const EmergencyContacts = ({
             </div>
             <div>
               <Label htmlFor="contact1phone">Phone</Label>
-              <Input
-                className="mt-2"
+              <CanadaPhoneInput
+                className={
+                  "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 mt-2"
+                }
                 id="contact1phone"
-                value={emergencyContactInfo[0].phone}
-                onChange={(e) => {
-                  const val = e.target.value.trim();
-                  if (isNaN(val)) return;
-                  setEmergencyContactInfo((prev) =>
-                    prev.map((r, i) => (i === 0 ? { ...r, phone: val } : r))
-                  );
-                }}
+                value={contactPhone1}
+                setValue={setContactPhone1}
                 required
               />
             </div>
@@ -106,19 +109,13 @@ const EmergencyContacts = ({
             </div>
             <div>
               <Label htmlFor="contact2Phone">Phone</Label>
-              <Input
-                className="mt-2"
+              <CanadaPhoneInput
+                className={
+                  "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 mt-2"
+                }
                 id="contact2Phone"
-                value={emergencyContactInfo[1].phone}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (isNaN(val)) return;
-                  setEmergencyContactInfo((prev) =>
-                    prev.map((r, i) =>
-                      i === 1 ? { ...r, phone: e.target.value } : r
-                    )
-                  );
-                }}
+                value={contactPhone2}
+                setValue={setContactPhone2}
                 required
               />
             </div>
@@ -162,19 +159,13 @@ const EmergencyContacts = ({
             </div>
             <div>
               <Label htmlFor="contact3Phone">Phone</Label>
-              <Input
-                className="mt-2"
+              <CanadaPhoneInput
+                className={
+                  "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 mt-2"
+                }
                 id="contact3Phone"
-                value={emergencyContactInfo[2].phone}
-                onChange={(e) => {
-                  const val = e.target.value;
-                  if (isNaN(val)) return;
-                  setEmergencyContactInfo((prev) =>
-                    prev.map((r, i) =>
-                      i === 2 ? { ...r, phone: e.target.value } : r
-                    )
-                  );
-                }}
+                value={contactPhone3}
+                setValue={setContactPhone3}
                 required
               />
             </div>

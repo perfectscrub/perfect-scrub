@@ -1,8 +1,18 @@
 import React from "react";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import CanadaPhoneInput from "./PhoneInput";
 
-const References = ({ referenceInfo, setReferenceInfo }) => {
+const References = ({
+  referenceInfo,
+  setReferenceInfo,
+  refPhone1,
+  setRefPhone1,
+  refPhone2,
+  setRefPhone2,
+}) => {
+  
+
   return (
     <section className="border-t-2 pt-5">
       <h2 className="mb-3 font-semibold">References</h2>
@@ -53,20 +63,14 @@ const References = ({ referenceInfo, setReferenceInfo }) => {
             </div>
             <div>
               <Label htmlFor="ref1Phone">Phone</Label>
-              <Input
-                className="mt-2"
+              <CanadaPhoneInput
                 id="ref1Phone"
-                value={referenceInfo[0].phone}
-                onChange={(e) =>{
-                  const val = e.target.value.trim();
-                  if(isNaN(val)) return
-                  setReferenceInfo((prev) =>
-                    prev.map((r, i) =>
-                      i === 0 ? { ...r, phone: val } : r
-                    )
-                  )}
-                }
+                value={refPhone1}
+                setValue={(val)=>setRefPhone1(val)}
                 required
+                className={
+                  "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 mt-2"
+                }
               />
             </div>
           </div>
@@ -109,20 +113,14 @@ const References = ({ referenceInfo, setReferenceInfo }) => {
             </div>
             <div>
               <Label htmlFor="ref2Phone">Phone</Label>
-              <Input
-                className="mt-2"
+              <CanadaPhoneInput
                 id="ref2Phone"
-                value={referenceInfo[1].phone}
-                onChange={(e) =>{
-                  const val = e.target.value;
-                  if(isNaN(val)) return
-                  setReferenceInfo((prev) =>
-                    prev.map((r, i) =>
-                      i === 1 ? { ...r, phone: e.target.value } : r
-                    )
-                  )}
-                }
+                value={refPhone2}
+                setValue={(val)=>setRefPhone2(val)}
                 required
+                className={
+                  "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 mt-2"
+                }
               />
             </div>
           </div>

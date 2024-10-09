@@ -1,10 +1,16 @@
 /** @type {import('next').NextConfig} */
+// import type { NextConfig } from "next";
+
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["images.surferseo.art",],
-    formats: ["image/webp"]
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "**.surferseo.art",
+      },
+    ],
   },
-}
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

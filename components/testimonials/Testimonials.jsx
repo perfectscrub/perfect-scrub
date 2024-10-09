@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState, useRef } from "react";
 import TestimonialCard from "../testimonial-card/TestimonialCard";
-import { testimonials } from "@/data";
+import { testimonials } from "@/utils/data";
 import Image from "next/image";
 
 const delay = 6000;

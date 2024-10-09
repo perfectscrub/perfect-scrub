@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { indexFacilitiesList } from "@/data";
+import { indexFacilitiesList } from "@/utils/data";
 import { ArrowRight } from "lucide-react";
 // import styles from "./HomeFacilitiesList.module.css";
 

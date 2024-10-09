@@ -1,7 +1,7 @@
 import FacilitiesSideMenu from "@/components/facilities-side-menu/FacilitiesSideMenu";
 import LandingSection from "@/components/landing-section/LandingSection";
 import EasySteps from "@/components/easy-steps/EasySteps";
-import { commercial_steps } from "@/data";
+import { commercial_steps } from "@/utils/data";
 
 export const metadata = {
   title: " Retail Stores Cleaning",

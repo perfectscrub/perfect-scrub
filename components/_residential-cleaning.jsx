@@ -1,6 +1,6 @@
 import EasySteps from "@/components/easy-steps/EasySteps";
 import HeroLandingSection from "@/components/hero-landing/HeroLandingSection";
-import { residential_steps } from "@/data";
+import { residential_steps } from "@/utils/data";
 
 export const metadata = {
   title: " Residential Cleaning Page",

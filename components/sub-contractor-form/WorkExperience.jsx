@@ -14,7 +14,7 @@ const WorkExperience = ({ newContractor, setNewContractor }) => {
     <section className="border-t-2 border-[#d7d7d7] pt-5">
       <h2 className="mb-1 font-semibold flex items-center">Experience</h2>
       <p className="mb-7 font-medium text-xs">
-        Please indicate the locations you are willing to work
+        Please indicate your work experience
       </p>
       <div className="md:max-w-[400px] col-span-2 flex flex-col gap-6 px-2">
         <div>
@@ -42,6 +42,9 @@ const WorkExperience = ({ newContractor, setNewContractor }) => {
                 <SelectItem value="Residential Cleaning">
                   Residential Cleaning
                 </SelectItem>
+                <SelectItem value="Window Cleaning">
+                  Window Cleaning
+                </SelectItem>
                 <SelectItem value="Post Construction Cleaning">
                   Post Construction Cleaning
                 </SelectItem>
@@ -58,7 +61,7 @@ const WorkExperience = ({ newContractor, setNewContractor }) => {
 
         <div className="md:col-span-2">
           <Label htmlFor="experienceDescription">
-            Please give a brief description of your cleaning experience
+            A brief description of prior experience
           </Label>
           <Textarea
             id="experienceDescription"

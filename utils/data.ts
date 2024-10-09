@@ -1,93 +1,153 @@
-export const services = [
+import {
+  Contractor,
+  DayOfWeek,
+  EmergencyContact,
+  Facilities,
+  IndexFacilities,
+  Link,
+  Locations,
+  Reference,
+  SliderImage,
+  Steps,
+  Testimonials,
+} from "./types";
+
+export const services: Link[] = [
   { id: 0, href: "/services/standard-cleaning", title: "Standard Clean" },
   { id: 1, href: "/services/deep-cleaning", title: "Deep Clean" },
-  { id: 2, href: "/services/disinfecting-services", title: "Disinfecting Services" },
-  { id: 3, href: "/services/janitorial-services", title: "Janitorial Services" },
+  {
+    id: 2,
+    href: "/services/disinfecting-services",
+    title: "Disinfecting Services",
+  },
+  {
+    id: 3,
+    href: "/services/janitorial-services",
+    title: "Janitorial Services",
+  },
   { id: 4, href: "/services/carpet-cleaning", title: "Carpet Clean" },
-  { id: 5, href: "/services/washroom-cleaning-and-consumables", title: "Washroom & Consumables" }
+  {
+    id: 5,
+    href: "/services/washroom-cleaning-and-consumables",
+    title: "Washroom & Consumables",
+  },
 ];
 
-export const facilities = [
-  { href: "/commercial-cleaning/office-buildings-cleaning", title: "Office Buildings", alt: "" },
-  { href: "/commercial-cleaning/retail-stores-cleaning", title: "Retail & Shopping centers", alt: "" },
-  { href: "/commercial-cleaning/day-care-cleaning", title: "DayCare & Preschool", alt: "" },
-  { href: "/commercial-cleaning/school-cleaning", title: "Schools & Universities", alt: "" },
-  { href: "/commercial-cleaning/medical-offices-cleaning", title: "Medical Offices & Clinics", alt: "" },
-  { href: "/commercial-cleaning/hotel-cleaning", title: "Hotels & Resorts", alt: "" },
-  { href: "/commercial-cleaning/recreational-facilities-cleaning", title: "Sports & Recreational Centers", alt: "" },
-  { href: "/commercial-cleaning/post-construction-cleaning", title: "Post Construction Clean", alt: "" },
+export const facilities: Facilities[] = [
+  {
+    href: "/commercial-cleaning/office-buildings-cleaning",
+    title: "Office Buildings",
+    alt: "",
+  },
+  {
+    href: "/commercial-cleaning/retail-stores-cleaning",
+    title: "Retail & Shopping centers",
+    alt: "",
+  },
+  {
+    href: "/commercial-cleaning/day-care-cleaning",
+    title: "DayCare & Preschool",
+    alt: "",
+  },
+  {
+    href: "/commercial-cleaning/school-cleaning",
+    title: "Schools & Universities",
+    alt: "",
+  },
+  {
+    href: "/commercial-cleaning/medical-offices-cleaning",
+    title: "Medical Offices & Clinics",
+    alt: "",
+  },
+  {
+    href: "/commercial-cleaning/hotel-cleaning",
+    title: "Hotels & Resorts",
+    alt: "",
+  },
+  {
+    href: "/commercial-cleaning/recreational-facilities-cleaning",
+    title: "Sports & Recreational Centers",
+    alt: "",
+  },
+  {
+    href: "/commercial-cleaning/post-construction-cleaning",
+    title: "Post Construction Clean",
+    alt: "",
+  },
 ];
 
-export const footerCompanyLinks = [
-  { href: "/", title: "Home" },
-  { href: "/blog", title: "Blog" },
-  { href: "/about", title: "About us" },
-  { href: "/contact", title: "Contact" },
-  { href: "/commercial-cleaning", title: "Commercial" },
-  // { href: "/residential-cleaning", title: "Residential" },
-  { href: "/quote", title: "Get a quote" },
+export const footerCompanyLinks: Link[] = [
+  { id:0, href: "/", title: "Home" },
+  { id:1, href: "/blog", title: "Blog" },
+  { id:2, href: "/about", title: "About us" },
+  { id:3, href: "/contact", title: "Contact" },
+  { id:4, href: "/commercial-cleaning", title: "Commercial" },
+  // { id:5, href: "/residential-cleaning", title: "Residential" },
+  { id:6, href: "/quote", title: "Get a quote" },
 ];
 
-export const indexFacilitiesList = [
+
+export const indexFacilitiesList: IndexFacilities[] = [
   {
     title: "Office buildings",
     href: "/commercial-cleaning/office-buildings-cleaning",
     imgUrl: "/office-building.svg",
-    src:"/facilities/office-interior.jpg",
+    src: "/facilities/office-interior.jpg",
     alt: "",
   },
   {
     title: "Stores & centers",
     href: "/commercial-cleaning/retail-stores-cleaning",
     imgUrl: "/supermarket.svg",
-    src:"/facilities/retail-store.jpg",
+    src: "/facilities/retail-store.jpg",
     alt: "",
   },
   {
     title: "Day Care and Preschool",
     href: "/commercial-cleaning/day-care-cleaning",
     imgUrl: "/day-care-center.svg",
-    src:"/facilities/day-care.jpg",
+    src: "/facilities/day-care.jpg",
     alt: "",
   },
   {
     title: "Schools and universities",
     href: "/commercial-cleaning/school-cleaning",
     imgUrl: "/university.svg",
-    src:"/facilities/school.jpg",
+    src: "/facilities/school.jpg",
     alt: "",
   },
   {
     title: "Medical Offices",
     href: "/commercial-cleaning/medical-offices-cleaning",
     imgUrl: "/hospital.svg",
-    src:"/facilities/medical-office.jpg",
+    src: "/facilities/medical-office.jpg",
     alt: "",
   },
   {
     title: "Hotels and resorts",
     href: "/commercial-cleaning/hotel-cleaning",
     imgUrl: "/hotel.svg",
-    src:"/facilities/hotel-lobby.jpg",
+    src: "/facilities/hotel-lobby.jpg",
     alt: "",
   },
   {
     title: "Gyms & Recreation centers",
     href: "/commercial-cleaning/recreational-facilities-cleaning",
     imgUrl: "/gym.svg",
-    src:"/facilities/gym-cleaner.jpg",
+    src: "/facilities/gym-cleaner.jpg",
     alt: "",
   },
   {
     title: "Construction Cleaning",
     href: "/commercial-cleaning/post-construction-cleaning",
     imgUrl: "/construction.svg",
-    src:"/facilities/new-construction.jpg",
+    src: "/facilities/new-construction.jpg",
     alt: "",
   },
 ];
 
-export const testimonials = [
+
+export const testimonials: Testimonials[] = [
   {
     text: "It was a great pleasure engaging your services at our office and for the impressive services at your most inconvenient time frame. This depicts commitment, reliability and positive business drive.",
     author: "Alex Emmanuel",
@@ -144,66 +204,79 @@ export const testimonials = [
     business: "Director, Absolute Angels Daycare",
     id: 8,
   },
+];
 
+export const sliderImgs: SliderImage = {
+  0: {
+    id: 1,
+    img: "/office-cleaning-indoors.jpg",
+    text: "Take care of business and leave the clean up to us.",
+    effect: "fadeIn",
+  },
+  1: {
+    id: 2,
+    img: "/buffing-floor.jpg",
+    text: "Customize pricing to meet your needs.",
+    effect: "fadeIn",
+  },
+  2: {
+    id: 3,
+    img: "/hero-office-interior.jpg",
+    text: "Reliability and quality you can trust.",
+    effect: "fadeIn",
+  },
+};
 
-]
-
-export const sliderImgs = {
-  0: { id: 1, img: "/office-cleaning-indoors.jpg", text: "Take care of business and leave the clean up to us.", effect: "fadeIn" },
-  1: { id: 2, img: "/buffing-floor.jpg", text: "Customize pricing to meet your needs.", effect: "fadeIn" },
-  2: { id: 3, img: "/hero-office-interior.jpg", text: "Reliability and quality you can trust.", effect: "fadeIn" },
-}
-
-export const residential_steps = [
+export const residential_steps: Steps[] = [
   {
     title: "Book Online",
     text: "Fill out our quick and easy booking Form in just a few minutes",
     src: "/booking-a-clean.jpg",
-    alt: "a woman using a laptop"
+    alt: "a woman using a laptop",
   },
   {
     title: "Confirmation",
     text: "Your booking is confirmed and you are assigned a professional Service Provider.",
     src: "/confirmation.jpg",
-    alt: "two happy friends with thumbs up"
+    alt: "two happy friends with thumbs up",
   },
   {
     title: "We clean your home",
     text: "We come in and clean your residence at the scheduled time.",
     src: "/we-clean.jpg",
-    alt: "a professional house-cleaner"
+    alt: "a professional house-cleaner",
   },
 ];
 
-export const commercial_steps = [
+export const commercial_steps: Steps[] = [
   {
     title: "Fill quote form",
     text: "Use our get a quote form to inform us about your cleaning needs",
     src: "/booking-a-clean.jpg",
-    alt: "a woman using a laptop"
+    alt: "a woman using a laptop",
   },
   {
     title: "We Contact you",
     text: "We will get in touch with you and process your cleaning request",
     src: "/confirmation.jpg",
-    alt: "two happy friends with thumbs up"
+    alt: "two happy friends with thumbs up",
   },
   {
     title: "We clean your Office",
     text: "A cleaning crew will be at your location on your designated start date",
     src: "/we-clean.jpg",
-    alt: "a professional house-cleaner"
+    alt: "a professional house-cleaner",
   },
 ];
 
-export const bookingBenefits = [
+export const bookingBenefits: string[] = [
   "customer service- we respond quickly",
   "Multiple ways to get in touch with us- by call, text, email",
   "your own dedicated log-in page- if you choose",
   "you can schedule and reschedule your clean",
 ];
 
-export const daysOfWeek = [
+export const daysOfWeek: DayOfWeek[] = [
   { text: "Monday", value: false },
   { text: "Tuesday", value: false },
   { text: "Wednesday", value: false },
@@ -213,7 +286,7 @@ export const daysOfWeek = [
   { text: "Sunday", value: false },
 ];
 
-export const locations = [
+export const locations: Locations[] = [
   { text: "All locations", value: false },
   { text: "Acton", value: false },
   { text: "Ajax", value: false },
@@ -231,7 +304,7 @@ export const locations = [
   { text: "Dundas", value: false },
   { text: "Erin", value: false },
   { text: "Etobicoke", value: false },
-  { text: "GeorgeTown", value: false },
+  { text: "Georgetown", value: false },
   { text: "Georgina", value: false },
   { text: "Grimsby", value: false },
   { text: "Guelph", value: false },
@@ -277,4 +350,61 @@ export const locations = [
   { text: "Way North East", value: false },
   { text: "Whitby", value: false },
   { text: "Woodbridge", value: false },
+];
+
+export const defaultContractor: Contractor = {
+  firstname: "",
+  lastname: "",
+  email: "",
+  phone: "",
+  address: "",
+  city: "",
+  postcode: "",
+  province: "",
+  businessName: "",
+  businessType: "",
+  bestDescribes: "",
+  businessAddress: "",
+  businessCity: "",
+  businessPostcode: "",
+  employmentStatus: "",
+  insurance: "",
+  hasVehicle: "No",
+  driversLicence: "",
+  availabilityDays: "",
+  experience: "",
+  experienceDescription: "",
+  hasEquipment: "",
+  locations: "",
+};
+
+export const defaultReferences: Reference[] = [
+  {
+    name: "",
+    relationship: "",
+    phone: "",
+  },
+  {
+    name: "",
+    relationship: "",
+    phone: "",
+  },
+];
+
+export const defaultEmergencyContacts: EmergencyContact[] = [
+  {
+    name: "",
+    email: "",
+    phone: "",
+  },
+  {
+    name: "",
+    email: "",
+    phone: "",
+  },
+  {
+    name: "",
+    email: "",
+    phone: "",
+  },
 ];

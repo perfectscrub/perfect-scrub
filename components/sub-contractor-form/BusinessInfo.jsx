@@ -79,21 +79,21 @@ const BusinessInfo = ({ newContractor, setNewContractor }) => {
           </div>
         </div>
         <div>
-          <Label htmlFor="businessCategory" className="">
-            Business Category
+          <Label htmlFor="businessType" className="">
+            Business Type
           </Label>
           <div className="pt-2">
             <Select
-              value={newContractor.businessCategory}
+              value={newContractor.businessType}
               onValueChange={(value) =>
                 setNewContractor({
                   ...newContractor,
-                  businessCategory: value,
+                  businessType: value,
                 })
               }
               className="flex flex-col gap-4"
             >
-              <SelectTrigger id="businessCategory">
+              <SelectTrigger id="businessType">
                 <SelectValue placeholder="Choose" />
               </SelectTrigger>
               <SelectContent>

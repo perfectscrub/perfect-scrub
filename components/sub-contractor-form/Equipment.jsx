@@ -23,7 +23,7 @@ const Equipment = ({ newContractor, setNewContractor }) => {
             })
           }
         >
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center space-x-2 gap">
             <RadioGroupItem
               value="Yes, I have all cleaning tools and Equipment"
               id="r1"

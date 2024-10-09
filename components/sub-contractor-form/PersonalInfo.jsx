@@ -1,8 +1,9 @@
 import React from "react";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
+import CanadaPhoneInput from "./PhoneInput";
 
-const PersonalInfo = ({newContractor, setNewContractor}) => {
+const PersonalInfo = ({ newContractor, setNewContractor, phone, setPhone }) => {
   return (
     <section className="border-t-2 border-[#d7d7d7] pt-5">
       <h2 className="mb-5 font-semibold">Personal Information</h2>
@@ -39,14 +40,11 @@ const PersonalInfo = ({newContractor, setNewContractor}) => {
         </div>
         <div>
           <Label htmlFor="phone">Phone</Label>
-          <Input
-            className="mt-2"
+          <CanadaPhoneInput
             id="phone"
-            value={newContractor.phone}
-            onChange={(e) =>
-              setNewContractor({ ...newContractor, phone: e.target.value })
-            }
-            required
+            value={phone}
+            setValue={setPhone}
+            className="flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 mt-2"
           />
         </div>
         <div>

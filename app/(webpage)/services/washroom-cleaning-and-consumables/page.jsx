@@ -2,7 +2,7 @@ import Image from "next/image";
 import LandingSection from "@/components/landing-section/LandingSection";
 import ServicesSideMenu from "@/components/services-side-menu/ServicesSideMenu";
 import EasySteps from "@/components/easy-steps/EasySteps";
-import { commercial_steps } from "@/data";
+import { commercial_steps } from "@/utils/data";
 
 export const metadata = {
   title: " Washroom Cleaning and Consumables",

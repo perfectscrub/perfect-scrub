@@ -1,7 +1,7 @@
 "use client";
 import { usePathname } from "next/navigation";
 import Link from "next/link";
-import { facilities } from "@/data";
+import { facilities } from "@/utils/data";
 
 const FacilitiesSideMenu = () => {
   const pathname = usePathname();
@@ -40,6 +40,5 @@ const FacilitiesSideMenu = () => {
     </aside>
   );
 };
-
 
 export default FacilitiesSideMenu;

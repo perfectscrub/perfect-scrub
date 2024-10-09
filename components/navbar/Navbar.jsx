@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
-import { services, facilities } from "@/data";
+import { services, facilities } from "@/utils/data";
 
 const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
   const [toggleChevron1, setToggleChevron1] = useState(false);
@@ -24,9 +24,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
       className="fixed w-full z-50 shadow-md px-0 bg-gray-900"
       onClick={handleNavClose}
     >
-      <div
-        className="bg-green-700 text-xs md:text-sm text-white p-3 lg:pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10"
-      >
+      <div className="bg-green-700 text-xs md:text-sm text-white p-3 lg:pr-10 flex flex-row items-center justify-between lg:justify-start gap-8 md:pl-10">
         <div>
           <Link
             className="flex justify-between gap-x-2 items-center"
@@ -168,7 +166,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
                   href="/commercial-cleaning"
                   onClick={() => handleNavMenuClick("nav")}
                 >
-                  <span className="lg:block">COMMERCIAL</span> 
+                  <span className="lg:block">COMMERCIAL</span>
                   {/* CLEANING */}
                 </Link>
                 <span
