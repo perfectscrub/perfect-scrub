@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -47,10 +47,10 @@ export default function AdminDashboard({
     setShowMenu((prev) => !prev);
   };
 
-  const handleTabClick = (val) => {
+  const handleTabClick = useCallback((val) => {
     setTab(val);
     showMenu ? setShowMenu(false) : null;
-  };
+  }, [showMenu]);
 
   useEffect(() => {
     if (changeTab) {

@@ -13,6 +13,8 @@ datasource db {
   url      = env("POSTGRES_URL")
 }
 
+
+
 model Contractor {
   id                    String             @id @default(cuid())
   slug                  String             @unique
