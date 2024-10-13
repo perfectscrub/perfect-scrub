@@ -47,6 +47,7 @@ export async function addContractor(data: ContractorModelData) {
   }
 }
 
+// delete references and emergency contact relations
 export async function deleteContractor(id: string) {
   await prisma.contractor.delete({ where: { id } });
 }
