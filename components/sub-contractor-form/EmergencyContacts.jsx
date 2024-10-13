@@ -23,7 +23,7 @@ const EmergencyContacts = ({
       <div className="flex flex-col md:flex-row gap-8 justify-around md:justify-start md:flex-wrap">
         {/* 1st Contact */}
         <div className="max-w-[340px] w-full py-6 px-3">
-          <h3>First reference</h3>
+          <h3>First Emergency Contact</h3>
           <div className="max-w-[300px] flex flex-col gap-4 px-2 py-5">
             <div>
               <Label htmlFor="contact1name">Name</Label>
@@ -73,7 +73,7 @@ const EmergencyContacts = ({
         </div>
         {/* 2nd Contact */}
         <div className="max-w-[340px] w-full  py-6 px-3">
-          <h3>Second emergency contact</h3>
+          <h3>Second Emergency Contact</h3>
           <div className="max-w-[300px] flex flex-col gap-4 px-2 py-5">
             <div>
               <Label htmlFor="contact2name">Name</Label>
@@ -123,7 +123,7 @@ const EmergencyContacts = ({
         </div>
         {/* 3rd Contact */}
         <div className="max-w-[340px] w-full py-6 px-3">
-          <h3>Third emergency contact</h3>
+          <h3>Third Emergency Contact</h3>
           <div className="max-w-[300px] flex flex-col gap-4 px-2 py-5">
             <div>
               <Label htmlFor="contact3name">Name</Label>

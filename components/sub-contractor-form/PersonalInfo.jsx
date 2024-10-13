@@ -58,6 +58,7 @@ const PersonalInfo = ({ newContractor, setNewContractor, phone, setPhone }) => {
               setNewContractor({ ...newContractor, email: e.target.value })
             }
             required
+            autoComplete="email"
           />
         </div>
         <div>
@@ -73,6 +74,7 @@ const PersonalInfo = ({ newContractor, setNewContractor, phone, setPhone }) => {
               })
             }
             required
+            autoComplete="street-address"
           />
         </div>
         <div>
@@ -100,6 +102,7 @@ const PersonalInfo = ({ newContractor, setNewContractor, phone, setPhone }) => {
               })
             }
             required
+            autoComplete="postal-code"
           />
         </div>
         <div>

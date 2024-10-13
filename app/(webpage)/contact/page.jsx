@@ -62,7 +62,7 @@ const Contact = () => {
                       Telephone Number
                     </span>
                     <span className="block font-medium text-gray-600">
-                      <Link href="tel:6474736478">647 473 6478</Link>
+                      <Link href="tel:6474736478">437 524 5122</Link>
                     </span>
                   </div>
                 </div>

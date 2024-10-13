@@ -50,6 +50,7 @@ const BusinessInfo = ({ newContractor, setNewContractor }) => {
           </Label>
           <div className="pt-2">
             <Select
+              name="employmentStatus"
               value={newContractor.employmentStatus}
               onValueChange={(value) =>
                 setNewContractor({
@@ -84,6 +85,7 @@ const BusinessInfo = ({ newContractor, setNewContractor }) => {
           </Label>
           <div className="pt-2">
             <Select
+              name="businessType"
               value={newContractor.businessType}
               onValueChange={(value) =>
                 setNewContractor({
@@ -159,9 +161,10 @@ const BusinessInfo = ({ newContractor, setNewContractor }) => {
           />
         </div>
         <div className="">
-          <Label htmlFor="insurance">Do you have Insurance Coverage</Label>
+          <h3>Do you have Insurance Coverage</h3>
           <RadioGroup
             id="insurance"
+            name="insurance"
             className="mt-2 ml-2"
             onValueChange={(value) =>
               setNewContractor({
@@ -171,19 +174,23 @@ const BusinessInfo = ({ newContractor, setNewContractor }) => {
             }
           >
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="Yes" id="i1" />
+              <RadioGroupItem value="Yes" id="i1" name="i1" />
               <Label htmlFor="i1">Yes</Label>
             </div>
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="No" id="i2" />
+              <RadioGroupItem value="No" id="i2" name="i2" />
               <Label htmlFor="i2">No</Label>
             </div>
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="In the process of obtaining one" id="i3" />
+              <RadioGroupItem
+                value="In the process of obtaining one"
+                id="i3"
+                name="i3"
+              />
               <Label htmlFor="i3">In the process of obtaining one</Label>
             </div>
             <div className="flex items-center space-x-2">
-              <RadioGroupItem value="Expired" id="i4" />
+              <RadioGroupItem value="Expired" id="i4" name="i4" />
               <Label htmlFor="i4">Expired</Label>
             </div>
           </RadioGroup>

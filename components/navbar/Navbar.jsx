@@ -55,7 +55,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
               src="/phone-receiver-silhouette.svg"
               alt=""
             />
-            <p className="tracking-wider font-medium">1-647-473-6478</p>
+            <p className="tracking-wider font-medium">437-524-5122</p>
           </Link>
         </div>
       </div>

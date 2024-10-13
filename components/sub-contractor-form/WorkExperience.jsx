@@ -23,6 +23,7 @@ const WorkExperience = ({ newContractor, setNewContractor }) => {
           </Label>
           <div className="pt-2">
             <Select
+              name="experience"
               value={newContractor.experience}
               onValueChange={(value) =>
                 setNewContractor({
@@ -42,9 +43,7 @@ const WorkExperience = ({ newContractor, setNewContractor }) => {
                 <SelectItem value="Residential Cleaning">
                   Residential Cleaning
                 </SelectItem>
-                <SelectItem value="Window Cleaning">
-                  Window Cleaning
-                </SelectItem>
+                <SelectItem value="Window Cleaning">Window Cleaning</SelectItem>
                 <SelectItem value="Post Construction Cleaning">
                   Post Construction Cleaning
                 </SelectItem>

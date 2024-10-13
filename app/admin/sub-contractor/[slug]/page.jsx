@@ -63,12 +63,11 @@ async function SubContractorPage({ params }) {
             <p className="mt-4">
               {" "}
               <span className="font-bold">Province:</span>{" "}
-              {contractorData?.email}
+              {contractorData?.province}
             </p>
             <p className="mt-4">
               {" "}
-              <span className="font-bold">Phone:</span>{" "}
-              {contractorData?.address}
+              <span className="font-bold">Phone:</span> {contractorData?.phone}
             </p>
           </div>
         </div>
@@ -94,13 +93,14 @@ async function SubContractorPage({ params }) {
             <p className="mt-4">
               {" "}
               <span className="font-bold">Business City:</span>{" "}
-              {contractorData?.businesscity}
+              {contractorData?.businessCity}
             </p>
           </div>
           <div className="mt-4 px-5">
             <p className="mt-4">
               {" "}
-              <span className="font-bold">City:</span> {contractorData?.city}
+              <span className="font-bold">Best described by: </span>{" "}
+              {contractorData?.employmentStatus}
             </p>
             <p className="mt-4">
               {" "}
@@ -114,11 +114,41 @@ async function SubContractorPage({ params }) {
             </p>
             <p className="mt-4">
               {" "}
-              <span className="font-bold">Phone:</span>{" "}
-              {contractorData?.address}
+              <span className="font-bold">Availability:</span>{" "}
+              {contractorData?.availabilityDays}
+            </p>
+          </div>
+          <div className="mt-4 px-5">
+            <p className="mt-4">
+              {" "}
+              <span className="font-bold">Experience: </span>{" "}
+              {contractorData?.experience}
+            </p>
+            <p className="mt-4">
+              {" "}
+              <span className="font-bold">Experience Description:</span>{" "}
+              {contractorData?.experienceDescription}
+            </p>
+            <p className="mt-4">
+              {" "}
+              <span className="font-bold">Equipment:</span>{" "}
+              {contractorData?.hasEquipment}
+            </p>
+            <p className="mt-4">
+              {" "}
+              <span className="font-bold">Vehicle:</span>{" "}
+              {contractorData?.hasVehicle}
             </p>
           </div>
         </div>
+        <section>
+          <span className="font-bold">Locations:</span>{" "}
+          <ul>
+            {contractorData.locations.map((location) => (
+              <li key={location}>{location}</li>
+            ))}
+          </ul>
+        </section>
 
         <h3 className="mt-10 text-xl md:text-2xl">References</h3>
         <div className="mt-5 max-w-[1200px] mx-auto flex flex-col gap-5">

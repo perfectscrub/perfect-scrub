@@ -1,11 +1,11 @@
 import React from "react";
-import { Button } from "../ui/button";
+import { Button } from "../ui/button.jsx";
 import { Briefcase, HardHat, Users } from "lucide-react";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import PSLogo from "@/public/perfect-scrub-logo.png";
 
-const DashboardSidebar = ({showMenu}) => {
+const DashboardSidebar = ({ showMenu }) => {
   return (
     <aside
       className={cn(
