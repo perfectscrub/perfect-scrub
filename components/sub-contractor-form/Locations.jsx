@@ -16,6 +16,7 @@ const Locations = ({ locationsData, setLocationsData }) => {
               <Checkbox
                 key={location.text}
                 id={location.text}
+                name={location.text}
                 checked={location.value}
                 onCheckedChange={(checked) => {
                   if (index === 0 && checked) {

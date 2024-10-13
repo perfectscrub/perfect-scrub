@@ -17,6 +17,7 @@ const Availability = ({ availabilityData, setAvailabilityData }) => {
               <Checkbox
                 key={day.text}
                 id={day.text}
+                name={day.text}
                 checked={day.value}
                 onCheckedChange={(checked) => {
                   setAvailabilityData((prev) => {

@@ -1,6 +1,6 @@
 "use client";
-import React, { useState } from "react";
-import { Button } from "../ui/button";
+import React, { useRef, useState } from "react";
+import { Button } from "../ui/button.jsx";
 import { addContractor } from "@/actions/actions";
 import PersonalInfo from "./PersonalInfo";
 import BusinessInfo from "./BusinessInfo";
@@ -18,8 +18,14 @@ import {
 } from "../../utils/data";
 import References from "./References";
 import EmergencyContacts from "./EmergencyContacts";
+import { z } from "zod";
+import type { ContractorModelData } from "@/utils/types";
+import { schema } from "@/lib/utils.js";
+import SubmitButton from "./SubmitButton";
+import { useFormState } from "react-dom";
+import { toast } from "sonner";
 
-const SubContractorForm = ({}) => {
+const SubContractorForm = ({ }) => {
   const [newContractor, setNewContractor] = useState(defaultContractor);
   const [locationsData, setLocationsData] = useState(locations);
   const [availabilityData, setAvailabilityData] = useState(daysOfWeek);
@@ -34,6 +40,75 @@ const SubContractorForm = ({}) => {
     defaultEmergencyContacts
   );
 
+  const resetForm = () => {
+    setNewContractor(defaultContractor);
+    setLocationsData(locations)
+    setAvailabilityData(daysOfWeek)
+    setReferenceInfo(defaultReferences)
+    setPhone("")
+    setRefPhone1("")
+    setRefPhone2("")
+    setContactPhone1("")
+    setContactPhone2("")
+    setContactPhone3("")
+    setEmergencyContactInfo(defaultEmergencyContacts)
+  }
+
+  // const formRef = useRef<HTMLFormElement>(null);
+
+  const arrLocations: string[] = locationsData
+    .filter((curr) => curr.value)
+    .map((curr) => curr.text)
+
+
+  function parseData<T extends z.ZodTypeAny>(data: unknown, schema: T) {
+    return schema.safeParse(data);
+  }
+
+  const addValues: ContractorModelData = {
+    ...newContractor,
+    slug: newContractor.businessName.replace(/\s+/g, "-").toLowerCase(),
+    phone,
+    locations: locationsData[0].value
+      ? ["All locations"]
+      : arrLocations,
+
+    availabilityDays: availabilityData.reduce(
+      (acc, current) =>
+        current.value ? `${acc} ${current.text}` : acc,
+      ""
+    ),
+    references: [
+      { ...referenceInfo[0], phone: refPhone1 },
+      { ...referenceInfo[1], phone: refPhone2 },
+    ],
+    emergencyContacts: [
+      { ...emergencyContactInfo[0], phone: contactPhone1 },
+      { ...emergencyContactInfo[1], phone: contactPhone2 },
+      { ...emergencyContactInfo[2], phone: contactPhone3 },
+    ],
+  }
+
+  const handleSubmit = async () => {
+    // formRef.current?.reset()
+    try {
+      const validatedData = parseData(addValues, schema);
+
+      if (!validatedData?.success) {
+        validatedData.error.issues.map((issue) => {
+          toast.error(issue.message);
+        });
+        return;
+      }
+      await addContractor(addValues);
+      resetForm();
+      toast.success("Your form was submitted.")
+    } catch (error) {
+      toast.error("Error while submitting the form or some details already exist in our database. Please check your information and try again", { duration: 8000, closeButton:true })
+      return
+    }
+  }
+
   return (
     <section className="max-w-[900px] mx-auto pt-28 px-4">
       <h1 className="text-2xl font-medium mb-5">Application Form</h1>
@@ -41,31 +116,8 @@ const SubContractorForm = ({}) => {
         Please fill the form below
       </p>
       <form
-        action={() => {
-          addContractor({
-            ...newContractor,
-            phone,
-            locations: locationsData[0].value
-              ? ["All locations"]
-              : locationsData
-                  .filter((curr) => curr.value)
-                  .map((curr) => curr.text),
-            availabilityDays: availabilityData.reduce(
-              (acc, current) =>
-                current.value ? `${acc} ${current.text}` : acc,
-              ""
-            ),
-            references: [
-              { ...referenceInfo[0], phone: refPhone1 },
-              { ...referenceInfo[1], phone: refPhone2 },
-            ],
-            emergencyContacts: [
-              { ...emergencyContactInfo[0], phone: contactPhone1 },
-              { ...emergencyContactInfo[1], phone: contactPhone2 },
-              { ...emergencyContactInfo[2], phone: contactPhone3 },
-            ],
-          });
-        }}
+        // ref={formRef}
+        action={handleSubmit}
         className="flex flex-col gap-8 mb-8"
       >
         {/* Personal Info */}
@@ -134,12 +186,7 @@ const SubContractorForm = ({}) => {
           setContactPhone3={setContactPhone3}
         />
 
-        <Button
-          type="submit"
-          className="text-[18px] md:max-w-[400px] w-full self-center bg-blue-600 my-10 py-7 rounded-[12px]"
-        >
-          Submit
-        </Button>
+        <SubmitButton />
       </form>
     </section>
   );

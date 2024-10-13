@@ -64,27 +64,27 @@ model EmergencyContact {
   contractorId String
 }
 
-model User {
-  id             String    @id @default(cuid())
-  email          String    @unique
-  hashedPassword String
-  isAdmin        Boolean   @default(false)
-  Profile        Profile?
-}
+// model User {
+//   id             String    @id @default(cuid())
+//   email          String    @unique
+//   hashedPassword String
+//   isAdmin        Boolean   @default(false)
+//   Profile        Profile?
+// }
 
-model Profile {
-  id        Int     @id @default(autoincrement())
-  firstName String
-  lastName  String
-  email     String  @unique
-  user      User    @relation(fields: [userId], references: [id])
-  userId    String @unique
-  isAdmin   Boolean @default(false) @map("is_admin")
-  createdAt DateTime @default(now()) @map("created_at")
-  updatedAt DateTime @updatedAt()
+// model Profile {
+//   id        Int     @id @default(autoincrement())
+//   firstName String
+//   lastName  String
+//   email     String  @unique
+//   user      User    @relation(fields: [userId], references: [id])
+//   userId    String @unique
+//   isAdmin   Boolean @default(false) @map("is_admin")
+//   createdAt DateTime @default(now()) @map("created_at")
+//   updatedAt DateTime @updatedAt()
 
-  @@unique([firstName, lastName])
-}
+//   @@unique([firstName, lastName])
+// }
 
 // model Employee {
 //   id                Int    @id @default(autoincrement())

@@ -23,6 +23,7 @@ const HasVehicle = ({ newContractor, setNewContractor }) => {
       <div className="md:max-w-[400px] flex flex-col gap-4 px-2">
         <div className="pt-2">
           <Select
+            name="hasVehicle"
             value={newContractor.hasVehicle}
             onValueChange={(value) =>
               setNewContractor({

@@ -84,6 +84,7 @@ export const footerCompanyLinks: Link[] = [
   { id:4, href: "/commercial-cleaning", title: "Commercial" },
   // { id:5, href: "/residential-cleaning", title: "Residential" },
   { id:6, href: "/quote", title: "Get a quote" },
+  { id:7, href: "/subcontractor-form", title: "Work with us" },
 ];
 
 
@@ -352,7 +353,10 @@ export const locations: Locations[] = [
   { text: "Woodbridge", value: false },
 ];
 
+
+
 export const defaultContractor: Contractor = {
+  slug: "",
   firstname: "",
   lastname: "",
   email: "",
@@ -375,7 +379,7 @@ export const defaultContractor: Contractor = {
   experience: "",
   experienceDescription: "",
   hasEquipment: "",
-  locations: "",
+  locations: [],
 };
 
 export const defaultReferences: Reference[] = [

@@ -16,7 +16,7 @@ import {
 } from "../ui/table";
 import { Label } from "../ui/label";
 import { Input } from "../ui/input";
-import { Button } from "../ui/button";
+import { Button } from "../ui/button.jsx";
 import { Edit, PlusCircle, Trash2 } from "lucide-react";
 
 // Mock data for workers
@@ -30,7 +30,7 @@ const initialWorkers = [
   },
 ];
 
-const WorkersTab = ({  }) => {
+const WorkersTab = ({}) => {
   const [workers, setWorkers] = useState(initialWorkers);
   const [newWorker, setNewWorker] = useState({
     name: "",

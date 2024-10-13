@@ -41,9 +41,9 @@ export type Reference = {
 };
 
 export type EmergencyContact = {
-  name: "";
-  email: "";
-  phone: "";
+  name: string;
+  email: string;
+  phone: string;
 };
 
 export type Day =
@@ -66,6 +66,7 @@ export type Locations = {
 };
 
 export type Contractor = {
+  slug: string;
   firstname: string;
   lastname: string;
   businessName: string;
@@ -85,7 +86,7 @@ export type Contractor = {
   insurance: string;
   employmentStatus: string;
   availabilityDays: string;
-  locations: string;
+  locations: string[];
   experience: string;
   experienceDescription: string;
   hasEquipment: string;
@@ -112,7 +113,7 @@ export type ContractorModelData = {
   insurance: string;
   employmentStatus: string;
   availabilityDays: string;
-  locations: string;
+  locations: string[];
   experience: string;
   experienceDescription: string;
   hasEquipment: string;
