@@ -35,7 +35,7 @@ const jobRequests = [
 
 const JobRequestTab = ({}) => {
   return (
-    <Card className="w-[800px] overflow-x-scroll lg:overflow-visible">
+    <Card className="max-w-[800px] overflow-x-auto lg:overflow-visible">
       <CardHeader>
         <CardTitle className="text-2xl">Job Requests</CardTitle>
         <CardDescription>

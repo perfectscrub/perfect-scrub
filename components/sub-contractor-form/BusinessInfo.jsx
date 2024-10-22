@@ -10,11 +10,29 @@ import {
 } from "../ui/select";
 import Link from "next/link";
 import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
+import { Checkbox } from "../ui/checkbox";
 
-const BusinessInfo = ({ newContractor, setNewContractor }) => {
+const BusinessInfo = ({
+  newContractor,
+  setNewContractor,
+  sameAddress,
+  setSameAddress,
+}) => {
   return (
     <section className="border-t-2 pt-5">
-      <h2 className="mb-3 font-semibold">Business Information</h2>
+      <div className="mb-3 flex items-center gap-5">
+        <h2 className="font-semibold">Business Information</h2>
+        <div className="flex gap-2">
+          <Checkbox
+            id={"same-address"}
+            checked={sameAddress}
+            onCheckedChange={(checked) => {setSameAddress(checked)}}
+          />
+          <Label htmlFor={"same-address"} className="text-xs">
+            Same address as above
+          </Label>
+        </div>
+      </div>
       <p className="mb-5 text-xs font-medium">
         Note: If you do not have a business, you can register a sole
         proprietorship in Ontario{" "}
@@ -120,7 +138,7 @@ const BusinessInfo = ({ newContractor, setNewContractor }) => {
           <Input
             className="mt-2"
             id="businessAddress"
-            value={newContractor.businessAddress}
+            value={sameAddress?newContractor.address:newContractor.businessAddress}
             onChange={(e) =>
               setNewContractor({
                 ...newContractor,
@@ -135,7 +153,7 @@ const BusinessInfo = ({ newContractor, setNewContractor }) => {
           <Input
             className="mt-2"
             id="businessCity"
-            value={newContractor.businessCity}
+            value={sameAddress?newContractor.city:newContractor.businessCity}
             onChange={(e) =>
               setNewContractor({
                 ...newContractor,
@@ -150,7 +168,7 @@ const BusinessInfo = ({ newContractor, setNewContractor }) => {
           <Input
             className="mt-2"
             id="businessPostcode"
-            value={newContractor.businessPostcode}
+            value={sameAddress?newContractor.postcode:newContractor.businessPostcode}
             onChange={(e) =>
               setNewContractor({
                 ...newContractor,

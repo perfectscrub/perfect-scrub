@@ -13,6 +13,7 @@ import {
   daysOfWeek,
   defaultContractor,
   defaultEmergencyContacts,
+  defaultExperience,
   defaultReferences,
   locations,
 } from "../../utils/data";
@@ -20,25 +21,28 @@ import References from "./References";
 import EmergencyContacts from "./EmergencyContacts";
 import { z } from "zod";
 import type { ContractorModelData } from "@/utils/types";
-import { schema } from "@/lib/utils.js";
+import { schema } from "@/lib/schema.js";
 import SubmitButton from "./SubmitButton";
-import { useFormState } from "react-dom";
 import { toast } from "sonner";
+
+
 
 const SubContractorForm = ({ }) => {
   const [newContractor, setNewContractor] = useState(defaultContractor);
   const [locationsData, setLocationsData] = useState(locations);
   const [availabilityData, setAvailabilityData] = useState(daysOfWeek);
+  const [experience, setExperience] = useState(defaultExperience);
   const [referenceInfo, setReferenceInfo] = useState(defaultReferences);
   const [phone, setPhone] = useState("");
   const [refPhone1, setRefPhone1] = useState("");
   const [refPhone2, setRefPhone2] = useState("");
   const [contactPhone1, setContactPhone1] = useState("");
   const [contactPhone2, setContactPhone2] = useState("");
-  const [contactPhone3, setContactPhone3] = useState("");
+  const [sameAddress, setSameAddress] = useState(false);
   const [emergencyContactInfo, setEmergencyContactInfo] = useState(
     defaultEmergencyContacts
   );
+
 
   const resetForm = () => {
     setNewContractor(defaultContractor);
@@ -50,7 +54,6 @@ const SubContractorForm = ({ }) => {
     setRefPhone2("")
     setContactPhone1("")
     setContactPhone2("")
-    setContactPhone3("")
     setEmergencyContactInfo(defaultEmergencyContacts)
   }
 
@@ -69,6 +72,11 @@ const SubContractorForm = ({ }) => {
     ...newContractor,
     slug: newContractor.businessName.replace(/\s+/g, "-").toLowerCase(),
     phone,
+    experience: experience.reduce(
+      (acc, current) =>
+        current.checked ? `${acc} ${current.experience}` : acc,
+      ""
+    ),
     locations: locationsData[0].value
       ? ["All locations"]
       : arrLocations,
@@ -85,7 +93,7 @@ const SubContractorForm = ({ }) => {
     emergencyContacts: [
       { ...emergencyContactInfo[0], phone: contactPhone1 },
       { ...emergencyContactInfo[1], phone: contactPhone2 },
-      { ...emergencyContactInfo[2], phone: contactPhone3 },
+      // { ...emergencyContactInfo[2], phone: contactPhone3 },
     ],
   }
 
@@ -104,7 +112,7 @@ const SubContractorForm = ({ }) => {
       resetForm();
       toast.success("Your form was submitted.")
     } catch (error) {
-      toast.error("Error while submitting the form or some details already exist in our database. Please check your information and try again", { duration: 8000, closeButton:true })
+      toast.error("Error while submitting the form or some details already exist in our database. Please check your information and try again", { duration: 8000, closeButton: true })
       return
     }
   }
@@ -131,6 +139,8 @@ const SubContractorForm = ({ }) => {
         <BusinessInfo
           newContractor={newContractor}
           setNewContractor={setNewContractor}
+          setSameAddress={setSameAddress}
+          sameAddress={sameAddress}
         />
 
         {/* Availability */}
@@ -150,6 +160,9 @@ const SubContractorForm = ({ }) => {
         <WorkExperience
           newContractor={newContractor}
           setNewContractor={setNewContractor}
+          experience={experience}
+          setExperience={setExperience}
+
         />
 
         {/*Equipment*/}
@@ -182,8 +195,8 @@ const SubContractorForm = ({ }) => {
           setContactPhone1={setContactPhone1}
           contactPhone2={contactPhone2}
           setContactPhone2={setContactPhone2}
-          contactPhone3={contactPhone3}
-          setContactPhone3={setContactPhone3}
+        // contactPhone3={contactPhone3}
+        // setContactPhone3={setContactPhone3}
         />
 
         <SubmitButton />

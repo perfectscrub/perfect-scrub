@@ -1,10 +1,15 @@
 import React from 'react'
 import SubContractorForm from "@/components/sub-contractor-form/SubContractorForm"
 
-const page = () => {
+export const metadata = {
+  title: "Subcontractor Application Form",
+  description: ""
+}
+
+const ContractorFormPage = () => {
   return (
     <SubContractorForm />
   )
 }
 
-export default page
+export default ContractorFormPage;
