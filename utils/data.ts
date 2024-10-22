@@ -2,6 +2,7 @@ import {
   Contractor,
   DayOfWeek,
   EmergencyContact,
+  Experience,
   Facilities,
   IndexFacilities,
   Link,
@@ -376,7 +377,6 @@ export const defaultContractor: Contractor = {
   hasVehicle: "No",
   driversLicence: "",
   availabilityDays: "",
-  experience: "",
   experienceDescription: "",
   hasEquipment: "",
   locations: [],
@@ -406,9 +406,36 @@ export const defaultEmergencyContacts: EmergencyContact[] = [
     email: "",
     phone: "",
   },
-  {
-    name: "",
-    email: "",
-    phone: "",
-  },
+  // {
+  //   name: "",
+  //   email: "",
+  //   phone: "",
+  // },
 ];
+
+export const defaultExperience: Experience[] = [
+  {
+    experience: "Commercial Office Cleaning",
+    checked: false
+  },
+  {
+    experience: "Residential Cleaning",
+    checked: false
+  },
+  {
+    experience: "Window Cleaning",
+    checked: false
+  },
+  {
+    experience: "Post Construction Cleaning",
+    checked: false
+  },
+  {
+    experience: "Floor Care (including Floor Strip, Wax and Carpet Cleaning)",
+    checked: false
+  },
+  {
+    experience: "No Cleaning Experience",
+    checked: false
+  },
+]

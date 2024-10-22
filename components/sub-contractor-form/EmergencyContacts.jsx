@@ -10,8 +10,6 @@ const EmergencyContacts = ({
   setContactPhone1,
   contactPhone2,
   setContactPhone2,
-  contactPhone3,
-  setContactPhone3,
 }) => {
   return (
     <section className="border-t-2 pt-5">
@@ -122,7 +120,7 @@ const EmergencyContacts = ({
           </div>
         </div>
         {/* 3rd Contact */}
-        <div className="max-w-[340px] w-full py-6 px-3">
+        {/* <div className="max-w-[340px] w-full py-6 px-3">
           <h3>Third Emergency Contact</h3>
           <div className="max-w-[300px] flex flex-col gap-4 px-2 py-5">
             <div>
@@ -170,7 +168,7 @@ const EmergencyContacts = ({
               />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

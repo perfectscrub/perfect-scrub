@@ -16,8 +16,6 @@ async function SubContractorPage({ params }) {
     },
   });
 
-  // console.log("contractorData", contractorData);
-
   return (
     <main className="min-h-screen py-40 max-w-[1200px] px-6 mx-auto">
       <Link href={"/admin?tab=contractors"} className="flex gap-3">

@@ -87,7 +87,6 @@ export type Contractor = {
   employmentStatus: string;
   availabilityDays: string;
   locations: string[];
-  experience: string;
   experienceDescription: string;
   hasEquipment: string;
 };
@@ -120,3 +119,8 @@ export type ContractorModelData = {
   references: Reference[];
   emergencyContacts: EmergencyContact[];
 };
+
+export type Experience = {
+  experience: string,
+  checked: boolean
+}

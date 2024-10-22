@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { Label } from "../ui/label";
 import {
   Select,
@@ -8,8 +8,18 @@ import {
   SelectValue,
 } from "../ui/select";
 import { Textarea } from "../ui/textarea";
+import { Checkbox } from "../ui/checkbox";
+import { toast } from "sonner";
 
-const WorkExperience = ({ newContractor, setNewContractor }) => {
+const WorkExperience = ({
+  newContractor,
+  setNewContractor,
+  experience,
+  setExperience,
+  
+}) => {
+  const [count, setCount] = useState(0);
+
   return (
     <section className="border-t-2 border-[#d7d7d7] pt-5">
       <h2 className="mb-1 font-semibold flex items-center">Experience</h2>
@@ -18,53 +28,51 @@ const WorkExperience = ({ newContractor, setNewContractor }) => {
       </p>
       <div className="md:max-w-[400px] col-span-2 flex flex-col gap-6 px-2">
         <div>
-          <Label htmlFor="experience">
+          <h2 className="mb-4">
             Select your type of cleaning experience
-          </Label>
-          <div className="pt-2">
-            <Select
-              name="experience"
-              value={newContractor.experience}
-              onValueChange={(value) =>
-                setNewContractor({
-                  ...newContractor,
-                  experience: value,
-                })
-              }
-              className="flex flex-col gap-4"
-            >
-              <SelectTrigger id="experience">
-                <SelectValue placeholder="Select experience" />
-              </SelectTrigger>
-              <SelectContent>
-                <SelectItem value="Commercial Office Cleaning">
-                  Commercial Office Cleaning
-                </SelectItem>
-                <SelectItem value="Residential Cleaning">
-                  Residential Cleaning
-                </SelectItem>
-                <SelectItem value="Window Cleaning">Window Cleaning</SelectItem>
-                <SelectItem value="Post Construction Cleaning">
-                  Post Construction Cleaning
-                </SelectItem>
-                <SelectItem value="Floor Care (including Floor Strip, Wax and Carpet Cleaning)">
-                  Floor Care (including Floor Strip, Wax and Carpet Cleaning)
-                </SelectItem>
-                <SelectItem value="No Cleaning Experience">
-                  No Cleaning Experience
-                </SelectItem>
-              </SelectContent>
-            </Select>
+          </h2>
+          <div className="flex flex-col gap-4 pt-2">
+            {experience.map(({ experience, checked }) => (
+              <div key={experience} className="flex gap-3">
+                <Checkbox
+                id={experience}
+                  checked={checked}
+                  onCheckedChange={(c) => {
+                    console.log(`${experience}`,c, count);
+                    
+                    if (count < 3 || !c) {
+                      setExperience((prev) => {
+                        return prev.map((exp) => {
+                          if (exp.experience === experience) {
+                            if (c===true) {
+                              setCount(count + 1);
+                            } else {
+                              setCount(count - 1);
+                            }
+                            return { ...exp, checked: c };
+                          }
+                          return exp;
+                        });
+                      });
+                    } else {
+                      toast("Maximum of 3 allowed", "success");
+                      return;
+                    }
+                  }}
+                />
+                <Label htmlFor={experience}>{experience}</Label>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="md:col-span-2">
-          <Label htmlFor="experienceDescription">
+        <div className="md:col-span-2 mt-5 text-base">
+          <Label htmlFor="experienceDescription" className="text-base">
             A brief description of prior experience
           </Label>
           <Textarea
             id="experienceDescription"
-            className=""
+            className="border-2"
             value={newContractor.experienceDescription}
             onChange={(e) =>
               setNewContractor({
@@ -73,6 +81,7 @@ const WorkExperience = ({ newContractor, setNewContractor }) => {
               })
             }
             placeholder="e.g years of experience and other relevant information"
+            rows={8}
             required
           />
         </div>
