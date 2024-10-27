@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import { Button } from "../ui/button.jsx";
-import { addContractor } from "@/actions/actions";
+import { addContractor } from "@/actions/subcontractor.js";
 import PersonalInfo from "./PersonalInfo";
 import BusinessInfo from "./BusinessInfo";
 import Locations from "./Locations";
@@ -21,7 +21,7 @@ import References from "./References";
 import EmergencyContacts from "./EmergencyContacts";
 import { z } from "zod";
 import type { ContractorModelData } from "@/utils/types";
-import { schema } from "@/lib/schema.js";
+import { SubContractorSchema } from "@/schemas/index.js";
 import SubmitButton from "./SubmitButton";
 import { toast } from "sonner";
 
@@ -64,7 +64,7 @@ const SubContractorForm = ({ }) => {
     .map((curr) => curr.text)
 
 
-  function parseData<T extends z.ZodTypeAny>(data: unknown, schema: T) {
+  function parseData<T extends z.ZodTypeAny>(data: ContractorModelData, schema: T) {
     return schema.safeParse(data);
   }
 
@@ -93,14 +93,13 @@ const SubContractorForm = ({ }) => {
     emergencyContacts: [
       { ...emergencyContactInfo[0], phone: contactPhone1 },
       { ...emergencyContactInfo[1], phone: contactPhone2 },
-      // { ...emergencyContactInfo[2], phone: contactPhone3 },
     ],
   }
 
   const handleSubmit = async () => {
     // formRef.current?.reset()
     try {
-      const validatedData = parseData(addValues, schema);
+      const validatedData = parseData(addValues, SubContractorSchema);
 
       if (!validatedData?.success) {
         validatedData.error.issues.map((issue) => {
