@@ -85,7 +85,7 @@ export const footerCompanyLinks: Link[] = [
   { id:4, href: "/commercial-cleaning", title: "Commercial" },
   // { id:5, href: "/residential-cleaning", title: "Residential" },
   { id:6, href: "/quote", title: "Get a quote" },
-  { id:7, href: "/subcontractor-form", title: "Work with us" },
+  { id:7, href: "/auth/login", title: "Sign in" },
 ];
 
 

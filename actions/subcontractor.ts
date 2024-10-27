@@ -3,8 +3,12 @@
 import { revalidatePath } from "next/cache";
 import prisma from "@/lib/db";
 import type { ContractorModelData } from "@/utils/types";
+import { SubContractorSchema } from "@/schemas";
+import { z } from "zod";
 
 export async function addContractor(data: ContractorModelData) {
+  const validatedFields = SubContractorSchema.safeParse(data)
+  if(!validatedFields.success) return {error: "Invalid fields"}
   try {
     await prisma.contractor.create({
       data: {
@@ -40,8 +44,12 @@ export async function addContractor(data: ContractorModelData) {
       },
     });
     revalidatePath("/admin");
+    return {success:"Form submitted successfully"}
   } catch (error) {
     console.log("error", error);
+    if(error.code==="P2002"){
+      // TODO: implement specific error return  
+    }
     const message = error.meta.target.reduce((acc:string,curr:string)=>(`${acc} ${curr}`),"")
     throw new Error("Error during submit: " + message);
   }
