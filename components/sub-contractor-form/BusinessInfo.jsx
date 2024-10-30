@@ -1,16 +1,16 @@
 import React from "react";
-import { Label } from "../ui/label";
-import { Input } from "../ui/input";
+import { Label } from "@/components/ui/label";
+import { Input } from "@/components/ui/input";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
+} from "@/components/ui/select";
 import Link from "next/link";
-import { RadioGroup, RadioGroupItem } from "../ui/radio-group";
-import { Checkbox } from "../ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const BusinessInfo = ({
   newContractor,
@@ -26,7 +26,9 @@ const BusinessInfo = ({
           <Checkbox
             id={"same-address"}
             checked={sameAddress}
-            onCheckedChange={(checked) => {setSameAddress(checked)}}
+            onCheckedChange={(checked) => {
+              setSameAddress(checked);
+            }}
           />
           <Label htmlFor={"same-address"} className="text-xs">
             Same address as above
@@ -138,7 +140,11 @@ const BusinessInfo = ({
           <Input
             className="mt-2"
             id="businessAddress"
-            value={sameAddress?newContractor.address:newContractor.businessAddress}
+            value={
+              sameAddress
+                ? newContractor.address
+                : newContractor.businessAddress
+            }
             onChange={(e) =>
               setNewContractor({
                 ...newContractor,
@@ -153,7 +159,9 @@ const BusinessInfo = ({
           <Input
             className="mt-2"
             id="businessCity"
-            value={sameAddress?newContractor.city:newContractor.businessCity}
+            value={
+              sameAddress ? newContractor.city : newContractor.businessCity
+            }
             onChange={(e) =>
               setNewContractor({
                 ...newContractor,
@@ -168,7 +176,11 @@ const BusinessInfo = ({
           <Input
             className="mt-2"
             id="businessPostcode"
-            value={sameAddress?newContractor.postcode:newContractor.businessPostcode}
+            value={
+              sameAddress
+                ? newContractor.postcode
+                : newContractor.businessPostcode
+            }
             onChange={(e) =>
               setNewContractor({
                 ...newContractor,

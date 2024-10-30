@@ -1,31 +1,7 @@
 "use client";
 import { useCallback, useEffect, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableHead,
-  TableHeader,
-  TableRow,
-} from "@/components/ui/table";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { PlusCircle, Trash2, Edit, Menu, X } from "lucide-react";
-import { Checkbox } from "@/components/ui/checkbox";
-import Link from "next/link";
-import Image from "next/image";
-
 import { useRouter } from "next/navigation";
-// import DashboardSidebar from "./DashboardSidebar";
 import ContractorTab from "./ContractorTab";
 import WorkersTab from "./WorkersTab";
 import JobRequestTab from "./JobRequestTab";
@@ -42,7 +18,7 @@ export default function AdminDashboard({
   const router = useRouter();
 
   const handleTabClick = useCallback(
-    (val) => {
+    (val: string) => {
       setTab(val);
       showMenu ? setShowMenu(false) : null;
     },
@@ -52,7 +28,7 @@ export default function AdminDashboard({
   useEffect(() => {
     if (changeTab) {
       handleTabClick(changeTab);
-      router.replace("/admin");
+      router.replace("/admin-dashboard");
     }
   }, [changeTab, router, handleTabClick]);
 

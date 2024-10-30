@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
-import DashboardSidebar from "@/components/admin-dashboard/DashboardSidebar";
-import TopNav from "@/components/admin-dashboard/TopNav";
+import DashboardSidebar from "@/components/dashboards/DashboardSidebar";
+import TopNav from "@/components/dashboards/admin-dashboard/TopNav";
+import SignOutBtn from "@/components/dashboards/admin-dashboard/SignOutBtn";
 
 const Layout = ({ children }) => {
   const [showMenu, setShowMenu] = useState(false);
@@ -12,11 +13,11 @@ const Layout = ({ children }) => {
 
   return (
     <main className="flex flex-col lg:flex-row h-screen bg-gray-100">
-        <DashboardSidebar showMenu={showMenu} />
+      <DashboardSidebar showMenu={showMenu} handleShowMenu={handleShowMenu}>
+        <SignOutBtn />
+      </DashboardSidebar>
       <TopNav handleShowMenu={handleShowMenu} showMenu={showMenu} />
-      <section className="flex-1 p-3 pt-10">
-        {children}
-      </section>
+      <section className="flex-1 p-3 pt-10">{children}</section>
     </main>
   );
 };

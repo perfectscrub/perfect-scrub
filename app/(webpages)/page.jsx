@@ -6,7 +6,6 @@ import ServicesSection from "@/components/services-section/ServicesSection";
 import LocationsSection from "@/components/locations-section/LocationsSection";
 import QuoteSection from "@/components/quote-section/QuoteSection";
 import HeroSection from "@/components/hero-section/HeroSection";
-import { Metadata } from "next";
 
 export const metadata = {
   title:

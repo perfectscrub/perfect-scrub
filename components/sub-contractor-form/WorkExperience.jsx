@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Label } from "../ui/label";
+import { Label } from "@/components/ui/label";
 import {
   Select,
   SelectContent,
   SelectItem,
   SelectTrigger,
   SelectValue,
-} from "../ui/select";
-import { Textarea } from "../ui/textarea";
-import { Checkbox } from "../ui/checkbox";
+} from "@/components/ui/select";
+import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
 
 const WorkExperience = ({
@@ -16,7 +16,6 @@ const WorkExperience = ({
   setNewContractor,
   experience,
   setExperience,
-  
 }) => {
   const [count, setCount] = useState(0);
 
@@ -28,23 +27,21 @@ const WorkExperience = ({
       </p>
       <div className="md:max-w-[400px] col-span-2 flex flex-col gap-6 px-2">
         <div>
-          <h2 className="mb-4">
-            Select your type of cleaning experience
-          </h2>
+          <h2 className="mb-4">Select your type of cleaning experience</h2>
           <div className="flex flex-col gap-4 pt-2">
             {experience.map(({ experience, checked }) => (
               <div key={experience} className="flex gap-3">
                 <Checkbox
-                id={experience}
+                  id={experience}
                   checked={checked}
                   onCheckedChange={(c) => {
-                    console.log(`${experience}`,c, count);
-                    
+                    console.log(`${experience}`, c, count);
+
                     if (count < 3 || !c) {
                       setExperience((prev) => {
                         return prev.map((exp) => {
                           if (exp.experience === experience) {
-                            if (c===true) {
+                            if (c === true) {
                               setCount(count + 1);
                             } else {
                               setCount(count - 1);

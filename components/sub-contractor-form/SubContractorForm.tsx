@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
-import { Button } from "../ui/button.jsx";
-import { addContractor } from "@/actions/subcontractor.js";
+import { Button } from "@/components/ui/button.jsx";
+import { addContractor } from "@/actions/subcontractor";
 import PersonalInfo from "./PersonalInfo";
 import BusinessInfo from "./BusinessInfo";
 import Locations from "./Locations";
@@ -21,7 +21,7 @@ import References from "./References";
 import EmergencyContacts from "./EmergencyContacts";
 import { z } from "zod";
 import type { ContractorModelData } from "@/utils/types";
-import { SubContractorSchema } from "@/schemas/index.js";
+import { SubContractorSchema } from "@/schemas/index";
 import SubmitButton from "./SubmitButton";
 import { toast } from "sonner";
 
