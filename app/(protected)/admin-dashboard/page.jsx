@@ -1,15 +1,26 @@
-import React from 'react'
-import AdminDashboard from "@/components/admin-dashboard/AdminDashboard"
+import AdminDashboard from "@/components/dashboards/admin-dashboard/AdminDashboard";
 import prisma from "@/lib/db";
-import { auth } from "@/auth";
+import RoleGate from "@/components/auth/RoleGate";
+import { UserRole } from "@prisma/client";
+import { currentUser } from "@/lib/auth";
 
-export default async function AdminPage({searchParams}) {
-  const session = await auth();
-  const {tab}= searchParams;  
+
+export default async function AdminPage({ searchParams }) {
+  const user = await currentUser();
+
+  const { tab } = searchParams;
   const contractorData = await prisma.contractor.findMany();
-  const contractorCount = await prisma.contractor.count(); 
-  
+  const contractorCount = await prisma.contractor.count();
+
+
   return (
-    <AdminDashboard data={contractorData} contractorCount={contractorCount} changeTab={tab}/>
-  )
+    <RoleGate allowedRole={UserRole.ADMIN}>
+      <AdminDashboard
+        data={contractorData}
+        contractorCount={contractorCount}
+        changeTab={tab}
+        user={user?.name}
+      />
+    </RoleGate>
+  );
 }

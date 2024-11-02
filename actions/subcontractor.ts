@@ -5,48 +5,19 @@ import prisma from "@/lib/db";
 import type { ContractorModelData } from "@/utils/types";
 import { SubContractorSchema } from "@/schemas";
 import { z } from "zod";
+import { createSubcontractor } from "@/data/subcontractor";
 
 export async function addContractor(data: ContractorModelData) {
-  const validatedFields = SubContractorSchema.safeParse(data)
+  const validatedFields = SubContractorSchema.safeParse(data);
   if(!validatedFields.success) return {error: "Invalid fields"}
+
   try {
-    await prisma.contractor.create({
-      data: {
-        slug: data.slug,
-        firstname: data.firstname,
-        lastname: data.lastname,
-        email: data.email,
-        address: data.address,
-        city: data.city,
-        postcode: data.postcode,
-        province: data.province,
-        phone: data.phone,
-        businessName: data.businessName,
-        businessType: data.businessType,
-        businessAddress: data.businessAddress,
-        businessCity: data.businessCity,
-        businessPostcode: data.businessPostcode,
-        driversLicence: data.driversLicence,
-        hasVehicle: data.hasVehicle,
-        insurance: data.insurance,
-        employmentStatus: data.employmentStatus,
-        availabilityDays: data.availabilityDays,
-        locations: data.locations,
-        experience: data.experience,
-        experienceDescription: data.experienceDescription,
-        hasEquipment: data.hasEquipment,
-        references: {
-          create: data.references,
-        },
-        emergencyContacts: {
-          create: data.emergencyContacts,
-        },
-      },
-    });
+    await createSubcontractor(data);
     revalidatePath("/admin");
     return {success:"Form submitted successfully"}
+
   } catch (error) {
-    console.log("error", error);
+    // console.log("error", error);
     if(error.code==="P2002"){
       // TODO: implement specific error return  
     }
