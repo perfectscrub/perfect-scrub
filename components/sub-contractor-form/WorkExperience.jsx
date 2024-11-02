@@ -1,12 +1,5 @@
 import React, { useState } from "react";
 import { Label } from "@/components/ui/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import { Textarea } from "@/components/ui/textarea";
 import { Checkbox } from "@/components/ui/checkbox";
 import { toast } from "sonner";
@@ -35,7 +28,7 @@ const WorkExperience = ({
                   id={experience}
                   checked={checked}
                   onCheckedChange={(c) => {
-                    console.log(`${experience}`, c, count);
+                    // console.log(`${experience}`, c, count);
 
                     if (count < 3 || !c) {
                       setExperience((prev) => {

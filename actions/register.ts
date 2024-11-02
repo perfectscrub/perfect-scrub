@@ -4,6 +4,8 @@ import { z } from "zod";
 import bcrypt from "bcryptjs";
 import prisma from "@/lib/db";
 import { getUserByEmail } from "@/data/user";
+import { generateVerificationToken } from "@/lib/tokens";
+import { sendVerificationEmail } from "@/lib/mail";
 
 export const register = async (values: z.infer<typeof RegisterSchema>) => {
   const validatedFields = RegisterSchema.safeParse(values);
@@ -11,7 +13,6 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
   if (!validatedFields.success) return { error: "Invalid fields" };
 
   const { email, password, name } = validatedFields.data;
-  console.log("email, password, name", email, password, name);
 
   const hashedPassword = await bcrypt.hash(password, 10);
 
@@ -29,7 +30,9 @@ export const register = async (values: z.infer<typeof RegisterSchema>) => {
     },
   });
 
-  //TODO: send verification token email
+  const verificationToken = await generateVerificationToken(email); 
 
-  return { success: "Account created successfully" };
+  await sendVerificationEmail(verificationToken?.email, verificationToken?.token);
+
+  return { success: "Confirmation email sent" };
 };

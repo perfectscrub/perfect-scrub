@@ -14,8 +14,8 @@ export const Header = ({ title, label }: HeaderProps) => {
         <div className={cn("w-full flex flex-col gap-y-4 items-center justify-center text-center", poppins.className)}>
             <Image src={PSLogo} width={300} height={135} alt="" className="self-start w-[80px] h-auto" />
             <div>
-                <h1 className={cn("text-3xl font-semibold mb-4")}>{title}</h1>
-                <p className={cn("text-muted-foreground text-sm")}>{label}</p>
+                <h1 className={cn("text-[22px] font-semibold mb-2")}>{title}</h1>
+                <p className={cn("text-muted-foreground text-xs tracking-wide")}>{label}</p>
             </div>
         </div>
     )

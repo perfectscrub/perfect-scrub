@@ -7,7 +7,7 @@ import Social from "./Social";
 
 type CardWrapperProps = {
     children: React.ReactNode;
-    headerTitle: string;
+    headerTitle?: string;
     headerLabel: string;
     backButtonLabel: string;
     backButtonHref: string;
