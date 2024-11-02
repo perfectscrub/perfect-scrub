@@ -13,10 +13,10 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import { Input } from "../ui/input";
-import { Button } from "../ui/button";
-import { FormError } from "../FormError";
-import { FormSuccess } from "../FormSuccess";
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { FormError } from "@/components/FormError";
+import { FormSuccess } from "@/components/FormSuccess";
 import { register } from "@/actions/register";
 
 export const RegisterForm = () => {
@@ -54,7 +54,7 @@ export const RegisterForm = () => {
     >
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-5">
-          <div className="space-y-4 p-1 ">
+          <div className="space-y-2.5 p-1 ">
             <FormField
               control={form.control}
               name="name"
@@ -70,7 +70,7 @@ export const RegisterForm = () => {
                       className="placeholder:text-gray-300"
                     />
                   </FormControl>
-                  <FormMessage className="text-xs"/>
+                  <FormMessage className="text-xs" />
                 </FormItem>
               )}
             />
@@ -90,7 +90,7 @@ export const RegisterForm = () => {
                       className="placeholder:text-gray-300"
                     />
                   </FormControl>
-                  <FormMessage className="text-xs"/>
+                  <FormMessage className="text-xs" />
                 </FormItem>
               )}
             />
@@ -110,7 +110,7 @@ export const RegisterForm = () => {
                       className="placeholder:text-gray-300"
                     />
                   </FormControl>
-                  <FormMessage className="text-xs"/>
+                  <FormMessage className="text-xs" />
                 </FormItem>
               )}
             />

@@ -1,6 +1,6 @@
 import React from "react";
-import { Input } from "../ui/input";
-import { Label } from "../ui/label";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
 import CanadaPhoneInput from "./PhoneInput";
 
 const References = ({
@@ -11,8 +11,6 @@ const References = ({
   refPhone2,
   setRefPhone2,
 }) => {
-  
-
   return (
     <section className="border-t-2 pt-5">
       <h2 className="mb-3 font-semibold">References</h2>
@@ -66,7 +64,7 @@ const References = ({
               <CanadaPhoneInput
                 id="ref1Phone"
                 value={refPhone1}
-                setValue={(val)=>setRefPhone1(val)}
+                setValue={(val) => setRefPhone1(val)}
                 required
                 className={
                   "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 mt-2"
@@ -116,7 +114,7 @@ const References = ({
               <CanadaPhoneInput
                 id="ref2Phone"
                 value={refPhone2}
-                setValue={(val)=>setRefPhone2(val)}
+                setValue={(val) => setRefPhone2(val)}
                 required
                 className={
                   "flex h-9 w-full rounded-md border border-input bg-transparent px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-sm file:font-medium file:text-foreground placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 mt-2"

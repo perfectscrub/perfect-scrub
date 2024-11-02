@@ -23,18 +23,25 @@ export default auth((req) => {
   if (isApiAuthRoute) return null;
 
   if (isAuthRoute) {
-    if(isLoggedIn){
-      return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl))// adding nextUrl helps create an absolute url
+    if (isLoggedIn) {
+      return Response.redirect(new URL(DEFAULT_LOGIN_REDIRECT, nextUrl)); // adding nextUrl helps create an absolute url
     }
     return null;
   }
 
-  if(!isLoggedIn && !isPublicRoute){
-    return Response.redirect(new URL("/auth/login", nextUrl))
+  if (!isLoggedIn && !isPublicRoute) {
+    let callbackUrl = nextUrl.pathname;
+    if (nextUrl.search) {
+      callbackUrl += nextUrl.search;
+    }
+
+    const encodedCallbackUrl = encodeURIComponent(callbackUrl);
+    return Response.redirect(
+      new URL(`/auth/login?callbackUrl=${encodedCallbackUrl}`, nextUrl)
+    );
   }
 
   return null;
-
 });
 
 export const config = {
