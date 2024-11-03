@@ -5,5 +5,5 @@ import { signOut } from "@/auth";
 
 export const logout = async () => {
   // do server specific stuff
-  await signOut({ redirect: true, redirectTo: "/auth/login" });
+  await signOut();
 };
