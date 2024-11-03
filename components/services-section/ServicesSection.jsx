@@ -34,7 +34,7 @@ const ServicesSection = () => {
                 <h3 className="card-title">Standard <br />Clean</h3>
                 <p className="small-desc">Our standard commercial cleaning service. Can be scheduled as a daily, weekly,
                   or monthly service. </p>
-                <Link className="service-link flex justify-end gap-2 inline py-2 px-3 font-semibold mt-6"
+                <Link className="service-link flex justify-end gap-2 py-2 px-3 font-semibold mt-6"
                   href="services/standard-cleaning">Standard Clean<Image width={20} height={20} className="w-5" src="/read-more.svg"
                     alt="" /></Link>
               </div>
@@ -44,9 +44,8 @@ const ServicesSection = () => {
                   <Image src={"/clean-icon.svg"} width={30} height={30} alt="" />
                 </div>
                 <h3 className="card-title">Deep <br />Clean</h3>
-                <p className="small-desc">Our standard commercial cleaning service. Can be scheduled as a daily, weekly,
-                  or monthly service. </p>
-                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                <p className="small-desc">In need of deep cleaning services? Give us a call. We can schedule a deep clean today. </p>
+                <Link className="service-link flex justify-end gap-2 py-2 px-3 font-semibold mt-6"
                   href="services/deep-cleaning">Deep Clean <Image width={20} height={20} className="w-5" src="/read-more.svg" alt="" /></Link>
               </div>
               {/*Service*/}
@@ -57,7 +56,7 @@ const ServicesSection = () => {
                 <h3 className="card-title">Disinfecting <br />Services</h3>
                 <p className="small-desc"> Our disinfecting service deeply cleans areas of your facility that may be
                   contaminated to prevent outbreaks.</p>
-                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                <Link className="service-link flex justify-end gap-2 py-2 px-3 font-semibold mt-6"
                   href="services/disinfecting-services">Disinfecting Service<Image width={20} height={20} className="w-5" src="/read-more.svg"
                     alt="" /></Link>
               </div>
@@ -69,7 +68,7 @@ const ServicesSection = () => {
                 <h3 className="card-title">Carpet <br />Clean</h3>
                 <p className="small-desc">We understand that you need more than the average commercial carpet cleaning
                   service.</p>
-                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                <Link className="service-link flex justify-end gap-2 py-2 px-3 font-semibold mt-6"
                   href="services/carpet-cleaning">Carpet Clean <Image width={20} height={20} className="w-5" src="/read-more.svg"
                     alt="" /></Link>
               </div>
@@ -79,9 +78,9 @@ const ServicesSection = () => {
                   <Image src={"/dispenser-icon.svg"} width={30} height={30} alt="" />
                 </div>
                 <h3 className="card-title">Washroom and Consumables</h3>
-                <p className="small-desc">Sustaining a spotless, hygienic washroom facility is essential for every
+                <p className="small-desc">Sustaining a spotless, hygienic washroom is essential for every
                   organization.</p>
-                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                <Link className="service-link flex justify-end gap-2 py-2 px-3 font-semibold mt-6"
                   href="services/washroom-cleaning-and-consumables">
                     Washroom and Consumables <Image width={20} height={20} className="w-5" src="/read-more.svg" alt="" />
                 </Link>
@@ -92,9 +91,8 @@ const ServicesSection = () => {
                   <Image src={"/janitor-icon.svg"} width={30} height={30} alt="" />
                 </div>
                 <h3 className="card-title">Janitorial<br /> Services</h3>
-                <p className="small-desc">Sustaining a spotless, hygienic washroom facility is essential for every
-                  organization.</p>
-                <Link className="service-link flex justify-end gap-2 inline-block py-2 px-3 font-semibold mt-6"
+                <p className="small-desc">Get a janitor for you business. From surface cleaning to trash removal. We get the </p>
+                <Link className="service-link flex justify-end gap-2 py-2 px-3 font-semibold mt-6"
                   href="services/janitorial-services">Janitorial Services <Image width={20} height={20} className="w-5" src="/read-more.svg"
                     alt="" /></Link>
               </div>

@@ -66,7 +66,7 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-white text-foreground font-body;
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -78,7 +78,7 @@
 
   /* #region DEFAULTS */
   html {
-    @apply bg-gray-50;
+    @apply bg-white;
   }
 
   /* Default Heading Fonts */
@@ -100,7 +100,7 @@
 
   body {
     overflow-x: hidden;
-    background: hsl(228, 71%, 97%);
+    /* background: hsl(228, 71%, 97%); */
   }
 
   body::-webkit-scrollbar {
