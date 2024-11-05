@@ -22,14 +22,14 @@ export const login = async (
   const validatedFields = LoginSchema.safeParse(values);
 
   if (!validatedFields.success) {
-    return { error: "Invalid fields" };
+    return { error: "Invalid email and/or password" };
   }
   const { email, password, code } = validatedFields.data;
 
   const existingUser = await getUserByEmail(email);
 
   if (!existingUser || !existingUser.email || !existingUser.password) {
-    return { error: "Email does not exist" };
+    return { error: "Invalid email and/or password" };
   }
 
   if (!existingUser.emailVerified) {
@@ -45,7 +45,7 @@ export const login = async (
         verificationToken.email,
         verificationToken.token
       );
-      return { success: "Confirmation email sent" };
+      return { success: "Confirmation email sent. Please check your email" };
     }
     return { success: "A confirmation email was sent to you" };
   }

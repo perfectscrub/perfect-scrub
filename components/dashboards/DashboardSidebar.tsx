@@ -7,21 +7,22 @@ import SignOutBtn from "@/components/dashboards/admin-dashboard/SignOutBtn";
 import DashboardNav from "@/components/dashboards/admin-dashboard/DashboardNav";
 import { useCurrentRole } from "@/hooks/useCurrentRole";
 import { UserRole } from "@prisma/client";
+import { useCurrentUser } from "@/hooks/useCurrentUser";
 
 type DashboardSidebarProps = {
-  user?: boolean,
+  // user?: boolean,
   showMenu:  boolean, 
   handleShowMenu: object,
   className?: string,
 }
 
-const DashboardSidebar = ({ user, showMenu, handleShowMenu, className }: DashboardSidebarProps) => {
-  const role = useCurrentRole();
+const DashboardSidebar = ({ showMenu, handleShowMenu, className }: DashboardSidebarProps) => {
+  const user = useCurrentUser();
   return (
     <aside
       className={cn(
-        "translate-x-[-2000px] lg:translate-x-0 absolute opacity-0 lg:opacity-100 lg:relative md:block w-64 bg-white p-6 shadow-md transition-all",
-        { "translate-x-0 opacity-100 min-h-screen z-50": showMenu },
+        " min-h-screen h-full translate-x-[-2000px] lg:translate-x-0 absolute lg:relative opacity-0 lg:opacity-100 md:block w-64 bg-white p-6 shadow-md transition-all",
+        { "translate-x-0 opacity-100 z-50": showMenu },
         className
       )}
     >
@@ -32,8 +33,8 @@ const DashboardSidebar = ({ user, showMenu, handleShowMenu, className }: Dashboa
         height={135}
         className="mb-10 w-[100px] h-auto"
       />
-      <div className="flex flex-col min-h-[40vh] justify-between">
-        {(role===UserRole.ADMIN) &&
+      <div className="flex flex-col min-h-[60vh] justify-between">
+        {(user?.role===UserRole.ADMIN) &&
           <DashboardNav handleShowMenu={handleShowMenu} />
         }
 

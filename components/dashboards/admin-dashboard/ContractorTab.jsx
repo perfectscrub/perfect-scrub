@@ -60,12 +60,12 @@ const initialContractors = [
 
 const ContractorTab = ({ data, contractorCount }) => {
   return (
-    <Card>
-      <CardHeader>
+    <Card className="max-w-[800px] overflow-x-auto lg:overflow-visible">
+      <CardHeader className="mb-3">
         <CardTitle className="text-2xl">
           Contractors ({contractorCount})
         </CardTitle>
-        <CardDescription>
+        <CardDescription >
           View and manage contractor information.
         </CardDescription>
       </CardHeader>
