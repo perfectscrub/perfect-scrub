@@ -203,7 +203,7 @@ const SettingsPage = () => {
                   </>
                 )}
 
-                <FormField
+                {/* <FormField
                   control={form.control}
                   name="role"
                   render={({ field }) => (
@@ -227,7 +227,7 @@ const SettingsPage = () => {
                       <FormMessage />
                     </FormItem>
                   )}
-                />
+                /> */}
               </div>
               <FormError message={error} />
               <FormSuccess message={success} />
