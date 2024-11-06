@@ -22,7 +22,7 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
          <!-- Header -->
                     <tr>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
-                        <img src="" alt="" width="" height="" />
+                        <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
                         </td>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                         Two Factor Authentication Code
@@ -98,6 +98,9 @@ export const sendVerificationEmail = async (email: string, token: string) => {
         <table width="100%" cellspacing="0" cellpadding="0">
          <!-- Header -->
                     <tr>
+                        <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
+                        <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                        </td>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                         Email Verification
                         </td>
@@ -176,6 +179,9 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
                     <table class="content" width="600" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: 1px solid #cccccc;">
                         <!-- Header -->
                         <tr>
+                            <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
+                            <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                            </td>
                             <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                             Password Reset
                             </td>
