@@ -36,7 +36,7 @@ const jobRequests = [
 const JobRequestTab = ({}) => {
   return (
     <Card className="max-w-[800px] overflow-x-auto lg:overflow-visible">
-      <CardHeader>
+      <CardHeader className="mb-3">
         <CardTitle className="text-2xl">Job Requests</CardTitle>
         <CardDescription>
           View and manage cleaning service requests from clients.
