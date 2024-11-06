@@ -4,6 +4,6 @@ import { signOut } from "@/auth";
 // For when modifications on the server are needed
 
 export const logout = async () => {
-  // do server specific stuff
-  await signOut();
+  // you can do server specific stuff here
+  await signOut({redirectTo: "/auth/login"});
 };

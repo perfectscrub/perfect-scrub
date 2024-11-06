@@ -65,7 +65,7 @@ const WorkersTab = ({}) => {
 
   return (
     <Card>
-      <CardHeader>
+      <CardHeader className="mb-3">
         <CardTitle className="text-2xl">Manage Workers</CardTitle>
         <CardDescription>
           Add, update, or remove workers from your cleaning company.
@@ -73,7 +73,7 @@ const WorkersTab = ({}) => {
       </CardHeader>
       <CardContent>
         <form className="space-y-4 mb-4">
-          <div className="grid grid-cols-3 gap-4">
+          <div className="grid md:grid-cols-3 gap-4">
             <div>
               <Label htmlFor="name">Name</Label>
               <Input

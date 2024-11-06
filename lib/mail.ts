@@ -6,7 +6,7 @@ const domain= process.env.NEXT_PUBLIC_APP_URL;
 export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
   try {
     await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "mail@perfectscrubcleaning.com",
       to: email,
       subject: "2FA Code",
       html: `
@@ -21,6 +21,9 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
         <table width="100%" cellspacing="0" cellpadding="0">
          <!-- Header -->
                     <tr>
+                        <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
+                        <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                        </td>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                         Two Factor Authentication Code
                         </td>
@@ -80,7 +83,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
   const confirmLink = `${domain}/auth/new-verification?token=${token}`;
   try {
     await resend.emails.send({
-      from: "Acme <onboarding@resend.dev>",
+      from: "mail@perfectscrubcleaning.com",
       to: email,
       subject: "Confirm your email",
       html: `
@@ -95,6 +98,9 @@ export const sendVerificationEmail = async (email: string, token: string) => {
         <table width="100%" cellspacing="0" cellpadding="0">
          <!-- Header -->
                     <tr>
+                        <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
+                        <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                        </td>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                         Email Verification
                         </td>
@@ -155,7 +161,7 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
   const text = "Reset Password";
   try {
     await resend.emails.send({
-      from: "onboarding@resend.dev",
+      from: "mail@perfectscrubcleaning.com",
       to: email,
       subject: "Reset your password",
       html: `
@@ -173,6 +179,9 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
                     <table class="content" width="600" border="0" cellspacing="0" cellpadding="0" style="border-collapse: collapse; border: 1px solid #cccccc;">
                         <!-- Header -->
                         <tr>
+                            <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
+                            <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                            </td>
                             <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                             Password Reset
                             </td>

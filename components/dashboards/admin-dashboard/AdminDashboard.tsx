@@ -62,8 +62,8 @@ export default function AdminDashboard({
   }, [changeTab, router, handleTabClick]);
 
   return (
-    <main className="space-y-6">
-      <h1 className="text-3xl mb-10">Welcome, {user}</h1>
+    <main className="max-w-[1100px] space-y-6">
+      <h1 className="text-3xl mb-10 capitalize">Welcome, {user}</h1>
       <Tabs value={tab} onValueChange={handleTabClick}>
         <TabsList className="">
           <TabsTrigger
@@ -88,15 +88,15 @@ export default function AdminDashboard({
         <TabsContent value="workers" className="overflow-auto">
           <WorkersTab />
         </TabsContent>
-        <TabsContent value="job-requests">
+        <TabsContent value="job-requests" className="overflow-auto">
           <JobRequestTab />
         </TabsContent>
-        <TabsContent value="contractors">
+        <TabsContent value="contractors" className="overflow-auto">
           <ContractorTab contractorCount={contractorCount} data={data} />
         </TabsContent>
       </Tabs>
 
-      <Card className="space-y-4">
+      {/* <Card className="space-y-4">
         <CardHeader>
           Admin only
         </CardHeader>
@@ -110,7 +110,7 @@ export default function AdminDashboard({
             <Button onClick={onServerActionClick}>Click for admin stuff</Button>
           </div>
         </CardContent>
-      </Card>
+      </Card> */}
     </main>
   );
 }
