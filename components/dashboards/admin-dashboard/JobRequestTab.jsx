@@ -15,7 +15,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 
-// Mock data for job requests
+// Mock data for customers
 const jobRequests = [
   {
     id: 1,

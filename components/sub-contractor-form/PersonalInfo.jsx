@@ -3,7 +3,14 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import CanadaPhoneInput from "./PhoneInput";
 
-const PersonalInfo = ({ newContractor, setNewContractor, phone, setPhone }) => {
+const PersonalInfo = ({
+  newContractor,
+  setNewContractor,
+  phone,
+  setPhone,
+  sameAddress,
+  setSameAddress,
+}) => {
   return (
     <section className="border-t-2 border-[#d7d7d7] pt-5">
       <h2 className="mb-5 font-semibold">Personal Information</h2>
@@ -71,6 +78,7 @@ const PersonalInfo = ({ newContractor, setNewContractor, phone, setPhone }) => {
               setNewContractor({
                 ...newContractor,
                 address: e.target.value,
+                businessAddress: sameAddress ? e.target.value : "",
               })
             }
             required
@@ -84,7 +92,11 @@ const PersonalInfo = ({ newContractor, setNewContractor, phone, setPhone }) => {
             id="city"
             value={newContractor.city}
             onChange={(e) =>
-              setNewContractor({ ...newContractor, city: e.target.value })
+              setNewContractor({
+                ...newContractor,
+                city: e.target.value,
+                businessCity: sameAddress ? e.target.value : "",
+              })
             }
             required
           />
@@ -99,6 +111,7 @@ const PersonalInfo = ({ newContractor, setNewContractor, phone, setPhone }) => {
               setNewContractor({
                 ...newContractor,
                 postcode: e.target.value,
+                businessPostcode: sameAddress ? e.target.value : "",
               })
             }
             required

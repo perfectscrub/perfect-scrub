@@ -25,9 +25,7 @@ import { SubContractorSchema } from "@/schemas/index";
 import SubmitButton from "./SubmitButton";
 import { toast } from "sonner";
 
-
-
-const SubContractorForm = ({ }) => {
+const SubContractorForm = ({}) => {
   const [newContractor, setNewContractor] = useState(defaultContractor);
   const [locationsData, setLocationsData] = useState(locations);
   const [availabilityData, setAvailabilityData] = useState(daysOfWeek);
@@ -43,28 +41,29 @@ const SubContractorForm = ({ }) => {
     defaultEmergencyContacts
   );
 
-
   const resetForm = () => {
     setNewContractor(defaultContractor);
-    setLocationsData(locations)
-    setAvailabilityData(daysOfWeek)
-    setReferenceInfo(defaultReferences)
-    setPhone("")
-    setRefPhone1("")
-    setRefPhone2("")
-    setContactPhone1("")
-    setContactPhone2("")
-    setEmergencyContactInfo(defaultEmergencyContacts)
-  }
+    setLocationsData(locations);
+    setAvailabilityData(daysOfWeek);
+    setReferenceInfo(defaultReferences);
+    setPhone("");
+    setRefPhone1("");
+    setRefPhone2("");
+    setContactPhone1("");
+    setContactPhone2("");
+    setEmergencyContactInfo(defaultEmergencyContacts);
+  };
 
   // const formRef = useRef<HTMLFormElement>(null);
 
   const arrLocations: string[] = locationsData
     .filter((curr) => curr.value)
-    .map((curr) => curr.text)
+    .map((curr) => curr.text);
 
-
-  function parseData<T extends z.ZodTypeAny>(data: ContractorModelData, schema: T) {
+  function parseData<T extends z.ZodTypeAny>(
+    data: ContractorModelData,
+    schema: T
+  ) {
     return schema.safeParse(data);
   }
 
@@ -77,13 +76,10 @@ const SubContractorForm = ({ }) => {
         current.checked ? `${acc} ${current.experience}` : acc,
       ""
     ),
-    locations: locationsData[0].value
-      ? ["All locations"]
-      : arrLocations,
+    locations: locationsData[0].value ? ["All locations"] : arrLocations,
 
     availabilityDays: availabilityData.reduce(
-      (acc, current) =>
-        current.value ? `${acc} ${current.text}` : acc,
+      (acc, current) => (current.value ? `${acc} ${current.text}` : acc),
       ""
     ),
     references: [
@@ -94,7 +90,7 @@ const SubContractorForm = ({ }) => {
       { ...emergencyContactInfo[0], phone: contactPhone1 },
       { ...emergencyContactInfo[1], phone: contactPhone2 },
     ],
-  }
+  };
 
   const handleSubmit = async () => {
     // formRef.current?.reset()
@@ -109,12 +105,15 @@ const SubContractorForm = ({ }) => {
       }
       await addContractor(addValues);
       resetForm();
-      toast.success("Your form was submitted.")
+      toast.success("The form was submitted. We will get back to you soon.");
     } catch (error) {
-      toast.error("Error while submitting the form or some details already exist in our database. Please check your information and try again", { duration: 8000, closeButton: true })
-      return
+      toast.error(
+        "Error while submitting the form or some details already exist in our database. Please check your information and try again",
+        { duration: 8000, closeButton: true }
+      );
+      return;
     }
-  }
+  };
 
   return (
     <section className="max-w-[900px] mx-auto pt-28 px-4">
@@ -133,6 +132,8 @@ const SubContractorForm = ({ }) => {
           setNewContractor={setNewContractor}
           phone={phone}
           setPhone={setPhone}
+          sameAddress={sameAddress}
+          setSameAddress={setSameAddress}
         />
         {/* Business Info */}
         <BusinessInfo
@@ -161,7 +162,6 @@ const SubContractorForm = ({ }) => {
           setNewContractor={setNewContractor}
           experience={experience}
           setExperience={setExperience}
-
         />
 
         {/*Equipment*/}
@@ -194,8 +194,6 @@ const SubContractorForm = ({ }) => {
           setContactPhone1={setContactPhone1}
           contactPhone2={contactPhone2}
           setContactPhone2={setContactPhone2}
-        // contactPhone3={contactPhone3}
-        // setContactPhone3={setContactPhone3}
         />
 
         <SubmitButton />
