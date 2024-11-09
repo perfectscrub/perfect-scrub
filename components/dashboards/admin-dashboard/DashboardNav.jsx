@@ -13,7 +13,7 @@ const DashboardNav = ({ handleShowMenu }) => {
           onClick={() => handleShowMenu()}
         >
           <Briefcase className="mr-2 h-4 w-4" />
-          Job Requests
+          Customers
         </Button>
       </Link>
       <Link href={"/admin-dashboard?tab=workers"}>

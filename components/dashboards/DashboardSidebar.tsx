@@ -10,7 +10,6 @@ import { UserRole } from "@prisma/client";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 
 type DashboardSidebarProps = {
-  // user?: boolean,
   showMenu:  boolean, 
   handleShowMenu: object,
   className?: string,

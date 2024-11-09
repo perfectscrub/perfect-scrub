@@ -114,7 +114,7 @@ const WorkersTab = ({}) => {
             </Button>
           )}
         </form>
-        <Table>
+        <Table className="whitespace-nowrap overflow-hidden">
           <TableHeader>
             <TableRow>
               <TableHead>Name</TableHead>

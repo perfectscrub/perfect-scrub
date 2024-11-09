@@ -10,9 +10,9 @@ const Protected = ({ children }: { children: React.ReactNode }) => {
     setShowMenu((prev) => !prev);
   };
   return (
-    <main className="max-w-[1540px] mx-auto flex flex-col lg:flex-row relative h-full w-full bg-gray-100">
+    <main className="max-w-[1540px] mx-auto flex flex-col lg:flex-row relative h-full bg-gray-100">
       <DashboardSidebar showMenu={showMenu} handleShowMenu={handleShowMenu} />
-      <section className="flex-1 p-3 md:px-6 pt-5 space-y-5">
+      <section className="max-w-[1100px] flex-1 p-3 md:px-6 pt-5 space-y-5">
         <TopNav handleShowMenu={handleShowMenu} showMenu={showMenu} />
         {children}
       </section>

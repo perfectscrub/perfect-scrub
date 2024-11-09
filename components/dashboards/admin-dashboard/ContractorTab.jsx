@@ -1,112 +1,79 @@
 import React from "react";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
+import {
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
+} from "@/components/ui/table";
 import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";
+import { format } from "date-fns";
 
-// Mock data for contractors
-const initialContractors = [
-  {
-    id: "cuid1",
-    slug: "Alices-Cleaning-Services",
-    fullname: "Alice Johnson",
-    businessName: "Alice's Cleaning Services",
-    businessCategory: "Residential",
-    email: "alice@example.com",
-    phone: "111-222-3333",
-    address: "123 Main St",
-    city: "Springfield",
-    postcode: "12345",
-    businessAddress: "456 Business Ave",
-    businessCity: "Springfield",
-    province: "IL",
-    businessPostcode: "12345",
-    hasVehicle: true,
-    driversLicence: "DL123456",
-    insurance: "INS789012",
-    employmentStatus: "Self-employed",
-    availabilityDays: "Mon-Fri",
-    locations: "Springfield, Shelbyville",
-    experience: "5 years",
-    experienceDescription: "Experienced in residential and commercial cleaning",
-    hasEquipment: true,
-  },
-  {
-    id: "cuid2",
-    slug: "Bobs-Janitorial",
-    fullname: "Bob Williams",
-    businessName: "Bob's Janitorial",
-    businessCategory: "Commercial",
-    email: "bob@example.com",
-    phone: "444-555-6666",
-    address: "789 Oak Rd",
-    city: "Shelbyville",
-    postcode: "67890",
-    businessAddress: "101 Commerce St",
-    businessCity: "Shelbyville",
-    province: "IL",
-    businessPostcode: "67890",
-    hasVehicle: false,
-    driversLicence: null,
-    insurance: "INS345678",
-    employmentStatus: "Contract",
-    availabilityDays: "Mon-Sat",
-    locations: "Shelbyville",
-    experience: "3 years",
-    experienceDescription: "Specialized in office and retail space cleaning",
-    hasEquipment: true,
-  },
-];
 
-const ContractorTab = ({ data, contractorCount }) => {
+const ContractorTab = ({ contractorData, contractorCount }) => {
+
   return (
-    <Card className="max-w-[800px] overflow-x-auto lg:overflow-visible">
+    <Card className="">
       <CardHeader className="mb-3">
         <CardTitle className="text-2xl">
           Contractors ({contractorCount})
         </CardTitle>
-        <CardDescription >
+        <CardDescription>
           View and manage contractor information.
         </CardDescription>
       </CardHeader>
-      <CardContent>
-        <Table>
+      <CardContent className="">
+        <Table className="whitespace-nowrap overflow-hidden">
           <TableHeader>
             <TableRow>
-              <TableHead>View</TableHead>
-              <TableHead>Full Name</TableHead>
+              <TableHead>Date</TableHead>
               <TableHead>Business Name</TableHead>
-              <TableHead>Category</TableHead>
+              <TableHead>Full Name</TableHead>
+              {/* <TableHead>Category</TableHead> */}
               <TableHead>Email</TableHead>
               <TableHead>Phone</TableHead>
               <TableHead>City</TableHead>
-              <TableHead>Has Vehicle</TableHead>
-              <TableHead>Has Equipment</TableHead>
+              {/* <TableHead>Has Vehicle</TableHead>
+              <TableHead>Has Equipment</TableHead> */}
             </TableRow>
           </TableHeader>
-          <TableBody>
-            {data.map((contractor) => (
-              <TableRow key={contractor.id}>
+          <TableBody className="">
+            {contractorData.map((contractor) => (
+              <TableRow key={contractor.id} >
                 <TableCell>
+                  {format(new Date(contractorData[0].createdAt), "PP")}
+                </TableCell>
+                <TableCell className="max-w-[200px] truncate">
                   <Link
-                    href={`/admin/sub-contractor/${contractor.slug}`}
-                    className="text-blue-500 underline underline-offset-2 hover:no-underline"
+                    href={`/admin-dashboard/contractors/${contractor.slug}`}
+                    title={contractor.businessName}
+                    className="hover:text-blue-500 no-underline underline-offset-2 hover:underline"
                   >
-                    View
+                    {contractor.businessName}
                   </Link>
                 </TableCell>
-                <TableCell>{contractor.fullname}</TableCell>
-                <TableCell>{contractor.businessName}</TableCell>
-                <TableCell>{contractor.businessCategory}</TableCell>
+                <TableCell className="capitalize">
+                  {`${contractor.firstname} ${contractor.lastname}`}
+                </TableCell>
+                {/* <TableCell>{contractor.businessCategory}</TableCell> */}
                 <TableCell>{contractor.email}</TableCell>
                 <TableCell>{contractor.phone}</TableCell>
-                <TableCell>{contractor.city}</TableCell>
-                <TableCell>
+                <TableCell className="capitalize">{contractor.city}</TableCell>
+                {/* <TableCell>
                   <Checkbox checked={contractor.hasVehicle} disabled />
                 </TableCell>
                 <TableCell>
                   <Checkbox checked={contractor.hasEquipment} disabled />
-                </TableCell>
+                </TableCell> */}
               </TableRow>
             ))}
           </TableBody>

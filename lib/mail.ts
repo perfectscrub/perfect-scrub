@@ -1,7 +1,7 @@
 import { Resend } from "resend";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
-const domain= process.env.NEXT_PUBLIC_APP_URL;
+const domain = process.env.NEXT_PUBLIC_APP_URL;
 
 export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
   try {
@@ -22,7 +22,7 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
          <!-- Header -->
                     <tr>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
-                        <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                        <img src=${domain}/static/perfect-scrub-logo.png alt="" width="80px" height="36px" />
                         </td>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                         Two Factor Authentication Code
@@ -35,9 +35,10 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
               <tr>
                   <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
                   Hi, <br>
-                  Your 2FA code for login is:
+                  Your 2FA code for login is below
+                  <br>
+                  Please note that the token is only for 5 minutes.
                   <br><br>
-                  
                   </td>
               </tr>
 
@@ -99,7 +100,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
          <!-- Header -->
                     <tr>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
-                        <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                        <img src=${domain}/static/perfect-scrub-logo.png  alt="" width="80px" height="36px" />
                         </td>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                         Email Verification
@@ -113,6 +114,8 @@ export const sendVerificationEmail = async (email: string, token: string) => {
                   <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
                   Hi, <br>
                   You can verify your email by clicking the link below.
+                  <br><br>
+                  This verification link is valid for 6 hours.
                   <br><br>
                   You are receiving this email because you created an account with Perfect Scrub Cleaning. If this request was not made by you please disregard the email.
                   </td>
@@ -180,7 +183,7 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
                         <!-- Header -->
                         <tr>
                             <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
-                            <img src="./perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                            <img src=${domain}/static/perfect-scrub-logo.png  alt="" width="80px" height="36px" />
                             </td>
                             <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                             Password Reset
@@ -192,6 +195,8 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
                             <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
                             Hi, <br>
                             If you want to reset your password you can click the link below
+                            <br>
+                            This verification link is valid for 1 hours.
                             <br><br>
                             You are receiving this email because you requested a password reset. If this request was not made by you please disregard.
                             </td>

@@ -31,4 +31,4 @@ export async function deleteContractor(id: string) {
   await prisma.contractor.delete({ where: { id } });
 }
 
-// export async function editContractor(id: string){}
+// export async function updateContractor(id: string){}
