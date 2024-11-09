@@ -20,7 +20,7 @@ const WorkExperience = ({
       </p>
       <div className="md:max-w-[400px] col-span-2 flex flex-col gap-6 px-2">
         <div>
-          <h2 className="mb-4">Select your type of cleaning experience</h2>
+          <h2 className="mb-4">Select your type of cleaning experience <span className="text-sm italic text-gray-500">(max. 3)</span></h2>
           <div className="flex flex-col gap-4 pt-2">
             {experience.map(({ experience, checked }) => (
               <div key={experience} className="flex gap-3">
@@ -45,7 +45,7 @@ const WorkExperience = ({
                         });
                       });
                     } else {
-                      toast("Maximum of 3 allowed", "success");
+                      toast.error("Maximum of 3 allowed");
                       return;
                     }
                   }}

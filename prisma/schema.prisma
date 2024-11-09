@@ -1,27 +1,12 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  // previewFeatures = ["driverAdapters"]
 }
 
-// datasource db {
-//   provider = "postgresql"
-//   url      = env("DATABASE_URL")
-// }
-
-
-// generator client {
-//   provider = "prisma-client-js"
-//   previewFeatures = ["driverAdapters"]
-// }
 datasource db {
-  provider = "postgresql"
-  url = env("POSTGRES_PRISMA_URL") // uses connection pooling
-  directUrl = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  provider  = "postgresql"
+  url       = env("POSTGRES_PRISMA_URL")
+  directUrl = env("POSTGRES_URL_NON_POOLING")
 }
 
 model Contractor {
@@ -49,10 +34,10 @@ model Contractor {
   experience            String
   experienceDescription String
   hasEquipment          String
-  references            Reference[]
-  emergencyContacts     EmergencyContact[]
   createdAt             DateTime           @default(now())
   updatedAt             DateTime           @updatedAt
+  emergencyContacts     EmergencyContact[]
+  references            Reference[]
 }
 
 model Reference {
@@ -60,8 +45,8 @@ model Reference {
   name         String
   relationship String
   phone        String     @unique
-  contractor   Contractor @relation(fields: [contractorId], references: [id])
   contractorId String
+  contractor   Contractor @relation(fields: [contractorId], references: [id])
 }
 
 model EmergencyContact {
@@ -69,33 +54,23 @@ model EmergencyContact {
   name         String
   phone        String
   email        String
-  contractor   Contractor @relation(fields: [contractorId], references: [id])
   contractorId String
-}
-
-
-enum UserRole {
-  ADMIN 
-  USER
+  contractor   Contractor @relation(fields: [contractorId], references: [id])
 }
 
 model User {
-  id            String    @id @default(cuid())
-  name          String?
-  email         String    @unique
-  emailVerified DateTime?
-  image         String?
-  password      String?
-  role          UserRole  @default(USER)
-  accounts      Account[]
-  isTwoFactorEnabled Boolean @default(false)
+  id                    String                 @id @default(cuid())
+  name                  String?
+  email                 String                 @unique
+  emailVerified         DateTime?
+  image                 String?
+  createdAt             DateTime               @default(now())
+  updatedAt             DateTime               @updatedAt
+  password              String?
+  role                  UserRole               @default(USER)
+  isTwoFactorEnabled    Boolean                @default(false)
+  accounts              Account[]
   twoFactorConfirmation TwoFactorConfirmation?
-  // sessions      Session[]
-  // Optional for WebAuthn support
-  // Authenticator Authenticator[]
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
 }
 
 model Account {
@@ -110,167 +85,47 @@ model Account {
   scope             String?
   id_token          String?
   session_state     String?
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt         DateTime @default(now())
+  updatedAt         DateTime @updatedAt
+  user              User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 
   @@id([provider, providerAccountId])
 }
 
 model VerificationToken {
-  id String @id @default(cuid())
-  email String
-  token String @unique
+  id      String   @id @default(cuid())
+  email   String
+  token   String   @unique
   expires DateTime
 
   @@unique([email, token])
 }
 
 model PasswordResetToken {
-  id String @id @default(cuid())
-  email String
-  token String @unique
+  id      String   @id @default(cuid())
+  email   String
+  token   String   @unique
   expires DateTime
 
   @@unique([email, token])
-
 }
 
 model TwoFactorToken {
-  id String @id @default(cuid())
-  email String
-  token String @unique
+  id      String   @id @default(cuid())
+  email   String
+  token   String   @unique
   expires DateTime
 
   @@unique([email, token])
 }
 
 model TwoFactorConfirmation {
-  id String @id @default(cuid())
-
-  userId String 
-  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
-
-  @@unique([userId])
+  id     String @id @default(cuid())
+  userId String @unique
+  user   User   @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
 
-// model Profile {
-//   id        Int     @id @default(autoincrement())
-//   firstName String
-//   lastName  String
-//   email     String  @unique
-//   user      User    @relation(fields: [userId], references: [id])
-//   userId    String @unique
-//   isAdmin   Boolean @default(false) @map("is_admin")
-//   createdAt DateTime @default(now()) @map("created_at")
-//   updatedAt DateTime @updatedAt()
-
-//   @@unique([firstName, lastName])
-// }
-
-// model Employee {
-//   id                Int    @id @default(autoincrement())
-//   firstName         String
-//   lastName          String
-//   middleName        String
-//   dob               String
-//   socialInsuranceNo String
-//   citizenship       String
-//   citizenshipImage  String
-//   education         String
-//   nextOfKin         String //{"name":"", "phone":"", "address"}
-//   photo             String
-//   trainingsIds      String
-//   certificateEarned String
-//   leaveRequest      String //"Paid, Unpaid, Maternity/paternity
-// }
-
-// !!!!!!!!!!          FIX ME!       !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-// create a job when you create a profile 
-// model Job {
-//    name:"",
-//    address:"",
-//    client_email:"",
-//    client_phone_number:"",
-//    job_type:"",
-//    job_details:"",
-//    number_of_offices:"",
-//    number_of_washrooms:"",
-//    kitchette: true,
-//    other_spaces:"",
-//    specific_requests:"",
-//    specific_complaints:"",
-// }
-
-// Training {
-//         "title":"",
-//         "date":"",
-//         "skills":"",
-//         "certificateEarned":"",
-//         "expiry":""
-//     }
-
-// On the job performance and feedback
-// Employee stats
-// Monthly and weekly statistics of:
-// number_of_cleans_completed
-// number_of_complaints_ on each job
-// total_five_star_ratings
-// total_incidents_reported: staff incident, client incident
-
-// Ability to make notes to provide details of the incidents.
-// Clock_in and clock out data per job
-// Ability to view calendar to know when an employee is scheduled for work during the week. 
-
-// The requirements below are not employee specific. 
-
-// 1.New Job details: This is the process of booking a new job. This can be created by a Perfect Scub staff if a client calls in to book.
-// Client should also be able to create a user name and password and have access to create a new job for review and acceptance by Perfect Scrub team
-// A page to book a new job should include  the following details
-// Name of client
-// Address of client with zipcode
-// Client email
-// Client phone number
-// Type of job:
-// What does client do: such as school, daycare, show room etc, 
-// Job details: deep clean or standard clean or specialty clean
-// Number of offices: size parameters 
-// Number of Washrooms: Male, female, universal
-// Kitchenette: yes or no
-// Other spaces: note space to make detailed notes.
-// Based on job details, client gets a price and can either make full payment or a down payment. 
-// Any specific client request or complaint
-// Credit card payment : client can enter card details to make payment.
-// Client contract : client can click on PDF of contract and check a box to say agreed before leaving the page and completing the process.
-
-// Perfect Scrub receives notification of new job details. 
-// Client receives email confirmation of job and payment
-
-// A supervisor should be able to see the following information about the job above except card details.
-
-// 2.Job pricing: the system should be able to calculate  a price based on customer information provided..
-// Job Scheduling: Job is scheduled and assigned to 2 people, one of which should be a supervisor. 
-// Job is assigned and appears on the calender of the people assigned. 
-// Employees get a notification or new job alert with details of job: when and type of job.
-// Employee accepts the job( employee cannot be on leave. Such employee should not be able to receive job Notification. 
-// Any employee currently clocked in should not receive notification or be able to accept a new job
-// Jobs MAY be assigned based on employee location: where employee lives and location of job. ( need to think some more on this)
-
-// 3. Supplies/inventory database
-// Ability to add and take away from inventory
-// Ability to make notes on damaged items, misplaced items
-// Ability to check out items for each job
-// Ability to check back in all items taken ( except consumables) before a job can be completed
-
-// 4.Laundry data: to be updated weekly
-// Items ready to be used
-// Kitchen cloths
-// Washroom cloths
-// General cleaning cloths
-// Mop heads
-// 4b.Items in laundry
-// Items returned and date
-
-// I know this is not everything. I will fill the gaps as we go. For example, I will provide information on the backend processing for sales and marketing that we should be able to track.
+enum UserRole {
+  ADMIN
+  USER
+}

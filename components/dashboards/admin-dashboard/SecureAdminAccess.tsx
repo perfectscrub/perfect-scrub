@@ -5,14 +5,13 @@ import AdminDashboard from "./AdminDashboard";
 import { UserRole } from "@prisma/client";
 import { useCurrentUser } from "@/hooks/useCurrentUser";
 
-const SecureAccess = ({ contractorData, contractorCount, tab }) => {
+const SecureAdminAccess = ({ contractorData, contractorCount, tab }) => {
   const user = useCurrentUser();
 
-  console.log("ROLEGATE: ", user?.role)
   return (
     <RoleGate allowedRole={UserRole.ADMIN} role={user?.role}>
       <AdminDashboard
-        data={contractorData}
+        contractorData={contractorData}
         contractorCount={contractorCount}
         changeTab={tab}
         user={user?.name}
@@ -21,4 +20,4 @@ const SecureAccess = ({ contractorData, contractorCount, tab }) => {
   );
 };
 
-export default SecureAccess;
+export default SecureAdminAccess;

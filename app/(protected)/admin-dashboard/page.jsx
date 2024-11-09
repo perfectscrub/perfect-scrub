@@ -1,5 +1,5 @@
 import prisma from "@/lib/db";
-import SecureAccess from "@/components/dashboards/admin-dashboard/SecureAccess";
+import SecureAdminAccess from "@/components/dashboards/admin-dashboard/SecureAdminAccess";
 
 export default async function AdminPage({ searchParams }) {
   const { tab } = searchParams;
@@ -7,7 +7,7 @@ export default async function AdminPage({ searchParams }) {
   const contractorCount = await prisma.contractor.count();
 
   return (
-    <SecureAccess
+    <SecureAdminAccess
       contractorData={contractorData}
       contractorCount={contractorCount}
       tab={tab}

@@ -18,6 +18,7 @@ const BusinessInfo = ({
   sameAddress,
   setSameAddress,
 }) => {
+  
   return (
     <section className="border-t-2 pt-5">
       <div className="mb-3 flex items-center gap-5">
@@ -28,6 +29,21 @@ const BusinessInfo = ({
             checked={sameAddress}
             onCheckedChange={(checked) => {
               setSameAddress(checked);
+              if(sameAddress){
+                setNewContractor({
+                  ...newContractor, 
+                  businessAddress: "",
+                  businessCity: "",
+                  businessPostcode: "",
+                })
+              }else{
+                setNewContractor({
+                  ...newContractor, 
+                  businessAddress: newContractor.address,
+                  businessCity: newContractor.city,
+                  businessPostcode: newContractor.postcode,
+                })
+              }
             }}
           />
           <Label htmlFor={"same-address"} className="text-xs">
@@ -140,17 +156,17 @@ const BusinessInfo = ({
           <Input
             className="mt-2"
             id="businessAddress"
-            value={
-              sameAddress
-                ? newContractor.address
-                : newContractor.businessAddress
-            }
-            onChange={(e) =>
+            value={newContractor.businessAddress}
+            onChange={(e) => {
+              if (sameAddress) {
+               
+                return;
+              }
               setNewContractor({
                 ...newContractor,
                 businessAddress: e.target.value,
-              })
-            }
+              });
+            }}
             required
           />
         </div>
@@ -162,12 +178,15 @@ const BusinessInfo = ({
             value={
               sameAddress ? newContractor.city : newContractor.businessCity
             }
-            onChange={(e) =>
+            onChange={(e) => {
+              if (sameAddress) {
+                return;
+              }
               setNewContractor({
                 ...newContractor,
                 businessCity: e.target.value,
-              })
-            }
+              });
+            }}
             required
           />
         </div>
@@ -176,17 +195,16 @@ const BusinessInfo = ({
           <Input
             className="mt-2"
             id="businessPostcode"
-            value={
-              sameAddress
-                ? newContractor.postcode
-                : newContractor.businessPostcode
-            }
-            onChange={(e) =>
+            value={newContractor.businessPostcode}
+            onChange={(e) => {
+              if (sameAddress) {
+                return;
+              }
               setNewContractor({
                 ...newContractor,
                 businessPostcode: e.target.value,
-              })
-            }
+              });
+            }}
             required
           />
         </div>

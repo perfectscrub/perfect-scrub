@@ -18,6 +18,7 @@ import { Button } from "@/components/ui/button";
 import { FormError } from "@/components/FormError";
 import { FormSuccess } from "@/components/FormSuccess";
 import { register } from "@/actions/register";
+import { toast } from "sonner";
 
 export const RegisterForm = () => {
   const [isPending, startTransition] = useTransition();
@@ -38,8 +39,13 @@ export const RegisterForm = () => {
     setSuccess("");
     startTransition(() => {
       register(values).then(data => {
-        setError(data?.error);
-        setSuccess(data?.success);
+        if(data?.error){
+          setError(data?.error);
+        } 
+        if(data?.success){
+          setSuccess(data?.success);
+          toast.success("Please verify your email by clicking the link in email sent to you.")
+        }
       });
     })
   }
