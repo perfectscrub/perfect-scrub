@@ -1,5 +1,5 @@
 import { Resend } from "resend";
-
+import PSLOGO from "@/public/perfect-scrub-logo.png"
 const resend = new Resend(process.env.RESEND_API_KEY);
 const domain = process.env.NEXT_PUBLIC_APP_URL;
 
@@ -22,7 +22,7 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
          <!-- Header -->
                     <tr>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
-                        <img src=${domain}/static/perfect-scrub-logo.png alt="" width="80px" height="36px" />
+                        <img src=${PSLOGO} alt="" width="80px" height="36px" />
                         </td>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                         Two Factor Authentication Code
@@ -76,7 +76,7 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
       `,
     });
   } catch (error) {
-    console.log("ERROR: ", error);
+    console.log("MAIL ERROR: ", error);
   }
 };
 
@@ -100,7 +100,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
          <!-- Header -->
                     <tr>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
-                        <img src=${domain}/static/perfect-scrub-logo.png  alt="" width="80px" height="36px" />
+                        <img src=${PSLOGO}  alt="" width="80px" height="36px" />
                         </td>
                         <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                         Email Verification
@@ -155,7 +155,7 @@ export const sendVerificationEmail = async (email: string, token: string) => {
       `,
     });
   } catch (error) {
-    console.log("ERROR: ", error);
+    console.log("MAIL ERROR: ", error);
   }
 };
 
@@ -183,7 +183,7 @@ export const sendPasswordResetEmail = async (email: string, token: string) => {
                         <!-- Header -->
                         <tr>
                             <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
-                            <img src=${domain}/static/perfect-scrub-logo.png  alt="" width="80px" height="36px" />
+                            <img src=${PSLOGO}  alt="" width="80px" height="36px" />
                             </td>
                             <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
                             Password Reset
