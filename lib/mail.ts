@@ -1,7 +1,8 @@
 import { Resend } from "resend";
-import PSLOGO from "@/public/perfect-scrub-logo.png"
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 const domain = process.env.NEXT_PUBLIC_APP_URL;
+const PSLOGO = `${domain}/perfect-scrub-logo.png`
 
 export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
   try {
@@ -79,7 +80,6 @@ export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
     console.log("MAIL ERROR: ", error);
   }
 };
-
 export const sendVerificationEmail = async (email: string, token: string) => {
   const confirmLink = `${domain}/auth/new-verification?token=${token}`;
   try {
