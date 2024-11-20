@@ -44,7 +44,7 @@ export const RegisterForm = () => {
         } 
         if(data?.success){
           setSuccess(data?.success);
-          toast.success("Please verify your email by clicking the link in email sent to you.")
+          toast.success("Please verify your email by clicking the link in the email sent to you.")
         }
       });
     })

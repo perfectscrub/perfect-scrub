@@ -20,7 +20,7 @@ export default auth((req) => {
   // first allow every api route
   // then check auth routes...
   if (isApiAuthRoute) {
-    return null
+    return null; 
   };
   
   if (isAuthRoute) {
@@ -30,7 +30,7 @@ export default auth((req) => {
     return null;
   }
   
-  if (!isLoggedIn && !isPublicRoute && nextUrl.pathname.includes("/auth")) {
+  if (!isLoggedIn && !isPublicRoute) {
     let callbackUrl = nextUrl.pathname;
     if (nextUrl.search) {
       callbackUrl += nextUrl.search;

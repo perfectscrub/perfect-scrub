@@ -214,6 +214,7 @@ const BusinessInfo = ({
             id="insurance"
             name="insurance"
             className="mt-2 ml-2"
+            value={newContractor.insurance}
             onValueChange={(value) =>
               setNewContractor({
                 ...newContractor,
