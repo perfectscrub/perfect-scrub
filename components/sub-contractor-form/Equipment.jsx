@@ -17,6 +17,7 @@ const Equipment = ({ newContractor, setNewContractor }) => {
         </Label> */}
         <RadioGroup
           name="hasEquipment"
+          value={newContractor.hasEquipment}
           onValueChange={(value) =>
             setNewContractor({
               ...newContractor,

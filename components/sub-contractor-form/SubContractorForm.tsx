@@ -46,12 +46,14 @@ const SubContractorForm = ({}) => {
     setLocationsData(locations);
     setAvailabilityData(daysOfWeek);
     setReferenceInfo(defaultReferences);
+    setExperience(defaultExperience),
     setPhone("");
     setRefPhone1("");
     setRefPhone2("");
     setContactPhone1("");
     setContactPhone2("");
     setEmergencyContactInfo(defaultEmergencyContacts);
+    setSameAddress(false);
   };
 
   // const formRef = useRef<HTMLFormElement>(null);
@@ -93,7 +95,15 @@ const SubContractorForm = ({}) => {
   };
 
   const handleSubmit = async () => {
-    // formRef.current?.reset()
+    if(refPhone1 === refPhone2){
+      toast.error("Please provide unique phone numbers for references");
+      return;
+    }
+    if(contactPhone1===contactPhone2){
+      toast.error("Please provide unique phone numbers for your emergency contacts");
+      return;
+    }
+
     try {
       const validatedData = parseData(addValues, SubContractorSchema);
 

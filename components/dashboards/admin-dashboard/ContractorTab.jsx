@@ -50,7 +50,7 @@ const ContractorTab = ({ contractorData, contractorCount }) => {
             {contractorData.map((contractor) => (
               <TableRow key={contractor.id} >
                 <TableCell>
-                  {format(new Date(contractorData[0].createdAt), "PP")}
+                  {format(new Date(contractor.createdAt), "PP")}
                 </TableCell>
                 <TableCell className="max-w-[200px] truncate">
                   <Link
