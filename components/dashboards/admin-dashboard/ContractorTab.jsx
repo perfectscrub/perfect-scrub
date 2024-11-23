@@ -33,7 +33,7 @@ const ContractorTab = ({ contractorData, contractorCount }) => {
   const csv = generateCsv(csvConfig)(exportData)
   return (
     <Card className="">
-      <CardHeader className="mb-3 flex flex-row justify-between items-center">
+      <CardHeader className="mb-3 flex md:flex-row justify-between items-center gap-6">
         <div className="">
           <CardTitle className="text-2xl">
             Contractors ({contractorCount})
@@ -42,7 +42,10 @@ const ContractorTab = ({ contractorData, contractorCount }) => {
             View and manage contractor information.
           </CardDescription>
         </div>
-        <Button onClick={() => download(csvConfig)(csv)}>Export</Button>
+        <Button 
+          onClick={() => download(csvConfig)(csv)}
+          className="self-end"
+        >Export</Button>
       </CardHeader>
       <CardContent className="">
         <Table className="whitespace-nowrap overflow-hidden">
