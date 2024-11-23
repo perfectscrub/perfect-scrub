@@ -17,19 +17,32 @@ import {
 import Link from "next/link";
 import { Checkbox } from "@/components/ui/checkbox";
 import { format } from "date-fns";
-
+import { Button } from "@/components/ui/button";
+import { mkConfig, generateCsv, download } from "export-to-csv";
 
 const ContractorTab = ({ contractorData, contractorCount }) => {
-
+  const exportData = contractorData.map((contractor)=>{
+    return {
+      ...contractor,
+      locations: contractor.locations.join(", "),
+      createdAt: format(new Date(contractor.createdAt), "PP"),
+      updatedAt: format(new Date(contractor.updatedAt), "PP"),
+    }
+  })
+  const csvConfig = mkConfig({ useKeysAsHeaders: true });
+  const csv = generateCsv(csvConfig)(exportData)
   return (
     <Card className="">
-      <CardHeader className="mb-3">
-        <CardTitle className="text-2xl">
-          Contractors ({contractorCount})
-        </CardTitle>
-        <CardDescription>
-          View and manage contractor information.
-        </CardDescription>
+      <CardHeader className="mb-3 flex flex-row justify-between items-center">
+        <div className="">
+          <CardTitle className="text-2xl">
+            Contractors ({contractorCount})
+          </CardTitle>
+          <CardDescription>
+            View and manage contractor information.
+          </CardDescription>
+        </div>
+        <Button onClick={() => download(csvConfig)(csv)}>Export</Button>
       </CardHeader>
       <CardContent className="">
         <Table className="whitespace-nowrap overflow-hidden">
@@ -48,7 +61,7 @@ const ContractorTab = ({ contractorData, contractorCount }) => {
           </TableHeader>
           <TableBody className="">
             {contractorData.map((contractor) => (
-              <TableRow key={contractor.id} >
+              <TableRow key={contractor.id}>
                 <TableCell>
                   {format(new Date(contractor.createdAt), "PP")}
                 </TableCell>
