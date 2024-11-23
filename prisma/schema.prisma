@@ -3,6 +3,10 @@ generator client {
   // previewFeatures = ["driverAdapters"]
 }
 
+// datasource db {
+//   provider  = "postgresql"
+//   url       = env("DATABASE_URL")
+// }
 datasource db {
   provider  = "postgresql"
   url       = env("POSTGRES_PRISMA_URL")
@@ -46,7 +50,7 @@ model Reference {
   relationship String
   phone        String     @unique
   contractorId String
-  contractor   Contractor @relation(fields: [contractorId], references: [id])
+  contractor   Contractor @relation(fields: [contractorId], references: [id], onDelete: Cascade)
 }
 
 model EmergencyContact {
@@ -55,7 +59,7 @@ model EmergencyContact {
   phone        String
   email        String
   contractorId String
-  contractor   Contractor @relation(fields: [contractorId], references: [id])
+  contractor   Contractor @relation(fields: [contractorId], references: [id], onDelete: Cascade)
 }
 
 model User {

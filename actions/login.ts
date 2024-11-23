@@ -99,7 +99,7 @@ export const login = async (
     return { success: "Email sent!" };
   } catch (error) {
     if (error instanceof AuthError) {
-      console.log("error.type", error.type);
+      // console.log("error.type", error.type);
 
       switch (error.type) {
         case "CredentialsSignin":

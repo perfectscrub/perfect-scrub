@@ -18,8 +18,6 @@ export const updateUserRole = async (
     await updateUserRoleByEmail(email, role);
     return { success: "User role updated " };
   } catch (error) {
-    console.log();
-
     return {error:"Error updating user role"};
   }
 };

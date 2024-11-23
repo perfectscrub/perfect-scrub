@@ -34,6 +34,7 @@
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
     "eslint": "8.36.0",
+    "export-to-csv": "^1.4.0",
     "framer-motion": "^10.16.5",
     "iframe-resizer-react": "^1.1.0",
     "lucide-react": "^0.445.0",
