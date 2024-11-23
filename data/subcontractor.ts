@@ -40,3 +40,11 @@ export const createSubcontractor = async (data: ContractorModelData) => {
     return null;
   }
 };
+
+export const deleteSubContractor = async (id: string) => {
+  try {
+    await prisma.contractor.delete({ where: { id } });
+  } catch (error) {
+    return null;
+  }
+};
