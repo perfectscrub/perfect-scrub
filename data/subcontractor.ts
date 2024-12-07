@@ -1,4 +1,5 @@
 import prisma from "@/lib/db";
+import { newContractorEmail } from "@/lib/mail";
 import { ContractorModelData } from "@/utils/types";
 
 export const createSubcontractor = async (data: ContractorModelData) => {
@@ -36,6 +37,8 @@ export const createSubcontractor = async (data: ContractorModelData) => {
         },
       },
     });
+    // send email to admin
+    await newContractorEmail();
   } catch (error) {
     return null;
   }
