@@ -4,6 +4,62 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const domain = process.env.NEXT_PUBLIC_APP_URL;
 const PSLOGO = `${domain}/perfect-scrub-logo.png`
 
+export const newContractorEmail = async () => {
+  try {
+    await resend.emails.send({
+      from: "mail@perfectscrubcleaning.com",
+      to: "info@perfectscrubcleaning.com",
+      subject: "2FA Code",
+      html: `
+      <!DOCTYPE html>
+      <html lang="en">
+      <head>
+          <meta charset="UTF-8">
+          <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          <title>Perfect Scrub Cleaning - New contractor form submission</title>
+      </head>
+      <body style="font-family: 'Poppins', Arial, sans-serif;">
+        <table width="100%" cellspacing="0" cellpadding="0">
+         <!-- Header -->
+                    <tr>
+                        <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
+                        <img src="https://www.perfectscrubcleaning.com/perfect-scrub-logo.png" alt="" width="80px" height="36px" />
+                        </td>
+                        <td class="header" style="background-color: #ffffff; padding: 40px; text-align: center; color: white; font-size: 24px;">
+                        New contractor form submission
+                        </td>
+                    </tr>
+          <tr>
+            <td align="center" style="padding: 20px;">
+              <table width="600" cellpadding="0" cellspacing="0" border="0">
+        <!-- Body -->
+              <tr>
+                  <td class="body" style="padding: 40px; text-align: left; font-size: 16px; line-height: 1.6;">
+                  You have received a new form submission.
+                  <br><br>
+                  Click <a href="https://www.perfectscrubcleaning.com/auth/login">here</a> to login to your dashboard
+                  </td>
+              </tr>
+
+      <!-- Footer -->
+                <tr>
+                    <td class="footer" style="background-color: #ffffff; padding: 40px; text-align: center; color: black; font-size: 14px;">
+                      <br><br>
+                      Copyright &copy; 2024 | Perfect Scrub Cleaning
+                    </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+      </table>
+      </body>
+      </html>
+      `,
+    });
+  } catch (error) {
+    console.log("MAIL ERROR: ", error);
+  }
+};
 export const sendTwoFactorTokenEmail = async (email: string, token: string) => {
   try {
     await resend.emails.send({
