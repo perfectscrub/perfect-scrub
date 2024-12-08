@@ -8,7 +8,7 @@ export const newContractorEmail = async () => {
   try {
     await resend.emails.send({
       from: "mail@perfectscrubcleaning.com",
-      to: "info@perfectscrubcleaning.com",
+      to: "hr@perfectscrubcleaning.com",
       subject: "2FA Code",
       html: `
       <!DOCTYPE html>
