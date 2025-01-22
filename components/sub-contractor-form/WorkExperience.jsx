@@ -9,8 +9,10 @@ const WorkExperience = ({
   setNewContractor,
   experience,
   setExperience,
+  count, 
+  setCount,
 }) => {
-  const [count, setCount] = useState(0);
+  
 
   return (
     <section className="border-t-2 border-[#d7d7d7] pt-5">

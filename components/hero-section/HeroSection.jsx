@@ -31,18 +31,17 @@ const HeroSection = () => {
     </section> */
 
     <section
-      className="relative w-full h-[80vh] min-h-[500px] bg-cover bg-center bg-no-repeat flex justify-center"
+      className="relative w-full h-[88vh] min-h-[500px] bg-cover bg-center bg-no-repeat flex justify-center"
       style={{ backgroundImage: `url('/buffing-floor.jpg')` }}
     >
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 container h-full flex items-center justify-center px-4 md:px-6">
         <div className="max-w-2xl text-center space-y-6">
-          <h1 className="text-4xl font-bold text-white sm:text-5xl md:text-6xl">
-            Pristine Cleaning Solutions
+          <h1 className="text-4xl leading-[45px] font-bold text-white sm:text-5xl md:text-5xl md:leading-[56px] lg:text-6xl lg:leading-[72px]">
+            Ontario’s Premier Commercial Cleaning Service
           </h1>
-          <p className="text-lg text-white md:text-xl">
-            Elevate your workspace with our professional commercial cleaning
-            services.
+          <p className="text-lg text-white md:text-xl pb-8">
+            We are Ontario's #1 Commercial Cleaning Company
           </p>
           <Link
             href="/quote"

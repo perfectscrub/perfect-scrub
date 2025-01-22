@@ -26,12 +26,20 @@ import { toast } from "sonner";
 const ContractorTab = ({ contractorData, contractorCount }) => {
   const handleExport = () => {
     if (contractorData.length < 1) {
-      toast.error("No data to export")
+      toast.error("No data to export");
       return;
     }
     const exportData = contractorData.map((contractor) => {
+      console.log("contractor data", contractor);
+      // join each  contact
+      const contacts = contractor.emergencyContacts.map(
+        ({ name, email, phone }, index) => {
+          return `${index + 1}. ${name} ${email} ${phone}`;
+        }
+      );
       return {
         ...contractor,
+        emergencyContacts: `${contacts[0]}, ${contacts[1]}`,
         locations: contractor.locations.join(", "),
         createdAt: format(new Date(contractor.createdAt), "PP"),
         updatedAt: format(new Date(contractor.updatedAt), "PP"),
