@@ -40,20 +40,21 @@ const SubContractorForm = ({}) => {
   const [emergencyContactInfo, setEmergencyContactInfo] = useState(
     defaultEmergencyContacts
   );
+  const [count, setCount] = useState(0);
 
   const resetForm = () => {
     setNewContractor(defaultContractor);
     setLocationsData(locations);
     setAvailabilityData(daysOfWeek);
     setReferenceInfo(defaultReferences);
-    setExperience(defaultExperience),
-    setPhone("");
+    setExperience(defaultExperience), setPhone("");
     setRefPhone1("");
     setRefPhone2("");
     setContactPhone1("");
     setContactPhone2("");
     setEmergencyContactInfo(defaultEmergencyContacts);
     setSameAddress(false);
+    setCount(0);
   };
 
   // const formRef = useRef<HTMLFormElement>(null);
@@ -95,12 +96,14 @@ const SubContractorForm = ({}) => {
   };
 
   const handleSubmit = async () => {
-    if(refPhone1 === refPhone2){
+    if (refPhone1 === refPhone2) {
       toast.error("Please provide unique phone numbers for references");
       return;
     }
-    if(contactPhone1===contactPhone2){
-      toast.error("Please provide unique phone numbers for your emergency contacts");
+    if (contactPhone1 === contactPhone2) {
+      toast.error(
+        "Please provide unique phone numbers for your emergency contacts"
+      );
       return;
     }
 
@@ -113,14 +116,20 @@ const SubContractorForm = ({}) => {
         });
         return;
       }
-      await addContractor(addValues);
+
+      const result = await addContractor(addValues);
+
+      if (result?.error) {
+        throw new Error(result.error);
+      }
       resetForm();
-      toast.success("The form was submitted. We will get back to you soon.");
-    } catch (error) {
-      toast.error(
-        "Error while submitting the form or some details already exist in our database. Please check your information and try again",
+      toast.success(
+        `The form was submitted. Please allow for 5 working days to process.\nContact hr@perfectscrubcleaning.com for inquiries`,
         { duration: 8000, closeButton: true }
       );
+    } catch (error) {
+      console.log("submit error",error);
+      toast.error(error, { duration: 8000, closeButton: true });
       return;
     }
   };
@@ -172,6 +181,8 @@ const SubContractorForm = ({}) => {
           setNewContractor={setNewContractor}
           experience={experience}
           setExperience={setExperience}
+          count={count}
+          setCount={setCount}
         />
 
         {/*Equipment*/}

@@ -5,7 +5,11 @@ export const revalidate = 3600
 
 export default async function AdminPage({ searchParams }) {
   const { tab } = searchParams;
-  const contractorData = await prisma.contractor.findMany();
+  const contractorData = await prisma.contractor.findMany({
+    include: {
+      emergencyContacts: true
+    }
+  });
   const contractorCount = await prisma.contractor.count();
 
   return (

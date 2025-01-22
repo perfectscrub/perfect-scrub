@@ -197,12 +197,13 @@ const BusinessInfo = ({
             id="businessPostcode"
             value={newContractor.businessPostcode}
             onChange={(e) => {
+              let value = e.target.value.trim();
               if (sameAddress) {
                 return;
               }
               setNewContractor({
                 ...newContractor,
-                businessPostcode: e.target.value,
+                businessPostcode: value,
               });
             }}
             required
