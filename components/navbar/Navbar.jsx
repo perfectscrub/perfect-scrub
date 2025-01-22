@@ -43,7 +43,7 @@ const Navbar = ({ toggleNav, setToggleNav, handleNavClose }) => {
         <div>
           <Link
             className="flex justify-between gap-x-1 items-center"
-            href="tel:6474736478"
+            href="tel:4375245122"
           >
             <p className="tracking-wider font-medium hidden md:block">
               Call us now -{" "}
