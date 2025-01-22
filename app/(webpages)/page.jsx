@@ -21,6 +21,8 @@ export default function Home() {
       <HeroSection />
       {/* Highlight Service  */}
       <Highlight />
+      {/* Locations we serve */}
+      <LocationsSection />
       {/* Start of Benefits Section  */}
       <Benefits />
       {/* Start of Services Section */}
@@ -31,8 +33,6 @@ export default function Home() {
       <Testimonials />
       {/* Start of 'Ready To Get Started' Section */}
       <QuoteSection />
-      {/* Locations we serve */}
-      <LocationsSection />
     </>
   );
 }

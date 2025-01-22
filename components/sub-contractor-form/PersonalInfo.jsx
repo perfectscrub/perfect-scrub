@@ -108,11 +108,13 @@ const PersonalInfo = ({
             id="postcode"
             value={newContractor.postcode}
             onChange={(e) =>
-              setNewContractor({
+              {
+                let value = e.target.value.trim();
+                setNewContractor({
                 ...newContractor,
-                postcode: e.target.value,
-                businessPostcode: sameAddress ? e.target.value : "",
-              })
+                postcode: value,
+                businessPostcode: sameAddress ? value : "",
+              })}
             }
             required
             autoComplete="postal-code"
