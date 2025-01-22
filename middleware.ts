@@ -14,8 +14,9 @@ export default auth((req) => {
   const { nextUrl } = req;
   const isLoggedIn = !!req.auth; 
   const isApiAuthRoute = nextUrl.pathname.startsWith(apiAuthPrefix);
-  const isPublicRoute = publicRoutes.includes(nextUrl.pathname);
-  const isAuthRoute = authRoutes.includes(nextUrl.pathname);
+  const pathname = nextUrl.pathname.toLowerCase();
+  const isPublicRoute = publicRoutes.includes(pathname);
+  const isAuthRoute = authRoutes.includes(pathname);
   
   // first allow every api route
   // then check auth routes...
@@ -31,7 +32,7 @@ export default auth((req) => {
   }
   
   if (!isLoggedIn && !isPublicRoute) {
-    let callbackUrl = nextUrl.pathname;
+    let callbackUrl = pathname;
     if (nextUrl.search) {
       callbackUrl += nextUrl.search;
     }
