@@ -1,30 +1,28 @@
 "use server";
 
 import { revalidatePath } from "next/cache";
-import prisma from "@/lib/db";
 import type { ContractorModelData } from "@/utils/types";
 import { SubContractorSchema } from "@/schemas";
-import { z } from "zod";
 import { createSubcontractor, deleteSubContractor } from "@/data/subcontractor";
 
 export async function addContractor(data: ContractorModelData) {
+  //validate on server
   const validatedFields = SubContractorSchema.safeParse(data);
-  if (!validatedFields.success) return { error: "Invalid fields" };
+  if (!validatedFields.success) {
+    console.log("validatedFields", validatedFields);
+    return { error: "Invalid fields" };
+  }
 
   try {
-    await createSubcontractor(data);
-    revalidatePath("/admin");
-    return { success: "Form submitted" };
-  } catch (error) {
-    // console.log("error", error);
-    if (error.code === "P2002") {
-      // TODO: implement specific error return
+    const result = await createSubcontractor(data);
+    console.log("createSubcontractor result: ", result);
+    if (result?.error) {
+      throw new Error(result.error);
     }
-    const message = error.meta.target.reduce(
-      (acc: string, curr: string) => `${acc} ${curr}`,
-      ""
-    );
-    throw new Error("Error during submit: " + message);
+    revalidatePath("/admin");
+    return result;
+  } catch (err) {
+    throw new Error(err);
   }
 }
 

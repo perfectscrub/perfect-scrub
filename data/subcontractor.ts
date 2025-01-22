@@ -1,4 +1,4 @@
-import prisma from "@/lib/db";
+import prisma, {PrismaNameSpace} from "@/lib/db";
 import { newContractorEmail } from "@/lib/mail";
 import { ContractorModelData } from "@/utils/types";
 
@@ -39,8 +39,25 @@ export const createSubcontractor = async (data: ContractorModelData) => {
     });
     // send email to admin
     await newContractorEmail();
-  } catch (error) {
-    return null;
+    return { success: "Form submitted" };
+  } catch (err) {
+    if (err instanceof PrismaNameSpace.PrismaClientKnownRequestError) {
+      switch (err.code) {
+        case "P2002":
+          // handling duplicate key errors
+          return { error: `Value already exists: ${err.meta.target}` };
+        case "P2014":
+          // handling invalid id errors
+          return { error: `Invalid ID: ${err.meta.target}` };
+        case "P2003":
+          // handling invalid data errors
+          return { error: `Invalid input: ${err.meta.target}` };
+        default:
+          // handling all other errors
+          return { error: `Something went wrong: ${err.message}` };
+        }
+      }
+      return { error: `Something went wrong. Please try again later` };
   }
 };
 
