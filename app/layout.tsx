@@ -4,6 +4,7 @@ import "./globals.css";
 import { Toaster } from "sonner";
 import { auth } from "@/auth";
 import Provider from "@/components/auth/Provider";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
   title: {
@@ -24,6 +25,9 @@ export default async function RootLayout({
   const session = await auth();
   return (
     <html lang="en">
+      {process.env.NODE_ENV === "production" ? (
+        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+      ) : null}
       <body className={inter.className}>
         <Provider session={session}>
           {children}

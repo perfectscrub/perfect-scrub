@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "@/components/layout/Layout";
-import { GoogleTagManager } from "@next/third-parties/google";
+// import { GoogleTagManager } from "@next/third-parties/google";
 
 export const metadata = {
   title: {
@@ -13,11 +13,10 @@ export const metadata = {
 
 export default function WebsiteLayout({ children }) {
   return (
-    <>
-      {process.env.NODE_ENV === "production" ? (
-        <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
-      ) : null}
-      <Layout>{children}</Layout>
-    </>
+      <Layout>
+      {/* {process.env.NODE_ENV === "production" ? ( 
+         <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS} />
+       ) : null}*/}
+        {children}</Layout>
   );
 }
